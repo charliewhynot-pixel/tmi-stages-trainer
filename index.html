@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>TMI Stages Trainer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: a calm, single-column study app — stage rail up top, mode cards, one-question-at-a-time flow.
+   Palette grounded in the subject: lamp-lit "mind illuminated" warmth (amber light) against deep contemplative indigo-night. */
+:root {
+  --bg: #f4f1ea;          /* warm paper */
+  --surface: #fffdf8;     /* card */
+  --surface-2: #efe9dd;   /* recessed */
+  --ink: #2a2622;         /* near-black, warm */
+  --ink-soft: #6a6258;    /* muted text */
+  --line: #ddd4c4;        /* hairline */
+  --accent: #b5742a;      /* lamp amber */
+  --accent-soft: #e8d3b0; /* amber tint */
+  --indigo: #3b4a6b;      /* contemplative blue, used for headings */
+  --good: #4f7a4d;        /* correct */
+  --good-bg: #e4efdf;
+  --bad: #a4493f;         /* incorrect */
+  --bad-bg: #f3dfdb;
+  --focus: #b5742a;
+  --r: 14px;
+  --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-head: "Space Grotesk", "Inter", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #17171c;
+    --surface: #1f2029;
+    --surface-2: #272834;
+    --ink: #ece7df;
+    --ink-soft: #9a9488;
+    --line: #34353f;
+    --accent: #e0a85a;
+    --accent-soft: #3a2f1e;
+    --indigo: #9fb0d6;
+    --good: #7fb47a;
+    --good-bg: #223026;
+    --bad: #d98a7f;
+    --bad-bg: #3a2420;
+    --focus: #e0a85a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #17171c;
+  --surface: #1f2029;
+  --surface-2: #272834;
+  --ink: #ece7df;
+  --ink-soft: #9a9488;
+  --line: #34353f;
+  --accent: #e0a85a;
+  --accent-soft: #3a2f1e;
+  --indigo: #9fb0d6;
+  --good: #7fb47a;
+  --good-bg: #223026;
+  --bad: #d98a7f;
+  --bad-bg: #3a2420;
+  --focus: #e0a85a;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 56px;
+}
+h1, h2, h3 { font-family: var(--font-head); font-weight: 600; text-wrap: balance; line-height: 1.2; }
+a { color: var(--accent); }
+em { font-style: italic; }
+strong { font-weight: 600; }
+button { font-family: inherit; cursor: pointer; }
+.tabnum { font-variant-numeric: tabular-nums; }
+
+/* ---- Masthead ---- */
+.masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 2px; }
+.masthead h1 { font-size: 1.5rem; letter-spacing: -0.01em; margin: 0; }
+.masthead .sub { color: var(--ink-soft); font-size: 0.82rem; margin: 2px 0 18px; }
+.theme-btn {
+  background: var(--surface); color: var(--ink-soft); border: 1px solid var(--line);
+  border-radius: 999px; width: 34px; height: 34px; font-size: 1rem; flex: 0 0 auto;
+  display: grid; place-items: center;
+}
+.theme-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+/* ---- Stage rail ---- */
+.rail-label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 8px; }
+.stages { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-bottom: 8px; }
+.stage-chip {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 10px 6px 8px; text-align: center; color: var(--ink); position: relative;
+  transition: border-color .15s, background .15s;
+}
+.stage-chip:hover { border-color: var(--accent); }
+.stage-chip[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+.stage-chip .num { font-family: var(--font-head); font-size: 1.15rem; font-weight: 600; display: block; }
+.stage-chip .dot { position: absolute; top: 6px; right: 6px; width: 7px; height: 7px; border-radius: 50%; background: transparent; }
+.stage-chip .dot.seen { background: var(--accent); }
+.stage-name { text-align: center; color: var(--ink-soft); font-size: 0.8rem; min-height: 1.2em; margin-bottom: 18px; }
+
+/* ---- Mode cards ---- */
+.modes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 8px; }
+.qtext p { margin: 0 0 8px; }
+.qtext ul { margin: 4px 0 0; padding-left: 20px; display: grid; gap: 5px; }
+.qtext li { font-size: 0.98rem; line-height: 1.4; }
+.qtext li::marker { color: var(--accent); }
+.open-model p + p { margin-top: 10px; }
+.empty-note { color: var(--ink-soft); font-size: 0.92rem; margin: 8px 0 0; }
+@media (max-width: 640px) { .modes { grid-template-columns: repeat(2, 1fr); } }
+.mode-btn {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 16px 12px; text-align: left; color: var(--ink);
+  display: flex; flex-direction: column; gap: 3px; min-height: 0;
+}
+.mode-btn:hover { border-color: var(--accent); }
+.mode-btn .mt { font-family: var(--font-head); font-weight: 600; font-size: 1rem; }
+.mode-btn .md { font-size: 0.78rem; color: var(--ink-soft); line-height: 1.35; }
+.mode-btn .mstat { font-size: 0.72rem; color: var(--accent); margin-top: 4px; font-variant-numeric: tabular-nums; min-height: 1em; }
+
+/* ---- Panel ---- */
+.panel {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 20px; margin-top: 16px;
+}
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 4px; flex-wrap: wrap; }
+.panel-head h2 { font-size: 1.15rem; margin: 0; color: var(--indigo); }
+.eyebrow { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); }
+.goal-line { color: var(--ink-soft); font-size: 0.88rem; margin: 6px 0 2px; }
+
+.btn {
+  background: var(--accent); color: #fff; border: none; border-radius: 10px;
+  padding: 11px 18px; font-size: 0.92rem; font-weight: 600;
+}
+.btn:hover { filter: brightness(1.06); }
+.btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--accent); }
+.btn.subtle { background: var(--surface-2); color: var(--ink); border: 1px solid var(--line); font-weight: 500; }
+.btn:disabled { opacity: 0.5; cursor: default; }
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 16px; }
+.spacer { flex: 1 1 auto; }
+
+/* ---- Train ---- */
+.train-item { border-top: 1px solid var(--line); padding: 14px 0; }
+.train-item:first-of-type { border-top: none; }
+.train-item h3 { font-size: 0.98rem; margin: 0 0 4px; color: var(--accent); }
+.train-item p { margin: 0; font-size: 0.92rem; }
+
+/* ---- Progress bar ---- */
+.progress { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.progress .track { flex: 1; height: 6px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+.progress .fill { height: 100%; background: var(--accent); width: 0; transition: width .25s; }
+.progress .count { font-size: 0.78rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; flex: 0 0 auto; }
+
+/* ---- Question ---- */
+.qtext { font-size: 1.05rem; margin: 2px 0 16px; line-height: 1.4; }
+.options { display: flex; flex-direction: column; gap: 9px; }
+.opt {
+  display: flex; gap: 11px; align-items: flex-start; text-align: left; width: 100%;
+  background: var(--surface-2); border: 1.5px solid var(--line); border-radius: 11px;
+  padding: 12px 14px; color: var(--ink); font-size: 0.92rem; line-height: 1.4;
+  transition: border-color .12s, background .12s;
+}
+.opt:hover:not(:disabled) { border-color: var(--accent); }
+.opt .key {
+  flex: 0 0 auto; width: 22px; height: 22px; border-radius: 6px; background: var(--surface);
+  border: 1px solid var(--line); display: grid; place-items: center;
+  font-family: var(--font-head); font-size: 0.8rem; font-weight: 600; margin-top: 1px;
+}
+.opt.correct { border-color: var(--good); background: var(--good-bg); }
+.opt.correct .key { background: var(--good); color: #fff; border-color: var(--good); }
+.opt.chosen-wrong { border-color: var(--bad); background: var(--bad-bg); }
+.opt.chosen-wrong .key { background: var(--bad); color: #fff; border-color: var(--bad); }
+.opt:disabled { cursor: default; }
+.opt.dim { opacity: 0.58; }
+
+/* ---- Feedback ---- */
+.feedback { margin-top: 14px; border-radius: 11px; padding: 13px 15px; font-size: 0.9rem; display: none; }
+.feedback.show { display: block; }
+.feedback.ok { background: var(--good-bg); border: 1px solid var(--good); }
+.feedback.no { background: var(--bad-bg); border: 1px solid var(--bad); }
+.feedback .verdict { font-family: var(--font-head); font-weight: 600; margin-bottom: 3px; }
+.feedback.ok .verdict { color: var(--good); }
+.feedback.no .verdict { color: var(--bad); }
+.feedback .why-list { margin: 8px 0 0; padding-left: 0; list-style: none; display: grid; gap: 5px; }
+.feedback .why-list li { font-size: 0.84rem; color: var(--ink-soft); padding-left: 16px; position: relative; }
+.feedback .why-list li::before { content: "·"; position: absolute; left: 4px; color: var(--accent); font-weight: 700; }
+
+/* ---- Open-question (Test) ---- */
+.open-model { background: var(--surface-2); border: 1px solid var(--line); border-radius: 11px; padding: 14px 16px; margin-top: 4px; }
+.open-model h4 { font-family: var(--font-head); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--indigo); margin: 0 0 8px; }
+.open-model p { margin: 0; font-size: 0.92rem; }
+.rubric { margin-top: 16px; }
+.rubric h4 { font-family: var(--font-head); font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 8px; }
+.rubric-item { display: flex; gap: 10px; align-items: flex-start; padding: 7px 0; border-top: 1px solid var(--line); }
+.rubric-item:first-child { border-top: none; }
+.rubric-check {
+  flex: 0 0 auto; width: 24px; height: 24px; border-radius: 7px; border: 1.5px solid var(--line);
+  background: var(--surface); display: grid; place-items: center; font-size: 0.9rem; color: transparent;
+  margin-top: 1px;
+}
+.rubric-item.hit .rubric-check { background: var(--good); border-color: var(--good); color: #fff; }
+.rubric-item .rtext { font-size: 0.88rem; }
+.hint { color: var(--ink-soft); font-size: 0.84rem; margin: 10px 0 0; }
+.self-score { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.self-score .q { font-size: 0.9rem; margin-bottom: 10px; }
+.scale { display: flex; gap: 8px; flex-wrap: wrap; }
+.scale button {
+  background: var(--surface-2); border: 1.5px solid var(--line); border-radius: 9px;
+  padding: 9px 14px; font-size: 0.86rem; color: var(--ink); font-weight: 500;
+}
+.scale button:hover { border-color: var(--accent); }
+.scale button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* ---- Results ---- */
+.results { text-align: center; padding: 10px 0 4px; }
+.results .score-num { font-family: var(--font-head); font-size: 3rem; font-weight: 600; color: var(--accent); line-height: 1; }
+.results .score-of { color: var(--ink-soft); font-size: 1rem; }
+.results .verdict-line { margin: 12px auto 4px; max-width: 42ch; font-size: 0.95rem; }
+.breakdown { margin-top: 20px; text-align: left; display: grid; gap: 8px; }
+.breakdown .bd-row { display: flex; gap: 10px; align-items: flex-start; font-size: 0.86rem; padding: 8px 0; border-top: 1px solid var(--line); }
+.breakdown .bd-mark { flex: 0 0 auto; font-weight: 700; width: 18px; }
+.breakdown .bd-row.r-ok .bd-mark { color: var(--good); }
+.breakdown .bd-row.r-no .bd-mark { color: var(--bad); }
+
+/* ---- Field-test feedback ---- */
+.item-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0 0 8px; }
+.item-id { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.74rem; color: var(--ink-soft); background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; padding: 2px 7px; }
+.flag-btn { background: transparent; border: 1px solid var(--line); color: var(--ink-soft); border-radius: 999px; padding: 4px 11px; font-size: 0.78rem; }
+.flag-btn:hover { border-color: var(--accent); color: var(--accent); }
+.flag-btn.on { border-color: var(--bad); color: var(--bad); }
+.flag-panel { background: var(--surface-2); border: 1px solid var(--line); border-radius: 11px; padding: 12px 14px; margin: 0 0 14px; display: grid; gap: 10px; }
+.flag-panel .lbl { font-size: 0.8rem; color: var(--ink-soft); }
+.tagrow { display: flex; gap: 8px; flex-wrap: wrap; }
+.tagrow button { background: var(--surface); border: 1.5px solid var(--line); border-radius: 999px; padding: 6px 13px; font-size: 0.84rem; color: var(--ink); }
+.tagrow button[aria-pressed="true"] { background: var(--bad); border-color: var(--bad); color: #fff; }
+.flag-panel textarea, .fb-view textarea, .fb-view input[type="text"] { width: 100%; font: inherit; font-size: 0.88rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 9px; padding: 9px 11px; }
+.flag-panel textarea { min-height: 64px; resize: vertical; }
+.flag-panel .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.flag-panel .saved { font-size: 0.8rem; color: var(--good); }
+.fb-bar { display: flex; justify-content: flex-end; margin: 6px 0 0; }
+.fb-link { background: transparent; border: none; color: var(--accent); font-size: 0.84rem; padding: 4px 2px; text-decoration: underline; text-underline-offset: 3px; }
+.fb-view textarea { min-height: 260px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.78rem; line-height: 1.45; resize: vertical; }
+.fb-view .stats { display: flex; gap: 18px; flex-wrap: wrap; margin: 10px 0 14px; font-size: 0.88rem; color: var(--ink-soft); }
+.fb-view .stats b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.fb-view label { display: block; font-size: 0.82rem; color: var(--ink-soft); margin: 0 0 5px; }
+
+.footer-note { text-align: center; color: var(--ink-soft); font-size: 0.78rem; margin-top: 28px; line-height: 1.5; }
+
+@media (max-width: 440px) {
+  .modes { grid-template-columns: repeat(2, 1fr); }
+  .stage-chip .num { font-size: 1rem; }
+  .masthead h1 { font-size: 1.3rem; }
+}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <div class="masthead">
+    <div>
+      <h1>TMI Stages Trainer</h1>
+    </div>
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle light or dark theme" title="Toggle theme">◐</button>
+  </div>
+  <p class="sub">Train · Grill · Test — Stages 1–6 of <em>The Mind Illuminated</em></p>
+
+  <div class="rail-label">Choose a stage</div>
+  <div class="stages" id="stages"></div>
+  <div class="stage-name" id="stageName"></div>
+
+  <div class="modes" id="modes">
+    <button class="mode-btn" data-mode="train">
+      <span class="mt">Train</span>
+      <span class="md">Learn or refresh the stage's essentials</span>
+      <span class="mstat" id="stat-train"></span>
+    </button>
+    <button class="mode-btn" data-mode="grill">
+      <span class="mt">Grill</span>
+      <span class="md">Rapid multiple-choice with instant feedback</span>
+      <span class="mstat" id="stat-grill"></span>
+    </button>
+    <button class="mode-btn" data-mode="test">
+      <span class="mt">Test</span>
+      <span class="md">Open questions you answer, then self-mark</span>
+      <span class="mstat" id="stat-test"></span>
+    </button>
+    <button class="mode-btn" data-mode="scenario">
+      <span class="mt">Scenario</span>
+      <span class="md">A student reports… diagnose and respond</span>
+      <span class="mstat" id="stat-scenario"></span>
+    </button>
+  </div>
+
+  <div class="fb-bar"><button class="fb-link" id="fbBtn">Export feedback</button></div>
+
+  <div id="panel"></div>
+
+  <p class="footer-note">
+    A good meditation is one you did. Progress is saved on this device only.<br>
+    Grounded in Culadasa (John Yates), <em>The Mind Illuminated</em>.
+  </p>
+</div>
+
+<script src="data.js"></script>
+<script src="extra.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  // ---------- state + storage ----------
+  var LS_KEY = "tmi-trainer-v1";
+  var state = { stage: 1, mode: null, progress: {} };
+  // progress shape: { "s1": { trainSeen:true, grillBest: 7, grillLast: 6, testScores:{avg} } }
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(LS_KEY);
+      if (raw) { var p = JSON.parse(raw); if (p && typeof p === "object") { state.progress = p.progress || {}; if (p.stage) state.stage = p.stage; } }
+    } catch (e) { /* private window etc. — run without persistence */ }
+    try {
+      var t = localStorage.getItem(LS_KEY + "-theme");
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  }
+  function save() {
+    try { localStorage.setItem(LS_KEY, JSON.stringify({ progress: state.progress, stage: state.stage })); } catch (e) {}
+  }
+  function prog(n) {
+    var k = "s" + n;
+    if (!state.progress[k]) state.progress[k] = {};
+    return state.progress[k];
+  }
+  function getStage(n) { for (var i = 0; i < STAGES.length; i++) if (STAGES[i].n === n) return STAGES[i]; return STAGES[0]; }
+
+  // ---------- helpers ----------
+  function el(tag, cls, html) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (html != null) e.innerHTML = html;
+    return e;
+  }
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; }
+    return a;
+  }
+  var KEYS = ["A", "B", "C", "D", "E"];
+
+  // Text formatting for the expanded banks: "\n• " marks bullet points in
+  // questions, "\n\n" separates paragraphs in model answers.
+  function fmtQ(s) {
+    if (s.indexOf("\n") < 0) return s;
+    var out = "", inList = false;
+    s.split("\n").forEach(function (line) {
+      var t = line.trim();
+      if (!t) return;
+      if (t.indexOf("•") === 0) {
+        if (!inList) { out += "<ul>"; inList = true; }
+        out += "<li>" + t.replace(/^•\s*/, "") + "</li>";
+      } else {
+        if (inList) { out += "</ul>"; inList = false; }
+        out += "<p>" + t + "</p>";
+      }
+    });
+    if (inList) out += "</ul>";
+    return out;
+  }
+  function fmtParas(s) {
+    return s.split(/\n\s*\n/).map(function (p) {
+      return "<p>" + p.trim().replace(/\n/g, "<br>") + "</p>";
+    }).join("");
+  }
+
+  // Item IDs. Expanded-bank items are numbered by their position in the stage
+  // file ("S5 grill Q3" = 3rd grill item in the Stage 5 file), so feedback maps
+  // straight back to the source. Original app items are "old-Q<n>".
+  var ITEMS = {};
+  function tagItems(n, kind, list, prefix) {
+    (list || []).forEach(function (it, i) {
+      it.id = "S" + n + " " + kind + " " + prefix + (i + 1);
+      it.kind = kind;
+      if (it.options) it.options.forEach(function (o, oi) { o.k = KEYS[oi]; });
+      ITEMS[it.id] = it;
+    });
+  }
+
+  // Merge expanded banks (extra.js) into the base stages.
+  function mergeExtras() {
+    STAGES.forEach(function (s) {
+      tagItems(s.n, "grill", s.grill, "old-Q");
+      tagItems(s.n, "open", s.open, "old-Q");
+      tagItems(s.n, "scenario", s.scenario, "old-Q");
+    });
+    if (typeof EXTRA_STAGES === "undefined") return;
+    EXTRA_STAGES.forEach(function (x) {
+      var s = getStage(x.n);
+      if (!s || s.n !== x.n || s._merged) return;
+      tagItems(x.n, "grill", x.grill, "Q");
+      tagItems(x.n, "open", x.open, "Q");
+      tagItems(x.n, "scenario", x.scenario, "Q");
+      s.grill = s.grill.concat(x.grill || []);
+      s.open = s.open.concat(x.open || []);
+      s.scenario = (s.scenario || []).concat(x.scenario || []);
+      s._merged = true;
+    });
+  }
+
+  // ---------- field-test feedback store (this device only) ----------
+  var FB_KEY = "tmi-trainer-feedback-v1";
+  var fbData = { tester: "", flags: {}, grill: {}, ratings: {} };
+  function loadFb() {
+    try {
+      var raw = localStorage.getItem(FB_KEY);
+      if (raw) { var d = JSON.parse(raw); if (d && typeof d === "object") {
+        fbData.tester = d.tester || ""; fbData.flags = d.flags || {}; fbData.grill = d.grill || {}; fbData.ratings = d.ratings || {};
+      } }
+    } catch (e) {}
+  }
+  function saveFb() { try { localStorage.setItem(FB_KEY, JSON.stringify(fbData)); } catch (e) {} updateFbBtn(); }
+  function updateFbBtn() {
+    var n = Object.keys(fbData.flags).length;
+    var b = document.getElementById("fbBtn");
+    if (b) b.textContent = "Export feedback" + (n ? " · " + n + " flagged" : "");
+  }
+  function recordGrill(item, opt) {
+    var g = fbData.grill[item.id] || (fbData.grill[item.id] = { n: 0, right: 0, picks: {} });
+    g.n++;
+    if (opt.ok) g.right++; else g.picks[opt.k] = (g.picks[opt.k] || 0) + 1;
+    saveFb();
+  }
+  function recordRating(item, r) {
+    (fbData.ratings[item.id] || (fbData.ratings[item.id] = [])).push(r);
+    saveFb();
+  }
+
+  // ID chip + flag button + flag panel, placed above each question.
+  function itemHeader(item) {
+    var wrap = el("div");
+    var meta = el("div", "item-meta");
+    meta.appendChild(el("span", "item-id", item.id));
+    var fbtn = el("button", "flag-btn");
+    meta.appendChild(fbtn);
+    wrap.appendChild(meta);
+
+    var panel = el("div", "flag-panel");
+    panel.hidden = true;
+    var existing = fbData.flags[item.id];
+    var tags = existing ? existing.tags.slice() : [];
+    function label() {
+      var on = !!fbData.flags[item.id];
+      fbtn.textContent = on ? "⚑ Flagged" : "⚑ Flag this question";
+      fbtn.classList.toggle("on", on);
+    }
+    label();
+
+    panel.appendChild(el("div", "lbl", "What's the problem? Pick any that apply, add a note if useful."));
+    var row = el("div", "tagrow");
+    ["wrong", "unclear", "too easy"].forEach(function (t) {
+      var b = el("button", null, t);
+      b.setAttribute("aria-pressed", tags.indexOf(t) >= 0 ? "true" : "false");
+      b.addEventListener("click", function () {
+        var i = tags.indexOf(t);
+        if (i >= 0) tags.splice(i, 1); else tags.push(t);
+        b.setAttribute("aria-pressed", i >= 0 ? "false" : "true");
+      });
+      row.appendChild(b);
+    });
+    panel.appendChild(row);
+    var ta = document.createElement("textarea");
+    ta.id = "flag-note";
+    ta.placeholder = "Short note — what's wrong, or what you'd expect instead";
+    ta.value = existing ? existing.note : "";
+    panel.appendChild(ta);
+    var act = el("div", "row");
+    var saveB = el("button", "btn", "Save flag");
+    var delB = el("button", "btn subtle", "Remove flag");
+    var msg = el("span", "saved", "");
+    act.appendChild(saveB); act.appendChild(delB); act.appendChild(msg);
+    panel.appendChild(act);
+    delB.hidden = !existing;
+
+    saveB.addEventListener("click", function () {
+      if (!tags.length && !ta.value.trim()) { msg.textContent = "Pick a tag or write a note first."; return; }
+      fbData.flags[item.id] = { tags: tags.slice(), note: ta.value.trim(), ts: new Date().toISOString().slice(0, 10) };
+      saveFb(); label(); delB.hidden = false;
+      msg.textContent = "Flag saved."; panel.hidden = true;
+    });
+    delB.addEventListener("click", function () {
+      delete fbData.flags[item.id]; tags = []; ta.value = "";
+      Array.prototype.forEach.call(row.children, function (c) { c.setAttribute("aria-pressed", "false"); });
+      saveFb(); label(); delB.hidden = true; msg.textContent = "Flag removed.";
+    });
+    fbtn.addEventListener("click", function () { panel.hidden = !panel.hidden; msg.textContent = ""; });
+
+    wrap.appendChild(panel);
+    return wrap;
+  }
+
+  function plain(s) {
+    var d = document.createElement("div"); d.innerHTML = s;
+    return (d.textContent || "").replace(/\s+/g, " ").trim();
+  }
+  function snip(s, n) { s = plain(s); return s.length > n ? s.slice(0, n - 1) + "…" : s; }
+
+  function buildExport() {
+    var L = [];
+    var flagIds = Object.keys(fbData.flags).sort();
+    var grillIds = Object.keys(fbData.grill).filter(function (id) { return fbData.grill[id].n > fbData.grill[id].right; }).sort();
+    var rateIds = Object.keys(fbData.ratings).sort();
+    L.push("TMI STAGES TRAINER — FIELD-TEST FEEDBACK");
+    L.push("Tester: " + (fbData.tester || "(not given)") + "   Exported: " + new Date().toISOString().slice(0, 10));
+    L.push("IDs: S<stage> <grill|open|scenario> Q<n> = nth item in that stage's file. 'old-' = original app question. 'open' = Test mode.");
+    L.push("");
+    L.push("FLAGGED (" + flagIds.length + ")");
+    if (!flagIds.length) L.push("  none");
+    flagIds.forEach(function (id) {
+      var f = fbData.flags[id], it = ITEMS[id];
+      L.push("- " + id + (f.tags.length ? "  [" + f.tags.join(", ") + "]" : ""));
+      if (f.note) L.push("  Note: " + f.note);
+      if (it) L.push("  Question: " + snip(it.q, 140));
+    });
+    L.push("");
+    L.push("GRILL WRONG ANSWERS (" + grillIds.length + " questions)  — letters are the option's position in the file, not on screen");
+    if (!grillIds.length) L.push("  none");
+    grillIds.forEach(function (id) {
+      var g = fbData.grill[id], it = ITEMS[id];
+      var picks = Object.keys(g.picks).sort().map(function (k) {
+        var o = it && it.options ? it.options.filter(function (x) { return x.k === k; })[0] : null;
+        return k + (o ? ' "' + snip(o.t, 70) + '"' : "") + " ×" + g.picks[k];
+      });
+      L.push("- " + id + ": answered " + g.n + ", right " + g.right + ". Wrong picks: " + picks.join("; "));
+    });
+    L.push("");
+    L.push("SELF-RATINGS, Test and Scenario (0–4, in order taken)");
+    if (!rateIds.length) L.push("  none");
+    rateIds.forEach(function (id) { L.push("- " + id + ": " + fbData.ratings[id].join(", ")); });
+    return L.join("\n");
+  }
+
+  function renderFeedback() {
+    var panel = el("div", "panel fb-view");
+    var head = el("div", "panel-head");
+    head.appendChild(el("h2", null, "Export feedback"));
+    head.appendChild(el("span", "eyebrow", "saved on this device"));
+    panel.appendChild(head);
+    var st = el("div", "stats");
+    var nG = 0; Object.keys(fbData.grill).forEach(function (k) { nG += fbData.grill[k].n; });
+    st.innerHTML = "<span><b>" + Object.keys(fbData.flags).length + "</b> flagged</span><span><b>" + nG + "</b> grill answers logged</span><span><b>" + Object.keys(fbData.ratings).length + "</b> item" + (Object.keys(fbData.ratings).length === 1 ? "" : "s") + " self-rated</span>";
+    panel.appendChild(st);
+
+    panel.appendChild(el("label", null, "Your name (so feedback from several testers can be told apart)")).setAttribute("for", "tester-name");
+    var nm = document.createElement("input"); nm.type = "text"; nm.id = "tester-name"; nm.value = fbData.tester; nm.placeholder = "Optional";
+    panel.appendChild(nm);
+    var ta = document.createElement("textarea"); ta.id = "export-text"; ta.readOnly = true; ta.value = buildExport();
+    ta.style.marginTop = "12px";
+    panel.appendChild(ta);
+    nm.addEventListener("input", function () { fbData.tester = nm.value.trim(); saveFb(); ta.value = buildExport(); });
+
+    var row = el("div", "btn-row");
+    var copy = el("button", "btn", "Copy to clipboard");
+    var msg = el("span", "hint", "");
+    copy.addEventListener("click", function () {
+      var txt = ta.value;
+      function fallback() { ta.focus(); ta.select(); msg.textContent = "Text selected — copy it with your device's Copy."; }
+      try {
+        navigator.clipboard.writeText(txt).then(function () { msg.textContent = "Copied. Paste it into a message or the chat."; }, fallback);
+      } catch (e) { fallback(); }
+    });
+    var clear = el("button", "btn subtle", "Clear all feedback");
+    var armed = false;
+    clear.addEventListener("click", function () {
+      if (!armed) { armed = true; clear.textContent = "Tap again to clear everything"; return; }
+      fbData.flags = {}; fbData.grill = {}; fbData.ratings = {}; saveFb(); renderFeedback();
+    });
+    row.appendChild(copy); row.appendChild(el("span", "spacer")); row.appendChild(clear);
+    panel.appendChild(row);
+    panel.appendChild(msg);
+    panel.appendChild(el("p", "hint", "Everything here stays in this browser until you clear it. Export and send it after a testing session."));
+    panelEl.innerHTML = ""; panelEl.appendChild(panel);
+  }
+
+  // ---------- rail + modes ----------
+  var stagesEl = document.getElementById("stages");
+  var stageNameEl = document.getElementById("stageName");
+  var panelEl = document.getElementById("panel");
+
+  function renderRail() {
+    stagesEl.innerHTML = "";
+    STAGES.forEach(function (s) {
+      var chip = el("button", "stage-chip");
+      chip.setAttribute("aria-pressed", s.n === state.stage ? "true" : "false");
+      var seen = prog(s.n).trainSeen || prog(s.n).grillBest != null || prog(s.n).testDone || prog(s.n).scenarioDone;
+      chip.innerHTML = '<span class="dot ' + (seen ? "seen" : "") + '"></span><span class="num">' + s.n + '</span>';
+      chip.setAttribute("aria-label", "Stage " + s.n + ": " + s.title);
+      chip.addEventListener("click", function () { state.stage = s.n; state.mode = null; save(); renderAll(); });
+      stagesEl.appendChild(chip);
+    });
+    var cur = getStage(state.stage);
+    stageNameEl.textContent = "Stage " + cur.n + " — " + cur.title;
+  }
+
+  function renderModeStats() {
+    var p = prog(state.stage);
+    var st = document.getElementById("stat-train");
+    var sg = document.getElementById("stat-grill");
+    var se = document.getElementById("stat-test");
+    st.textContent = p.trainSeen ? "✓ reviewed" : "";
+    var g = getStage(state.stage);
+    sg.textContent = (p.grillBest != null) ? ("best " + p.grillBest + "/" + g.grill.length) : "";
+    se.textContent = p.testDone ? ("done · self-rated " + (p.testAvg != null ? p.testAvg + "/4" : "")) : "";
+    var sc = document.getElementById("stat-scenario");
+    var nScen = (g.scenario || []).length;
+    sc.textContent = p.scenarioDone ? ("done · self-rated " + (p.scenarioAvg != null ? p.scenarioAvg + "/4" : ""))
+      : (nScen ? nScen + " scenarios" : "coming soon");
+    Array.prototype.forEach.call(document.querySelectorAll(".mode-btn"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-mode") === state.mode ? "true" : "false");
+    });
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll(".mode-btn"), function (b) {
+    b.addEventListener("click", function () { state.mode = b.getAttribute("data-mode"); renderPanel(); renderModeStats(); });
+  });
+
+  // ---------- TRAIN ----------
+  function renderTrain() {
+    var s = getStage(state.stage);
+    var panel = el("div", "panel");
+    var head = el("div", "panel-head");
+    head.appendChild(el("h2", null, "Train"));
+    head.appendChild(el("span", "eyebrow", "Stage " + s.n + " · " + s.title));
+    panel.appendChild(head);
+    panel.appendChild(el("p", "goal-line", "<strong>Goal:</strong> " + s.goal));
+    s.train.forEach(function (t) {
+      var item = el("div", "train-item");
+      item.appendChild(el("h3", null, t.h));
+      item.appendChild(el("p", null, t.p));
+      panel.appendChild(item);
+    });
+    var row = el("div", "btn-row");
+    var done = el("button", "btn", "Mark reviewed →");
+    done.addEventListener("click", function () { prog(s.n).trainSeen = true; save(); state.mode = "grill"; renderPanel(); renderRail(); renderModeStats(); });
+    var toGrill = el("button", "btn ghost", "Skip to Grill");
+    toGrill.addEventListener("click", function () { state.mode = "grill"; renderPanel(); renderModeStats(); });
+    row.appendChild(done); row.appendChild(toGrill);
+    panel.appendChild(row);
+    panelEl.innerHTML = ""; panelEl.appendChild(panel);
+    // mark seen on open as well (they're reading it)
+    prog(s.n).trainSeen = true; save(); renderRail();
+  }
+
+  // ---------- GRILL ----------
+  function renderGrill() {
+    var s = getStage(state.stage);
+    var items = shuffle(s.grill);
+    var idx = 0, correct = 0, answered = false;
+    var results = [];
+
+    var panel = el("div", "panel");
+    panelEl.innerHTML = ""; panelEl.appendChild(panel);
+
+    function draw() {
+      panel.innerHTML = "";
+      var head = el("div", "panel-head");
+      head.appendChild(el("h2", null, "Grill"));
+      head.appendChild(el("span", "eyebrow", "Stage " + s.n + " · " + s.title));
+      panel.appendChild(head);
+
+      // progress
+      var pr = el("div", "progress");
+      var track = el("div", "track"); var fill = el("div", "fill");
+      fill.style.width = Math.round((idx) / items.length * 100) + "%";
+      track.appendChild(fill);
+      pr.appendChild(track);
+      pr.appendChild(el("span", "count", "Q " + (idx + 1) + " / " + items.length + " · " + correct + " right"));
+      panel.appendChild(pr);
+
+      if (idx >= items.length) { drawResults(); return; }
+
+      var item = items[idx];
+      panel.appendChild(itemHeader(item));
+      panel.appendChild(el("div", "qtext", fmtQ(item.q)));
+
+      // shuffle options but track correctness
+      var opts = shuffle(item.options);
+      var optsWrap = el("div", "options");
+      answered = false;
+      var fb = el("div", "feedback");
+
+      opts.forEach(function (o, i) {
+        var btn = el("button", "opt");
+        btn.innerHTML = '<span class="key">' + KEYS[i] + '</span><span>' + o.t + '</span>';
+        btn.addEventListener("click", function () {
+          if (answered) return;
+          answered = true;
+          recordGrill(item, o);
+          // reveal all
+          Array.prototype.forEach.call(optsWrap.children, function (c, ci) {
+            c.disabled = true;
+            if (opts[ci].ok) c.classList.add("correct");
+            else c.classList.add("dim");
+          });
+          if (o.ok) {
+            btn.classList.remove("dim"); btn.classList.add("correct");
+            correct++;
+            results.push({ q: item.q, ok: true });
+            fb.className = "feedback ok show";
+            fb.innerHTML = '<div class="verdict">Correct</div><div>' + o.why + "</div>";
+          } else {
+            btn.classList.remove("dim"); btn.classList.add("chosen-wrong");
+            results.push({ q: item.q, ok: false });
+            // find correct why
+            var cor = null; for (var k = 0; k < opts.length; k++) if (opts[k].ok) cor = opts[k];
+            fb.className = "feedback no show";
+            fb.innerHTML = '<div class="verdict">Not that one</div><div><strong>Why your pick is wrong:</strong> ' + o.why + '</div>' +
+              '<ul class="why-list"><li><strong>Correct:</strong> ' + (cor ? cor.t : "") + '</li><li>' + (cor ? cor.why : "") + '</li></ul>';
+          }
+          nextBtn.disabled = false;
+          nextBtn.focus();
+        });
+        optsWrap.appendChild(btn);
+      });
+      panel.appendChild(optsWrap);
+      panel.appendChild(fb);
+
+      var row = el("div", "btn-row");
+      var quit = el("button", "btn subtle", "End");
+      quit.addEventListener("click", function () { state.mode = null; renderPanel(); });
+      var nextBtn = el("button", "btn", idx === items.length - 1 ? "See score →" : "Next →");
+      nextBtn.disabled = true;
+      nextBtn.addEventListener("click", function () { idx++; draw(); });
+      row.appendChild(quit); row.appendChild(el("span", "spacer")); row.appendChild(nextBtn);
+      panel.appendChild(row);
+    }
+
+    function drawResults() {
+      var p = prog(s.n);
+      if (p.grillBest == null || correct > p.grillBest) p.grillBest = correct;
+      p.grillLast = correct;
+      save(); renderRail(); renderModeStats();
+
+      panel.innerHTML = "";
+      var head = el("div", "panel-head");
+      head.appendChild(el("h2", null, "Grill — result"));
+      head.appendChild(el("span", "eyebrow", "Stage " + s.n));
+      panel.appendChild(head);
+
+      var res = el("div", "results");
+      res.innerHTML = '<div><span class="score-num tabnum">' + correct + '</span><span class="score-of"> / ' + items.length + '</span></div>';
+      var pct = correct / items.length;
+      var verdict = pct === 1 ? "Clean sweep. This stage is solid — move to the open-question Test."
+        : pct >= 0.75 ? "Strong. Review the ones you missed below, then try the Test."
+        : pct >= 0.5 ? "Getting there. Worth another Grill pass before testing."
+        : "Early days — revisit Train, then grill again. No such thing as a bad attempt.";
+      res.appendChild(el("p", "verdict-line", verdict));
+      panel.appendChild(res);
+
+      var bd = el("div", "breakdown");
+      results.forEach(function (r) {
+        var row = el("div", "bd-row " + (r.ok ? "r-ok" : "r-no"));
+        row.innerHTML = '<span class="bd-mark">' + (r.ok ? "✓" : "✗") + '</span><span>' + r.q + "</span>";
+        bd.appendChild(row);
+      });
+      panel.appendChild(bd);
+
+      var row = el("div", "btn-row");
+      var again = el("button", "btn", "Grill again");
+      again.addEventListener("click", function () { renderGrill(); });
+      var toTest = el("button", "btn ghost", "Go to Test →");
+      toTest.addEventListener("click", function () { state.mode = "test"; renderPanel(); renderModeStats(); });
+      row.appendChild(again); row.appendChild(toTest);
+      panel.appendChild(row);
+    }
+
+    draw();
+  }
+
+  // ---------- TEST and SCENARIO (open answers, self-marked) ----------
+  // kind: "test" uses s.open; "scenario" uses s.scenario. Same flow for both.
+  function renderTest(kind) {
+    kind = kind || "test";
+    var isScen = kind === "scenario";
+    var title = isScen ? "Scenario" : "Test";
+    var s = getStage(state.stage);
+    var items = (isScen ? s.scenario : s.open) || [];
+    var idx = 0;
+    var scores = [];
+
+    var panel = el("div", "panel");
+    panelEl.innerHTML = ""; panelEl.appendChild(panel);
+
+    if (!items.length) {
+      var h0 = el("div", "panel-head");
+      h0.appendChild(el("h2", null, title));
+      h0.appendChild(el("span", "eyebrow", "Stage " + s.n));
+      panel.appendChild(h0);
+      panel.appendChild(el("p", "empty-note", "Scenario questions for Stage " + s.n + " haven't been loaded yet. Stage 1 has them now; the rest are on the way."));
+      return;
+    }
+
+    function draw() {
+      panel.innerHTML = "";
+      var head = el("div", "panel-head");
+      head.appendChild(el("h2", null, title));
+      head.appendChild(el("span", "eyebrow", "Stage " + s.n + (isScen ? " · diagnose and respond" : " · open answer")));
+      panel.appendChild(head);
+
+      var pr = el("div", "progress");
+      var track = el("div", "track"); var fill = el("div", "fill");
+      fill.style.width = Math.round(idx / items.length * 100) + "%";
+      track.appendChild(fill); pr.appendChild(track);
+      pr.appendChild(el("span", "count", "Q " + (idx + 1) + " / " + items.length));
+      panel.appendChild(pr);
+
+      if (idx >= items.length) { drawResults(); return; }
+      var item = items[idx];
+
+      panel.appendChild(itemHeader(item));
+      panel.appendChild(el("div", "qtext", fmtQ(item.q)));
+      panel.appendChild(el("p", "hint", isScen
+        ? "Answer as you would to the student: what's happening in TMI terms, and what you'd say. Then reveal the model answer and mark yourself honestly against each point."
+        : "Answer out loud or in your head — teacher-level, in full sentences. When you're ready, reveal the model answer and mark yourself honestly against each point."));
+
+      var revealRow = el("div", "btn-row");
+      var revealBtn = el("button", "btn", "Reveal model answer & rubric");
+      revealRow.appendChild(revealBtn);
+      panel.appendChild(revealRow);
+
+      var modelWrap = el("div");
+      modelWrap.hidden = true;
+      panel.appendChild(modelWrap);
+
+      revealBtn.addEventListener("click", function () {
+        revealRow.hidden = true;
+        var mm = el("div", "open-model");
+        mm.appendChild(el("h4", null, "Model answer"));
+        mm.appendChild(el("div", null, fmtParas(item.model)));
+        modelWrap.appendChild(mm);
+
+        var rub = el("div", "rubric");
+        rub.appendChild(el("h4", null, "Did you cover these? Tap each point you hit"));
+        var hits = [];
+        item.rubric.forEach(function (r, ri) {
+          var ritem = el("div", "rubric-item");
+          ritem.innerHTML = '<span class="rubric-check">✓</span><span class="rtext">' + r + "</span>";
+          ritem.setAttribute("role", "button");
+          ritem.setAttribute("tabindex", "0");
+          hits[ri] = false;
+          function toggle() { hits[ri] = !hits[ri]; ritem.classList.toggle("hit", hits[ri]); updateScore(); }
+          ritem.addEventListener("click", toggle);
+          ritem.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+          rub.appendChild(ritem);
+        });
+        modelWrap.appendChild(rub);
+
+        var ss = el("div", "self-score");
+        ss.appendChild(el("div", "q", "How complete was your answer? (counts toward this stage's " + title + " score)"));
+        var scale = el("div", "scale");
+        var chosen = null;
+        var labels = [["0", "Missed it"], ["1", "Partial"], ["2", "Most of it"], ["3", "Solid"], ["4", "Full"]];
+        var scoreHint = el("p", "hint", "");
+        labels.forEach(function (lb) {
+          var b = el("button", null, lb[0] + " · " + lb[1]);
+          b.setAttribute("aria-pressed", "false");
+          b.addEventListener("click", function () {
+            chosen = parseInt(lb[0], 10);
+            Array.prototype.forEach.call(scale.children, function (c) { c.setAttribute("aria-pressed", "false"); });
+            b.setAttribute("aria-pressed", "true");
+            nextBtn.disabled = false;
+          });
+          scale.appendChild(b);
+        });
+        ss.appendChild(scale);
+        ss.appendChild(scoreHint);
+        modelWrap.appendChild(ss);
+
+        function updateScore() {
+          var n = 0; hits.forEach(function (h) { if (h) n++; });
+          scoreHint.textContent = "You've ticked " + n + " of " + item.rubric.length + " points. Use that to pick a rating below.";
+        }
+
+        var row2 = el("div", "btn-row");
+        var quit = el("button", "btn subtle", "End");
+        quit.addEventListener("click", function () { state.mode = null; renderPanel(); });
+        var nextBtn = el("button", "btn", idx === items.length - 1 ? "Finish →" : "Next question →");
+        nextBtn.disabled = true;
+        nextBtn.addEventListener("click", function () { scores.push(chosen); recordRating(item, chosen); idx++; draw(); });
+        row2.appendChild(quit); row2.appendChild(el("span", "spacer")); row2.appendChild(nextBtn);
+        modelWrap.appendChild(row2);
+        modelWrap.hidden = false;
+      });
+    }
+
+    function drawResults() {
+      var total = 0, max = items.length * 4;
+      scores.forEach(function (x) { total += (x || 0); });
+      var avg = Math.round((total / items.length) * 10) / 10;
+      var p = prog(s.n);
+      if (isScen) { p.scenarioDone = true; p.scenarioAvg = avg; }
+      else { p.testDone = true; p.testAvg = avg; }
+      save(); renderRail(); renderModeStats();
+
+      panel.innerHTML = "";
+      var head = el("div", "panel-head");
+      head.appendChild(el("h2", null, title + " — self-assessment"));
+      head.appendChild(el("span", "eyebrow", "Stage " + s.n));
+      panel.appendChild(head);
+
+      var res = el("div", "results");
+      res.innerHTML = '<div><span class="score-num tabnum">' + avg + '</span><span class="score-of"> / 4 average</span></div>';
+      var verdict = avg >= 3.5 ? "You can teach this stage. Strong, complete answers across the board."
+        : avg >= 2.5 ? "Good working grasp. Tighten the points you kept missing and you're teaching-ready."
+        : avg >= 1.5 ? "The shape is there but gaps remain — back to Train, then re-test."
+        : "Worth rebuilding from Train and Grill before testing again. Honest marking now saves you later.";
+      res.appendChild(el("p", "verdict-line", verdict));
+      panel.appendChild(res);
+
+      var row = el("div", "btn-row");
+      var again = el("button", "btn", title + " again");
+      again.addEventListener("click", function () { renderTest(kind); });
+      var nextStage = el("button", "btn ghost", state.stage < 6 ? "On to Stage " + (state.stage + 1) + " →" : "Back to Stage 1");
+      nextStage.addEventListener("click", function () {
+        state.stage = state.stage < 6 ? state.stage + 1 : 1; state.mode = "train"; save(); renderAll();
+      });
+      row.appendChild(again); row.appendChild(nextStage);
+      panel.appendChild(row);
+    }
+
+    draw();
+  }
+
+  // ---------- routing ----------
+  function renderPanel() {
+    if (!state.mode) { panelEl.innerHTML = ""; renderModeStats(); return; }
+    if (state.mode === "train") renderTrain();
+    else if (state.mode === "grill") renderGrill();
+    else if (state.mode === "test") renderTest("test");
+    else if (state.mode === "scenario") renderTest("scenario");
+    else if (state.mode === "feedback") renderFeedback();
+    renderModeStats();
+  }
+  function renderAll() { renderRail(); renderModeStats(); renderPanel(); }
+
+  // ---------- theme toggle ----------
+  document.getElementById("themeBtn").addEventListener("click", function () {
+    var cur = document.documentElement.getAttribute("data-theme");
+    var mqDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var isDark = cur ? cur === "dark" : mqDark;
+    var next = isDark ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem(LS_KEY + "-theme", next); } catch (e) {}
+  });
+
+  // ---------- boot ----------
+  document.getElementById("fbBtn").addEventListener("click", function () { state.mode = "feedback"; renderPanel(); });
+  mergeExtras();
+  load();
+  loadFb();
+  updateFbBtn();
+  renderAll();
+})();
+</script>
+
+</body>
+</html>
