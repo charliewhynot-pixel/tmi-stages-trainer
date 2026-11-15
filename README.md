@@ -10,3 +10,5 @@ Intended for students who own and have worked with the book.
 - `extra.js`: expanded banks (Grill, Test, Scenario), numbered by position in each stage's source file
 
 Progress and field-test feedback are saved in each visitor's own browser. Use **Export feedback** in the app to send feedback back.
+
+Live site: https://charliewhynot-pixel.github.io/tmi-stages-trainer/
