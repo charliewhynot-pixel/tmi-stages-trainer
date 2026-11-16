@@ -78,7 +78,7 @@ const STAGES = [
       {
         q: "Why treat the <em>beginning of the out-breath</em> as the start of the cycle?",
         options: [
-          { t: "It puts the natural pause mid-cycle, where the mind is less apt to wander off", ok: true, why: "The mind tends to drift after 'finishing' a breath; this keeps the pause inside the cycle." },
+          { t: "It puts the long pause mid-cycle, so the mind doesn't treat a breath as finished", ok: true, why: "The long pause comes at the end of the out-breath, and it's where attention slips away. Starting the cycle at the out-breath puts that pause in the middle, so you are still 'inside' a breath. Culadasa: the pause then 'occurs in the middle of your cycle, and is less likely to trip you up.'" },
           { t: "The out-breath carries stronger, clearer sensations to track than the in-breath", ok: false, why: "Sensation strength isn't the reason; it's about where the vulnerable pause lands." },
           { t: "It is the traditional Theravada method for counting the breath", ok: false, why: "This is a practical tip from Culadasa, not a tradition claim." },
           { t: "It makes each full breath cycle last noticeably longer than usual", ok: false, why: "You breathe naturally; the technique reframes the cycle, it doesn't lengthen it." },

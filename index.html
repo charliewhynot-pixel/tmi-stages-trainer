@@ -26,8 +26,8 @@ img{max-width:100%}
   --indigo: #3b4a6b;      /* contemplative blue, used for headings */
   --good: #4f7a4d;        /* correct */
   --good-bg: #e4efdf;
-  --bad: #a4493f;         /* incorrect */
-  --bad-bg: #f3dfdb;
+  --bad: #c2541a;         /* incorrect: orange */
+  --bad-bg: #f8e3d2;
   --focus: #b5742a;
   --r: 14px;
   --font-body: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -46,8 +46,8 @@ img{max-width:100%}
     --indigo: #9fb0d6;
     --good: #7fb47a;
     --good-bg: #223026;
-    --bad: #d98a7f;
-    --bad-bg: #3a2420;
+    --bad: #ef8f55;
+    --bad-bg: #3b2618;
     --focus: #e0a85a;
     color-scheme: dark;
   }
@@ -64,8 +64,8 @@ img{max-width:100%}
   --indigo: #9fb0d6;
   --good: #7fb47a;
   --good-bg: #223026;
-  --bad: #d98a7f;
-  --bad-bg: #3a2420;
+  --bad: #ef8f55;
+  --bad-bg: #3b2618;
   --focus: #e0a85a;
   color-scheme: dark;
 }
@@ -458,7 +458,7 @@ button { font-family: inherit; cursor: pointer; }
   function itemHeader(item) {
     var wrap = el("div");
     var meta = el("div", "item-meta");
-    meta.appendChild(el("span", "item-id", item.id));
+    meta.appendChild(el("span"));
     var fbtn = el("button", "flag-btn");
     meta.appendChild(fbtn);
     wrap.appendChild(meta);
@@ -474,7 +474,7 @@ button { font-family: inherit; cursor: pointer; }
     }
     label();
 
-    panel.appendChild(el("div", "lbl", "What's the problem? Pick any that apply, add a note if useful."));
+    panel.appendChild(el("div", "lbl", "Flagging <span class=\"item-id\">" + item.id + "</span> What's the problem? Pick any that apply, add a note if useful."));
     var row = el("div", "tagrow");
     ["wrong", "unclear", "too easy"].forEach(function (t) {
       var b = el("button", null, t);
@@ -732,7 +732,7 @@ button { font-family: inherit; cursor: pointer; }
             // find correct why
             var cor = null; for (var k = 0; k < opts.length; k++) if (opts[k].ok) cor = opts[k];
             fb.className = "feedback no show";
-            fb.innerHTML = '<div class="verdict">Not that one</div><div><strong>Why your pick is wrong:</strong> ' + o.why + '</div>' +
+            fb.innerHTML = '<div class="verdict">Not that one</div><div><strong>Why your pick is incorrect:</strong> ' + o.why + '</div>' +
               '<ul class="why-list"><li><strong>Correct:</strong> ' + (cor ? cor.t : "") + '</li><li>' + (cor ? cor.why : "") + '</li></ul>';
           }
           nextBtn.disabled = false;
