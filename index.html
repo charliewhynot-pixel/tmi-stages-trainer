@@ -411,6 +411,9 @@ button { font-family: inherit; cursor: pointer; }
       tagItems(s.n, "grill", s.grill, "old-Q");
       tagItems(s.n, "open", s.open, "old-Q");
       tagItems(s.n, "scenario", s.scenario, "old-Q");
+      // Retired items keep their IDs (so old feedback still matches) but are not shown.
+      s.grill = s.grill.filter(function (x) { return !x.retired; });
+      s.open = s.open.filter(function (x) { return !x.retired; });
     });
     if (typeof EXTRA_STAGES === "undefined") return;
     EXTRA_STAGES.forEach(function (x) {

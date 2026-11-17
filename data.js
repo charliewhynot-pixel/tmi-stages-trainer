@@ -76,6 +76,7 @@ const STAGES = [
         ],
       },
       {
+        retired: true, // superseded by S1 grill Q16
         q: "Why treat the <em>beginning of the out-breath</em> as the start of the cycle?",
         options: [
           { t: "It puts the long pause mid-cycle, so the mind doesn't treat a breath as finished", ok: true, why: "The long pause comes at the end of the out-breath, and it's where attention slips away. Starting the cycle at the out-breath puts that pause in the middle, so you are still 'inside' a breath. Culadasa: the pause then 'occurs in the middle of your cycle, and is less likely to trip you up.'" },

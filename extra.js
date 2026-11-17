@@ -1,4 +1,5 @@
-// Expanded question banks (Grill, Test, Scenario), merged into STAGES at load.
+// Expanded question banks (Grill, Test, Scenario): batch 1 then batch 2 per stage, merged into STAGES at load.
+// IDs follow position: grill Q1-10 batch 1, Q11-20 batch 2; open Q1-4 / Q5-8; scenario Q1-3 / Q4-6.
 const EXTRA_STAGES = [
  {
   "n": 1,
@@ -252,6 +253,256 @@ const EXTRA_STAGES = [
       "why": "The hindrances are real, but in this passage he traces the feeling of difficulty to judging your own performance."
      }
     ]
+   },
+   {
+    "q": "A student says her only reason for meditating is that the rest of her day goes better when she does. What does the first of the Six Points say to do with a reason like this?",
+    "options": [
+     {
+      "t": "Acknowledge and accept it as it is, without judging it good or bad",
+      "ok": true,
+      "why": "He gives this very reason as an example and says not to judge your reasons as good or bad, only to acknowledge and accept them as they are."
+     },
+     {
+      "t": "Replace it with a higher aim, since modest reasons give modest practice",
+      "ok": false,
+      "why": "He lists peace of mind, Awakening and simply feeling better as equally usable reasons, and what matters is having a clear sense of purpose."
+     },
+     {
+      "t": "Hold it very lightly, as you would a goal, so that it cannot disappoint",
+      "ok": false,
+      "why": "Holding lightly is what the third Point asks of goals, whereas motivation is something the first Point tells you to fire up."
+     },
+     {
+      "t": "Keep it in reserve, and review it only once resistance has appeared",
+      "ok": false,
+      "why": "Reminding yourself why you meditate is the first thing to do after sitting down, and it is what helps when restlessness or resistance come."
+     }
+    ]
+   },
+   {
+    "q": "Before a sit, a student knows that an argument with a friend is likely to keep coming to mind. What does the fifth of the Six Points ask her to do about it?",
+    "options": [
+     {
+      "t": "Put it firmly out of mind before starting, so that the sit begins clear",
+      "ok": false,
+      "why": "Nothing is to be suppressed in this method, and he expects that you may not be wholly successful in keeping such thoughts away."
+     },
+     {
+      "t": "Think it through to a conclusion first, so that it has no reason to return",
+      "ok": false,
+      "why": "The Point asks for a quick inventory and an intention, not for the problem to be solved, and thinking it through is the very activity the sit sets aside."
+     },
+     {
+      "t": "Acknowledge it, and resolve to set it aside if it does arise in the sit",
+      "ok": true,
+      "why": "He says to take a quick inventory, acknowledge these thoughts and emotions, and resolve to set them aside if they arise, which makes them easier to handle even when it does not wholly succeed."
+     },
+     {
+      "t": "Plan to take it as the meditation object as soon as it makes itself felt",
+      "ok": false,
+      "why": "Taking a persistent distraction as the object is a method of later Stages for what cannot be disregarded, whereas the resolve here is simply to set it aside."
+     }
+    ]
+   },
+   {
+    "q": "A new student says the Six-Point Preparation takes up a large part of her sit and asks whether that is a problem. What is Culadasa's answer?",
+    "options": [
+     {
+      "t": "Yes, so it should be kept to a minute or two, to protect the time for the breath",
+      "ok": false,
+      "why": "He sets no limit, and says the mind will be well settled by the time you have gone through the Six Points."
+     },
+     {
+      "t": "No, since the preparation is itself a form of meditation that trains attention",
+      "ok": true,
+      "why": "He says it does not matter how long you spend on it, because you are still intentionally directing and sustaining attention, and he asks how the rest of the sit went afterwards."
+     },
+     {
+      "t": "Yes, so it is best dropped once the Six Points have become second nature",
+      "ok": false,
+      "why": "He says it goes more quickly with daily use, not that it should be dropped, and that it helps establish a consistent practice free from resistance."
+     },
+     {
+      "t": "No, as long as at least half of every sit is still spent with the breath",
+      "ok": false,
+      "why": "He gives no such proportion, and elsewhere allows that for a novice the Four-Step Transition alone may take most or all of a session."
+     }
+    ]
+   },
+   {
+    "q": "Which statement about posture matches the Stage One chapter?",
+    "options": [
+     {
+      "t": "Lying down is ruled out, because a comfortable body always falls asleep",
+      "ok": false,
+      "why": "Lying down is one of the four traditional postures that he says all work, and the only caution is against being so comfortable that you fall asleep."
+     },
+     {
+      "t": "Sitting cross-legged on the floor is correct, and a chair is only a concession",
+      "ok": false,
+      "why": "He lists a chair, a bench and the floor side by side, and says to use a straight-backed chair if sitting on the floor proves difficult."
+     },
+     {
+      "t": "Full lotus is the aim, because only a locked posture keeps the mind alert",
+      "ok": false,
+      "why": "He says full lotus is stable and helps alertness but is not necessary for success, and can cause serious injury to those not flexible enough."
+     },
+     {
+      "t": "Sitting, standing, walking and lying down all work, and none is more correct",
+      "ok": true,
+      "why": "He says any comfortable position works as long as it is not so comfortable that you fall asleep, and that of the four traditional postures none is more correct than the others."
+     }
+    ]
+   },
+   {
+    "q": "In Step Three a student wants to perceive the breath sensations more clearly. Which of these does Culadasa suggest?",
+    "options": [
+     {
+      "t": "Turning the closed eyes towards the tip of the nose or the abdomen",
+      "ok": false,
+      "why": "He says not to actually direct your eyes there, because that will just create discomfort."
+     },
+     {
+      "t": "Breathing a little more fully, so that the sensations stand out better",
+      "ok": false,
+      "why": "He says to breathe naturally as a passive observer, and that you do not have to exaggerate the breath to make sensations easier to notice."
+     },
+     {
+      "t": "Imagining that you are looking at the place where the sensations occur",
+      "ok": true,
+      "why": "He says to try imagining that you are looking at the place where the sensations are occurring, letting the eyes rest wherever serves that."
+     },
+     {
+      "t": "Forming a clear mental picture of the area where the breath is felt",
+      "ok": false,
+      "why": "He says not to visualise the area in your mind, and the object throughout is the sensations and not an image of them."
+     }
+    ]
+   },
+   {
+    "q": "Why does Culadasa suggest treating the beginning of the out-breath as the start of each breath cycle when counting?",
+    "options": [
+     {
+      "t": "The pause then falls in mid-cycle, where the mind is less likely to wander",
+      "ok": true,
+      "why": "He says the mind tends to shift focus when it has completed a task, so a pause at the end of the cycle is the perfect opportunity for thoughts to wander off."
+     },
+     {
+      "t": "The out-breath is the more soothing half, so that each count begins in calm",
+      "ok": false,
+      "why": "He does note that the out-breath feels more relaxing, but the reason he gives here is where the pause falls."
+     },
+     {
+      "t": "The in-breath sensations are clearer, so they are best saved until last",
+      "ok": false,
+      "why": "He makes no such claim, and the alternative he offers is to say the number during the pause so as to fill the gap."
+     },
+     {
+      "t": "Counting on the out-breath slows the breathing, which settles the mind",
+      "ok": false,
+      "why": "The breath is to be observed passively and not controlled, and the count is there to stabilise attention."
+     }
+    ]
+   },
+   {
+    "q": "Once attention is at the nose in Step Four, what should it do as the air moves in and out?",
+    "options": [
+     {
+      "t": "Rest on the tip of the nose alone, since that one point is the object",
+      "ok": false,
+      "why": "The area may be just inside the nostrils, at the tip or on the upper lip, from the size of a pencil eraser to two inches across, and may differ between the in-breath and the out-breath."
+     },
+     {
+      "t": "Travel with the air into the chest and back, so that no part is missed",
+      "ok": false,
+      "why": "He says in so many words not to try to follow the air as it moves into the body or out of your nose."
+     },
+     {
+      "t": "Range between the nose, chest and abdomen, wherever the breath is felt",
+      "ok": false,
+      "why": "Ranging freely among breath sensations anywhere in the body is Step Three, and Step Four restricts attention to the nose."
+     },
+     {
+      "t": "Stay where the sensations are clearest and observe the air passing over it",
+      "ok": true,
+      "why": "He says to keep attention on the area where the sensations are clearest and not to follow the air into the body or out of the nose, because the object is the sensations and not the breath itself."
+     }
+    ]
+   },
+   {
+    "q": "A student finds one long sit hard and prefers two sits of twenty minutes each day. What is Culadasa's position?",
+    "options": [
+     {
+      "t": "It is better, since frequent short sits form the habit more quickly",
+      "ok": false,
+      "why": "He allows it as easier for some people without calling it better, and names a longer daily sit as the solid basis for practice."
+     },
+     {
+      "t": "It is fine at first, but he asks for at least one 45-minute sit a day",
+      "ok": true,
+      "why": "He says two shorter meditations are fine at first but strongly recommends at least one daily 45-minute sit as a minimum, reached by gradual increases."
+     },
+     {
+      "t": "It is equivalent, since what matters is the total time spent each day",
+      "ok": false,
+      "why": "If only the total mattered he would not single out one 45-minute sit as the minimum."
+     },
+     {
+      "t": "It is unhelpful, since a sit of under 45 minutes trains very little",
+      "ok": false,
+      "why": "He himself suggests starting with fifteen or twenty minutes a day, and says it is always best to work up gradually."
+     }
+    ]
+   },
+   {
+    "q": "A student sits each morning with a friend who keeps cancelling and seems half-hearted. What does Culadasa advise?",
+    "options": [
+     {
+      "t": "Sit only on the days they come, so that the practice stays a shared one",
+      "ok": false,
+      "why": "That would tie your practice to someone else's wavering intention, when mastery of this Stage means never missing a daily session."
+     },
+     {
+      "t": "Carry on, since your steady commitment will in time strengthen theirs",
+      "ok": false,
+      "why": "Mutual reinforcement is what he hopes for from a partner, but where only one intention is established he says to end it."
+     },
+     {
+      "t": "End the arrangement, since your intention is established and theirs is not",
+      "ok": true,
+      "why": "He says that if you have clearly established your intention but your practice partner has not, it is better to end the practice arrangement."
+     },
+     {
+      "t": "Join a group in its place, since groups meet daily and need no partner",
+      "ok": false,
+      "why": "He says groups provide especially strong support but usually do not meet every day."
+     }
+    ]
+   },
+   {
+    "q": "Where does Culadasa say 'the only place for great effort in meditation' lies?",
+    "options": [
+     {
+      "t": "In adjusting your schedule so that more time goes to practice",
+      "ok": true,
+      "why": "He says the only place for great effort is in adjusting your schedule to actually spend more time practicing, since small measures repeated consistently produce huge results."
+     },
+     {
+      "t": "In holding attention on the breath against the pull of distraction",
+      "ok": false,
+      "why": "On the cushion he asks for joyful effort and the repetition of simple tasks, and calls a striving attitude the greatest impediment to progress."
+     },
+     {
+      "t": "In staying still through the discomforts of the first long sits",
+      "ok": false,
+      "why": "He asks you to stay as still as you can, but also to minimise pain and to be patient, which is not a call for great effort."
+     },
+     {
+      "t": "In the first few weeks, until sitting every day has become a habit",
+      "ok": false,
+      "why": "He says force and willpower will not produce a sustainable practice, and that habits come from working on motivation and intention."
+     }
+    ]
    }
   ],
   "open": [
@@ -298,6 +549,50 @@ const EXTRA_STAGES = [
      "With the student, affirms first, then asks diagnostic questions (clarity of the sensations during the count; what happens when the count is dropped) before judging their Stage.",
      "Separates Stage diagnosis from the count, citing the Overview's cautions about overestimating ability and getting ahead of what is actually happening, and notes that allowing longer counts departs from Culadasa's rule."
     ]
+   },
+   {
+    "q": "The Six-Point Preparation tells the meditator to set goals for each sit and, immediately afterwards, to beware of expectations.\n• Reconcile the two instructions.\n• Explain what Culadasa says about plateaus and bad days, and trace how judging one's practice leads to missed or wasted sits.\n• A student rates every sit out of ten in a notebook and is discouraged by the trend. Say what you would tell them.",
+    "model": "Goals and expectations. A goal, as he uses the word, gives direction to one sit: what you will work on today, chosen in the light of recent sits and kept reasonable. His examples for a beginner are small ones, such as not giving up and daydreaming, or staying patient when the mind wanders or drowsiness comes. An expectation is a view about where you 'should be', and it sets you up for disappointment. The two are reconciled by how the goal is held. He says to practise diligently towards the goals you set and to hold them very lightly, to find enjoyment in every meditation no matter what happens, and to savour any achievement. Simply sitting down is an accomplishment. So the goal steers the effort, and the result is not used to grade the sit. That last sentence is my summary of his three resolves.\n\nPlateaus and bad days. Some sits are easy, and he calls that the fruit of previous practice. But obvious progress should not be expected each time. There will be plateaus where nothing seems to change for days or weeks, and today's attention or mindfulness may be weaker than it was weeks or even months ago. He calls that normal and says to stay relaxed, to keep the effort diligent yet joyful, and to remember that there is no such thing as a bad meditation.\n\nFrom judging to lost sits. He gives the chain in two places. In the fourth Point: judging the quality of your practice can lead to doubt, and doubt gives rise to procrastination about sitting down and to resistance once seated. In the passage on attitude: calling the practice difficult means you are dissatisfied with your performance and have started judging; expectations have not been met; doubt about ever succeeding saps motivation. Under self-doubt he adds the link that closes the loop: without regular practice, improvement is slow, which creates more doubt.\n\nThe notebook. I would start with what the notebook shows about the student: they care, they sit, and they pay attention to their practice. Then I would say that a score out of ten is a judgment passed after every sit, which is the first link of his chain, and that a falling trend over a few weeks is what he describes as normal. He does want you to know your practice. The second Point asks you to think about recent sits when choosing a goal, and he recommends counting partly for the information it gives about the state of the mind. So I would not ask them to stop observing. I would ask them to change what they record: the goal they set, what they noticed, and one thing they enjoyed, with no number. The suggestion about the record is my own advice. The book says nothing about journals.",
+    "rubric": [
+     "Distinguishes a goal (direction for this sit, reasonable, chosen in the light of recent sits; simple examples such as not giving up and daydreaming) from an expectation (a view of where one 'should be' that sets up disappointment).",
+     "Reconciles them by how goals are held: practise diligently towards them, hold them very lightly, find enjoyment in every sit whatever happens, savour any achievement; sitting down is itself an accomplishment.",
+     "Gives his account of plateaus: easy sits are the fruit of previous practice; no obvious progress each time; days or weeks without change; today may be weaker than weeks or months ago; this is normal, and there is no 'bad' meditation.",
+     "Traces the chain: judging the quality of practice leads to doubt, and doubt to procrastination about sitting down and resistance on the cushion; unmet expectations sap motivation; irregular practice slows improvement and feeds more doubt.",
+     "Responds to the student by crediting the care first, naming the score as a judgment, keeping observation (recent sits inform goals; counting gives information) while changing what is recorded; marks the advice about the notebook as the answerer's own."
+    ]
+   },
+   {
+    "q": "Culadasa names four major obstacles to establishing a practice.\n• Distinguish them, and say which one each of these students is describing: 'I'll start again once this project is finished'; 'I sit every day but mostly drift'; 'There just aren't enough hours'; 'I don't think I have the right kind of mind'.\n• Give the antidote he offers for each.\n• Explain why he says diligence 'helps start you on your way' but is not the real solution, and what is.",
+    "model": "The four. Time: finding room for practice once early enthusiasm fades and other demands press. Procrastination: putting off sitting down, with 'after I take care of such-and-such' or 'tomorrow'. Reluctance and resistance: sitting down but spending the time daydreaming, fantasising or planning in place of meditating. He draws that line himself: procrastination keeps us from sitting down, and reluctance and resistance waste the time once we are seated. Self-doubt: concluding from an unruly mind that something inherent is missing, whether discipline, intelligence or being 'spiritual' enough.\n\nThe four students. 'Once this project is finished' is procrastination about sitting down, almost in his own words. 'I sit every day but mostly drift' needs a question before a label. If the drifting is chosen or indulged, it is reluctance and resistance. If the student is trying and the mind simply wanders, it is the ordinary mind-wandering of Stage Two. 'Not enough hours' is the obstacle of time. 'Not the right kind of mind' is self-doubt, and he says the real obstacle there is the doubt and not the mind.\n\nThe antidotes. For time: make the time, as you would for anything else you are committed to. He says he knows no one who has established a practice in spare time, and that without a regular schedule you most likely will not meditate. For procrastination about sitting down: make practice a priority, since otherwise there will always be something more important to do first. He adds that regular practice leaves you feeling that you have more time, not less. For reluctance and resistance: inspiration and motivation, taken from somewhere else at first and supplied by your own success later. For self-doubt: trust and perseverance, which again depend on inspiration and motivation. For procrastination and resistance together he gives one more, to just do it, because nothing works as quickly or effectively as diligence.\n\nWhy diligence is only the start. Diligence gets the person onto the cushion and keeps them at the task. The real solution, he says, is learning to enjoy the practice: savouring feelings of physical comfort, cultivating the pleasure that can be found in quietness, and taking satisfaction in having sat down at all. He contrasts this with approaching meditation like medicine that tastes bad but is supposed to be good for you. His claim is that someone at ease and happy will be more successful than someone tense and straining, and that once the practice is enjoyed the rest falls into place: doubt disappears, time is found, and procrastination and resistance vanish.\n\nA caution of my own. That is a statement about what enjoyment does once it is present. With a student who is not enjoying anything yet, the practical steps and inspiration from outside have to carry the first weeks, and I would not promise the enjoyment on a timetable.",
+    "rubric": [
+     "Distinguishes the four: time; procrastination (putting off sitting down); reluctance and resistance (seated, but daydreaming, fantasising or planning); self-doubt; and cites his own line between the second and third.",
+     "Matches the statements: the project is procrastination about sitting down; the hours are time; the mind is self-doubt; and for 'mostly drift' asks whether it is chosen (reluctance and resistance) or involuntary (Stage Two's mind-wandering) before labelling.",
+     "Gives the antidotes: make the time and keep a regular schedule; make practice a priority; inspiration and motivation (from outside first, then from one's own success); trust and perseverance; and 'just do it' for procrastination and resistance.",
+     "Explains the two layers: diligence starts you, but the real solution is learning to enjoy practice (savouring comfort, the pleasure of quietness, satisfaction in having sat), in contrast to taking it like medicine; ease and happiness succeed where tension and straining do not.",
+     "States his claim that enjoyment makes the other obstacles fall away, and marks any caution about students who are not yet enjoying practice as the answerer's own."
+    ]
+   },
+   {
+    "q": "Explain self-doubt as an obstacle at Stage One, using the Stage One chapter and the Second Interlude's account of Doubt.\n• Say what Doubt is for, and when it becomes a hindrance.\n• Give the remedies, and the specific assurances Culadasa offers about an overactive mind, intelligence and self-discipline.\n• Explain why self-doubt confirms itself, and what finally ends it.",
+    "model": "What Doubt is for. In the Second Interlude, Doubt is healthy and valuable when it moves us to question, investigate and try things for ourselves. It protects against blind acceptance and against wasting time and resources. It begins as an unconscious process that focuses on negative results and possible negative outcomes, and when the feeling is strong enough it compels us to re-evaluate an activity or to abandon it. Its purpose, he says, is to challenge the strength of our motivation and invite us to test what we are doing with reason and logic.\n\nWhen it becomes a hindrance. When we respond only to the emotional uncertainty and do not re-evaluate rationally. It then keeps us from making the effort needed to validate something through our own experience. He calls this form a perverse faith in failure that saps the will and undermines intentions, and he gives the Stage One case directly: doubt your ability to succeed in meditation, and your motivation fades and you do not sit down.\n\nThe form it takes at Stage One. The chapter describes the moment. You discover that you cannot control your unruly mind and conclude that you are different, lack self-discipline, or are not smart or 'spiritual' enough, especially when you compare yourself with what others seem to be achieving. He says the real obstacle is the self-doubt and not any inherent lack.\n\nRemedies. The immediate remedy is to use reason to envision the possibility of long-term success, against the short-term emotional pressure. The chapter's 'basic antidote' is trust and perseverance, which need inspiration and motivation. The ultimate remedy is the trust and confidence that come from success, and success depends on persistent effort.\n\nThe three assurances. On an active mind: some people are calmer by nature, but very few have minds so active that they cannot meditate. If your mind is more active than average, the first three Stages will be the most challenging, and the later ones come more easily. On intelligence: it is not that important, because meditation is about attention and awareness, and anyone who can read the book and follow the instructions has more than enough. On self-discipline: if you can exercise regularly or go to work or school, you can establish a practice. The key factor is not discipline but motivation and habit, so someone who questions their discipline should re-examine their motivation.\n\nWhy it confirms itself, and what ends it. Doubt weakens the motivation to sit; without regular practice it takes a long time to see improvement; and the lack of improvement creates more doubt. The way out runs through the same loop in the other direction. Consistent effort develops the meditation factor of sustained attention, you learn that you are capable of sustaining attention and getting results, and success leads to trust in the practice and in yourself. He says Doubt is then completely overcome. He also says that even serious attention deficit disorder does not prevent people from reaching the highest goals. I would pass that on to a student as his assurance and not as a clinical claim.",
+    "rubric": [
+     "States the function of Doubt (it prompts questioning and testing, protects against blind acceptance and wasted effort, challenges the strength of motivation) and that it begins as an unconscious focus on negative outcomes.",
+     "States when it is a hindrance: responding only to the emotional uncertainty without rational re-evaluation, so that the effort is never made; 'a perverse faith in failure'; at Stage One, motivation fades and you do not sit down.",
+     "Gives the remedies: reason used to envision long-term success; trust and perseverance, supported by inspiration and motivation; ultimately the trust and confidence that come from success through persistent effort.",
+     "Gives the three assurances: very few minds are too active to meditate, and for them the first three Stages are the hardest; intellectual ability is not that important; the key factor is motivation and habit, not discipline.",
+     "Explains the loop (doubt, less practice, slow improvement, more doubt) and its reversal (consistent effort, sustained attention, success, trust), and treats the statement about attention deficit disorder as his assurance, not as a clinical claim."
+    ]
+   },
+   {
+    "q": "Explain Culadasa's choice of meditation object.\n• Say what 'the breath' means as a meditation object, and what it does not mean.\n• Give the qualities that make the breath suitable, and what each one serves.\n• Explain why he recommends the nose over the abdomen, and what you would tell a student who already practises with a mantra or with body scanning.",
+    "model": "What it means. A meditation object is something you intentionally choose as the focus of attention. When he says 'the breath' he means the sensations produced by breathing, and not a visualisation or an idea of the breath going in and out. In the chest or abdomen these are sensations of movement, pressure and touch. At the nose they are sensations of temperature, pressure and air moving on the skin: around the tip, on the rim, inside the nostrils, or on the upper lip. Two instructions follow. Do not follow the air into the body or out of the nose; observe the sensations as the air passes over one area. And breathe naturally, as a passive observer, without exaggerating the breath to make it easier to feel.\n\nWhy the breath. He gives several qualities, and each serves something different. It is always with you, so practice is possible anywhere, every day. It lets you be a completely passive observer, with nothing to repeat, generate or look at. It becomes fainter as concentration deepens, so the details attended to grow ever more subtle, which suits the development of powerful attention. Its sensations change continuously, moment by moment, which is conducive to Insight into impermanence. And it repeats the same pattern over and over, which makes it suitable as a fixed object for entering meditative absorption. For these reasons the breath is the basis for śamatha-vipassanā, for dry Insight practice and for jhāna.\n\nWhy the nose. He grants that beginners often find the large movements of the abdomen easier to follow at first. His objection concerns what happens later: when the breath becomes very shallow, the coarser sensitivity of the abdomen makes the sensations harder to detect, and the nerve endings at the nose are much more sensitive. Within that, the choice is free: whatever area around the nostrils works best for you. The object is the nose most often, but not always.\n\nThe student with another method. I would tell them that nothing in the Ten Stages requires them to abandon it. He says the same principles and methods can be used with a visualised object, a mantra or loving-kindness, and alongside Mahasi-style noting, the U Ba Khin and Goenka methods, and Shinzen Young's system, because each of them meets the same problems of mind-wandering, distraction and dullness. He recommends counting as a way into the sit whatever the object. And he adds one qualification, which I would pass on as his: not every meditation object leads to the final Stages as surely as the sensations of the breath. He does not say which objects fall short, or at what point, so I would not pretend to know. Whether to ask such a student to switch is a judgment the book leaves to the teacher.",
+    "rubric": [
+     "Defines the object as the sensations produced by breathing (movement, pressure and touch in chest or abdomen; temperature, pressure and moving air at the nose), not a visualisation or an idea of the breath.",
+     "Draws the practical consequences: do not follow the air in or out; observe the sensations at one area; breathe naturally as a passive observer without exaggerating.",
+     "Gives the qualities and what each serves: always available; passive observation; growing fainter (powerful attention); continuous change (Insight into impermanence); a repeating pattern (a fixed object for absorption).",
+     "Explains the nose: the abdomen's large movements are easier at first, but its coarser sensitivity fails when the breath is shallow, while the nerve endings at the nose are much more sensitive; any area around the nostrils may be chosen.",
+     "Tells the student with another method that the same principles apply (he names several methods) and that counting still helps, passes on his qualification that not every object leads to the final Stages as surely, and notes that he does not say which fall short."
+    ]
    }
   ],
   "scenario": [
@@ -332,6 +627,39 @@ const EXTRA_STAGES = [
      "Keeps what is right in the student's instinct: practice has to be made a priority and scheduled, and the one place for great effort is adjusting your schedule, so firmness goes into the timetable and not into self-punishment.",
      "Corrects the dosage: consistency before duration, with short daily sits (fifteen to twenty minutes) lengthened in five-minute steps towards forty-five, a fixed time or place in the routine, realism about sleep, and no compensatory long sits.",
      "Rebuilds motivation and enjoyment, and notes the weighting: teachers differ on how hard to press 'make it a priority' versus easing the load, and some would let the student test the strict plan and learn from the result."
+    ]
+   },
+   {
+    "q": "A student three weeks in reports: 'I work full time and have two small children. The only slot I've found is ten at night, in bed, and I'm asleep within minutes. My partner sighs whenever I mention it, and honestly it feels selfish to take that time for myself. I manage about ten minutes, three nights a week. Should I wait until life is calmer?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, the effort deserves saying out loud. With a job and two small children this student has found a slot at all and has kept coming back to it for three weeks. Culadasa says that simply sitting down to practise is an accomplishment.\n\nSecond, the obstacle is the one he calls the first big challenge, time, and it is behaving as he describes: early enthusiasm carried the first sits, and now the pressure of other demands is winning. His antidote is blunt. He knows no one who has established a practice in spare time, spare time is rare, and you have to make the time, as you would for anything else you are committed to. 'Wait until life is calmer' is the usual form of procrastination about sitting down: I'll have more time later.\n\nThird, the slot is working against them. He says beginners often forget to take their mental energy and clarity into account, and to choose a time when you are least agitated or tired. Ten at night after such a day is the opposite. Bed adds to it: any comfortable position works, he says, as long as it is not so comfortable that you fall asleep. So the sleep is not a failure of the meditator. That it is ordinary fatigue is my reading of the report, and it is the obvious one.\n\nFourth, the guilt. He addresses it directly. Meditation time is your time, set aside for yourself, and given how much it will improve your relationships with others it should not be regarded as selfish; it ultimately benefits everyone you come into contact with. He also predicts the sighing: family who are not used to you being unavailable may resist at first, will learn to adjust, and may even join in.\n\nWhat I don't know. Whether mornings are possible at all with these children. What the partner actually objects to. How much sleep the student is getting, since his own suggestion of getting up earlier only works, he says, if you go to bed earlier.\n\nResponse. Start with the credit, then answer the question: no, don't wait. Then work the problem with them. Look for a slot when they are awake. He ranks early morning first, then late afternoon or early evening, and says to avoid sitting straight after a meal. If no clock time will hold, tie the sit to a fixed point in the daily routine. Sit up, and out of bed. Keep it short and daily: fifteen or twenty minutes is where he starts everyone, lengthened five minutes at a time. Ask them to tell the partner plainly when they will be unavailable, and why it matters to them. I would hold back his 45-minute minimum for now. He gives it as a strong recommendation to work up to, and in this household I would treat a short daily sit as the whole goal for some time. That ordering is my judgment.",
+    "rubric": [
+     "Credits the persistence first: finding and keeping a slot under these conditions is an accomplishment, and sitting down at all counts.",
+     "Names the obstacle as time, with his antidote (make the time; no one builds a practice in spare time; make it a priority), and recognises 'wait until life is calmer' as procrastination about sitting down.",
+     "Identifies the slot and the setting as the problem: choose the time of least tiredness and agitation; a position so comfortable that you fall asleep does not work; marks the reading of the sleep as ordinary fatigue as an inference.",
+     "Answers the guilt and the partner from the text: this time is not selfish and benefits everyone; family resistance is expected and eases; others should be told when you are unavailable.",
+     "Gives a workable plan (a wakeful slot or a fixed point in the routine, sitting up, fifteen to twenty minutes daily, gradual increases) and notes the weighting: teachers differ on how soon to press his 45-minute minimum, and on how hard to press 'make it a priority' on a parent of small children; he states the principle and does not discuss such cases."
+    ]
+   },
+   {
+    "q": "A student two months in reports: 'I can't stay still. My nose itches, so I scratch it. Then my foot goes numb, so I shift. Then my back aches, so I straighten up. Each fix works for about a minute and then something else starts. I've tried a chair, a bench and two different cushions. By the end I've moved thirty times and I'm irritated with myself. Is my body just not built for this?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, two things are going right. The student sits through the whole period in spite of the irritation, and the experimenting with chair, bench and cushions is what Culadasa recommends: try different postures before deciding, and fine-tune with supports. I would say both before anything else.\n\nSecond, what they have discovered is something he states as a fact about sitting. You cannot overcome all physical discomfort by adjusting your posture. He predicts their exact experience: you move, the thing that made you move disappears, and another irritating sensation, possibly more intense, soon takes its place. So the endless sequence is not evidence about this particular body. He also says that a beginner's body is unaccustomed to staying still for long, and that some aches and pains come merely from not moving.\n\nThird, the instruction has two halves, and the student has been working on only the first. Eliminate what you can: any comfortable position, as little strain or pain as possible, and no aggravating of old injuries. Then accept what remains as part of your practice and stay as still as you can. When something arises, always wait as long as you can before moving. If you do move, do not stop meditating: move slowly and deliberately, with full attention on the sensations as you shift.\n\nFourth, the irritation. Each discomfort is being treated as a problem to be fixed at once, so the sit has become a series of repairs. I infer that the restlessness is in the mind as much as in the body. The Four-Step Transition says something close: when you feel restless or contentment fades, thoughts and emotions begin to stir, and the remedy offered there is to widen out, seek what is pleasant in the present, and re-establish contentment.\n\nWhat I don't know. Whether any of this is pain from an injury, or from a posture that is wrong for them, which would change the advice. Whether the numbness clears quickly on standing. How long the sits are.\n\nResponse. Reassure first: nothing in this report says their body is unsuited, and he says sitting gets easier with practice, eventually for hours without discomfort. Then settle the posture question once, with the most comfortable arrangement of those they have tried, and stop changing equipment. Give them his rule as an experiment for a week: when the itch or the ache comes, wait as long as you can and watch what it does. If you must move, do it slowly and attend to the movement. Tell them to expect his prediction to come true, and to be curious about it; he says that observing discomforts teaches you how body and mind interact. Spend longer in Step Two at the start of each sit, releasing tension and looking for pleasant sensations, with the body, in his image, like a lump of soft clay. I would not ask for perfect stillness. His words are 'as still as you can'.",
+    "rubric": [
+     "Credits what is right: sitting through the whole period, and experimenting with postures and supports, which he recommends.",
+     "Normalises with his statement that discomfort cannot all be overcome by adjusting posture, and his prediction that after moving another irritating sensation soon takes its place; a beginner's body is unaccustomed to stillness.",
+     "Gives both halves of the instruction: eliminate what you can (comfort, minimal strain, no aggravating of injuries), then accept what remains as part of practice, stay as still as you can, wait as long as you can, and move slowly with full attention without stopping the meditation.",
+     "Marks as inference that the restlessness is mental as much as physical, links it to the Four-Step Transition's advice on restlessness, and asks about injury, numbness and the length of the sits.",
+     "Prescribes a settled posture and a week's experiment in waiting and watching, with more time relaxing in Step Two, and notes the weighting: teachers differ on how firmly to ask a beginner for stillness, and some would shorten the sits or alternate with walking first; the chapter says 'as still as you can' and leaves the degree to judgment."
+    ]
+   },
+   {
+    "q": "A student who enrolled five weeks ago reports: 'I want to do this properly, so I've been getting ready. I've read the first half of the book twice, bought a bench and a timer, cleared a corner and set up a small altar, and I'm still working out the ideal time of day. I've only actually sat three times, because I don't want to build bad habits before I understand the method. When should I start?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, almost everything this student has done is something the chapter recommends, and I would say so. A regular place just for meditating, a seat that suits the body, a timer, an altar whose purpose is to inspire and motivate, reading to stay inspired, and a considered time of day are all among his practical steps. The care is real.\n\nSecond, the pattern is still procrastination about sitting down, in a respectable form. His description of it is saying 'I'll meditate after I take care of such-and-such', and here the such-and-such is preparing to meditate. The Second Interlude explains why it holds: the power of laziness lies in procrastination, because before we start an activity we can question its value and suggest alternatives that seem more appealing, and once we start it is easier to continue. Calling this student lazy would be unkind and wrong about their energy, so I would keep to his description of the mechanism. That this is what is driving the delay is my inference, and I would ask before saying it.\n\nThird, the stated reason does not survive the text. The basic practice, he says, is quite simple: direct attention to the object, and whenever it slips, bring it back. He calls meditation a series of simple tasks, easy to perform, that only need to be repeated until they bear fruit. The practical steps are presented alongside just doing it, not ahead of it. And the thing from which everything else in the Ten Stages flows is, in his words, the simple act of consistently sitting down and placing attention on the meditation object, day after day.\n\nFourth, there may be expectation and doubt underneath. 'Properly' and 'bad habits' suggest an ideal image of the sit, which is what he says people are really struggling with, and perhaps a fear of meeting an unruly mind. That is a guess, and I would hold it as one.\n\nWhat I don't know. How the three sits went, and whether something in them was discouraging. Whether the reading has left a specific confusion that could be cleared up in a minute.\n\nResponse. Appreciate the preparation, and tell them it is finished. Then answer the question literally: today. Fifteen or twenty minutes, in the corner they have made, at whatever time is available, with the Six Points and the Four Steps as written. The ideal time of day is found by sitting, since his criterion is when you are least agitated or tired, and that can only be learned by trying. On bad habits, the one habit this Stage is about is sitting daily, and each day spent preparing is a day of practising not sitting. That is my own way of putting it, and I would say it gently. I would give them his line that a good meditation is one you did, and ask for a report after seven consecutive days. Keep the reading, which he recommends, as support for the sitting and not as its entry requirement.",
+    "rubric": [
+     "Credits the preparation as things the chapter recommends: a dedicated place, a suitable seat, a timer, an altar to inspire and motivate, reading for inspiration, a considered time of day.",
+     "Identifies the pattern as procrastination about sitting down ('after I take care of such-and-such'), explains its hold with the Second Interlude (the power of laziness lies before a task begins), avoids calling the student lazy, and marks the diagnosis as an inference to be checked by asking.",
+     "Answers the stated reason from the text: the basic practice is simple; meditation is a series of simple tasks repeated; the practical steps come alongside just doing it; everything flows from consistently sitting down day after day.",
+     "Holds expectation and doubt as possible undercurrents and labels them a guess; asks how the three sits went and whether a specific confusion remains.",
+     "Prescribes starting today with a short daily sit using the preparation and transition as written, and notes the weighting: teachers differ on whether to name the avoidance directly or simply to set a start date, and on whether more study before practice ever helps; the chapter favours sitting and also recommends reading."
     ]
    }
   ]
@@ -588,6 +916,256 @@ const EXTRA_STAGES = [
       "why": "His definition rules out forcing the mind to do what it can't and specifies a firm, intentional resolve to release whatever has captured attention."
      }
     ]
+   },
+   {
+    "q": "A new meditator says that since she started sitting, her mind seems wilder than it used to be. What does Culadasa say is going on?",
+    "options": [
+     {
+      "t": "Sitting still stirs up an agitation that was not there before she began",
+      "ok": false,
+      "why": "He attributes the impression to noticing, and says mind-wandering is so much a part of normal experience that we rarely notice it."
+     },
+     {
+      "t": "She is only now becoming aware of what has always gone on in her own mind",
+      "ok": true,
+      "why": "He says you may feel that meditation is making your mind more agitated, but in reality you are just becoming aware of what has always been going on, and that recognising this is an important first step."
+     },
+     {
+      "t": "Her effort to focus is provoking the mind into pushing back against her",
+      "ok": false,
+      "why": "Forcing does breed conflict, but his explanation of this common first impression is simply that the mind's usual activity has become visible."
+     },
+     {
+      "t": "Buried material is surfacing now that her mind has started to grow calm",
+      "ok": false,
+      "why": "Material welling up from the unconscious is described at Stage Four, once everyday distractions have fallen away."
+     }
+    ]
+   },
+   {
+    "q": "The untrained mind produces distractions that lead to forgetting, which results in mind-wandering. Which part of this sequence does Stage Two set out to work on?",
+    "options": [
+     {
+      "t": "All three at once, since ending distraction prevents everything after it",
+      "ok": false,
+      "why": "He says each part of the problem is addressed sequentially, with mind-wandering first."
+     },
+     {
+      "t": "Forgetting, by catching each distraction before the breath has been lost",
+      "ok": false,
+      "why": "Intervening before the breath is lost is the goal of Stage Three, when introspective awareness has grown strong enough to do it."
+     },
+     {
+      "t": "Distraction, by training attention to stop alternating away from the breath",
+      "ok": false,
+      "why": "Distractions are taken on in Stages Four to Six, and at this Stage attention is expected to alternate."
+     },
+     {
+      "t": "Mind-wandering alone, the last event, by making the waking up come sooner",
+      "ok": true,
+      "why": "The Overview says that in Stage Two you only work with the last event, mind-wandering, and the chapter says forgetting is discussed here but not dealt with as an obstacle until Stage Three."
+     }
+    ]
+   },
+   {
+    "q": "Culadasa describes three ways in which attention moves spontaneously. Which does he say is apparent only to an experienced meditator, and why?",
+    "options": [
+     {
+      "t": "Alternating, since rapid shifts feel like attending to two things at once",
+      "ok": true,
+      "why": "He calls alternating attention a subtler kind of scattered attention, because the focus moves so swiftly among objects that there is an illusion of paying attention to two or more things simultaneously."
+     },
+     {
+      "t": "Scanning, since the search for something of interest goes on unconsciously",
+      "ok": false,
+      "why": "Scanning is the focus moving from object to object in search of something of interest, and he does not say it is hidden from beginners."
+     },
+     {
+      "t": "Getting captured, since a capture is only ever discovered after the event",
+      "ok": false,
+      "why": "He says getting captured is the movement you are probably familiar with, as when a siren pulls attention away from a book."
+     },
+     {
+      "t": "Mind-wandering, since the one who wanders does not know it is happening",
+      "ok": false,
+      "why": "Mind-wandering is what follows forgetting and is not one of his three kinds of spontaneous movement, which are scanning, getting captured and alternating."
+     }
+    ]
+   },
+   {
+    "q": "Why does Culadasa call sustaining attention 'trickier' than directing it?",
+    "options": [
+     {
+      "t": "Directing uses attention, but sustaining depends on peripheral awareness alone",
+      "ok": false,
+      "why": "Peripheral awareness helps by noticing potential distractions, but the mechanism he describes here is an unconscious weighing of importance and interest."
+     },
+     {
+      "t": "Directing takes a moment, but sustaining takes more willpower than beginners have",
+      "ok": false,
+      "why": "He says we cannot use our will to control how long we remain focused on one thing, so more willpower is not what is lacking."
+     },
+     {
+      "t": "Directing is voluntary, but how long attention stays put is decided unconsciously",
+      "ok": true,
+      "why": "He says it is possible to voluntarily direct attention, but the part of the mind that sustains it for more than a few moments works entirely unconsciously, weighing the object's importance against other possible objects."
+     },
+     {
+      "t": "Directing is innate, but sustaining is a new skill with no basis in ordinary life",
+      "ok": false,
+      "why": "He says all the mental skills used in meditation are innate abilities, and that stable attention is an inborn capacity that is simply used less."
+     }
+    ]
+   },
+   {
+    "q": "What does Culadasa say about stable attention from an evolutionary point of view?",
+    "options": [
+     {
+      "t": "It is a learned skill with no natural basis, which is why it takes training",
+      "ok": false,
+      "why": "He says we all have the inherent capacity, and that meditation trains abilities that are already there."
+     },
+     {
+      "t": "It is an inborn capacity, though we are less strongly disposed to use it",
+      "ok": true,
+      "why": "He says stable attention is useful for survival too, so evolution has not selected against it, and that meditation strengthens this inborn but less-used capacity."
+     },
+     {
+      "t": "It was selected against, since a fixed mind cannot keep watch for danger",
+      "ok": false,
+      "why": "He says selection favoured moving attention more strongly, and adds in so many words that evolution has not selected against stable attention."
+     },
+     {
+      "t": "It is the mind's natural resting state, which busy modern life has eroded",
+      "ok": false,
+      "why": "He says spontaneously moving attention is the stronger predisposition and a normal, necessary part of everyday life, not a modern corruption."
+     }
+    ]
+   },
+   {
+    "q": "Impatience and mind-wandering are rooted in several of the same hindrances. According to the Second Interlude, what sets impatience apart?",
+    "options": [
+     {
+      "t": "It appears only once mind-wandering is overcome, at the start of Stage Three",
+      "ok": false,
+      "why": "Impatience is listed among the obstacles of Stage Two itself, and he says it is inevitable fairly soon."
+     },
+     {
+      "t": "It comes from Laziness and Lethargy, which play no part in mind-wandering",
+      "ok": false,
+      "why": "The hindrances he names for impatience are Aversion, Worldly Desire and Doubt, and Laziness and Lethargy is not among them."
+     },
+     {
+      "t": "It shows up as a disruptive emotion, not as a distracting thought or memory",
+      "ok": true,
+      "why": "He says impatience is rooted in Aversion, Worldly Desire and Doubt like distraction and mind-wandering, and that the difference is that it manifests as a disruptive emotion."
+     },
+     {
+      "t": "It belongs to the body, as restlessness, where mind-wandering is mental",
+      "ok": false,
+      "why": "He calls impatience an insidious and pervasive emotional state, with any restlessness as something that comes along with it."
+     }
+    ]
+   },
+   {
+    "q": "A student's monkey-mind follows a day spent fretting about a mistake at work. Which account of the causes of monkey-mind matches the Second Interlude?",
+    "options": [
+     {
+      "t": "Often Worry and Remorse, but any hindrance except Laziness and Lethargy",
+      "ok": true,
+      "why": "He says Agitation due to Worry and Remorse often causes monkey-mind, that anger and Aversion, anticipated Desire or the restlessness of impatience can too, and that it can stem from any hindrance except Laziness and Lethargy."
+     },
+     {
+      "t": "Always Worry and Remorse, since no other hindrance leaves the mind agitated",
+      "ok": false,
+      "why": "He names several other causes, including anger and Aversion and the anticipation of fulfilling a strong Desire."
+     },
+     {
+      "t": "Mostly Laziness and Lethargy, which the mind fights off by darting about",
+      "ok": false,
+      "why": "Laziness and Lethargy is the one hindrance he excludes, and he describes it as a lack of energy where monkey-mind is an overly energised state."
+     },
+     {
+      "t": "Only Worldly Desire, since the monkey is always chasing the next pleasure",
+      "ok": false,
+      "why": "Anticipated Desire is one cause among several, and the commonest he names is Worry and Remorse."
+     }
+    ]
+   },
+   {
+    "q": "A student calls her sits boring and scolds herself for not doing better. Under which hindrance does the Second Interlude place both boredom and self-accusation?",
+    "options": [
+     {
+      "t": "Worldly Desire, the craving for an experience more pleasant than this",
+      "ok": false,
+      "why": "Desire for some other gratification feeds impatience, but boredom and self-accusation are rejections of what is present, which is his mark of Aversion."
+     },
+     {
+      "t": "Laziness and Lethargy, the loss of energy when nothing seems rewarding",
+      "ok": false,
+      "why": "Lethargy does arise when nothing seems interesting or rewarding, but he lists boredom itself under Aversion."
+     },
+     {
+      "t": "Doubt, the unconscious focus on negative results and possible failure",
+      "ok": false,
+      "why": "Judging one's practice can encourage Doubt, but self-accusation is named as a form of Aversion."
+     },
+     {
+      "t": "Aversion, the compulsion to get rid of or avoid whatever is unpleasant",
+      "ok": true,
+      "why": "He says any compulsion to get rid of or avoid unpleasantness is Aversion, and lists dissatisfaction, most forms of criticism, self-accusation, impatience and boredom among its forms."
+     }
+    ]
+   },
+   {
+    "q": "A student can find the start of each in-breath but cannot tell exactly where the in-breath or the out-breath ends. What does Culadasa suggest?",
+    "options": [
+     {
+      "t": "Lengthen each breath slightly, so that its end is easier to make out",
+      "ok": false,
+      "why": "The breath is observed as it is, and is not altered to make sensations easier to find."
+     },
+     {
+      "t": "Identify the pauses first, and then work backward to find the ends",
+      "ok": true,
+      "why": "He says the ends are less obvious than the beginnings, and that if they are hard to perceive it helps to identify the pauses first and then work backward."
+     },
+     {
+      "t": "Say the count at the end of each breath, so the number marks the spot",
+      "ok": false,
+      "why": "Saying the number in the pause is a Stage One counting aid for keeping the mind on task, not a way of locating the end of the breath."
+     },
+     {
+      "t": "Leave the ends alone for now and attend only to the clear beginnings",
+      "ok": false,
+      "why": "The task is to find the start and end of each part of the cycle and the pauses, and then to observe all of these points with equal clarity."
+     }
+    ]
+   },
+   {
+    "q": "In Culadasa's 'formula for success', what does 'look for the joy' mean?",
+    "options": [
+     {
+      "t": "Wait for meditative joy to arise once attention has become fully stable",
+      "ok": false,
+      "why": "Meditative Joy as a Meditation Factor matures in later Stages, but this instruction applies in every moment from the start."
+     },
+     {
+      "t": "Produce a feeling of joy at the start of the sit and rest attention on it",
+      "ok": false,
+      "why": "It means noticing what is already pleasant in every moment, and the feelings are held in awareness and not made the object of attention."
+     },
+     {
+      "t": "Notice what is pleasant in each moment of practice and hold it in awareness",
+      "ok": true,
+      "why": "He says it means noticing the pleasant aspects of the practice in every moment, since feelings of peace, satisfaction and happiness are often present, and holding them in awareness so they become a regular part of experience."
+     },
+     {
+      "t": "Replace each negative thought with a pleasant one as soon as it appears",
+      "ok": false,
+      "why": "He says negative thoughts and feelings are inevitable and are not to be suppressed or struggled against, only not allowed to colour the practice."
+     }
+    ]
    }
   ],
   "open": [
@@ -634,6 +1212,50 @@ const EXTRA_STAGES = [
      "States mastery accurately: attention sustained for minutes while mind-wandering lasts only seconds; forgetting may persist; improvement shows over days and weeks; a ten-to-fifteen-minute figure is a rule of thumb, not the chapter's wording.",
      "Places the sit with no 'aha' until the bell: not a total success by his criterion and not a bad meditation; 'null sit' as a teaching label, with the realisation at the bell still worth appreciating."
     ]
+   },
+   {
+    "q": "A student asks: 'Why can't I keep my attention on one simple thing? What is wrong with my mind?'\n• Explain, in Culadasa's terms, how attention comes to leave the breath and why the mind then wanders.\n• Give his evolutionary account, including what it says about stable attention.\n• Say how you would use this to answer the student, and what remains true of an adept's mind in daily life.",
+    "model": "How attention leaves the breath. You place attention on the breath, and the mind goes on producing distractions. Attention alternates among them, scanning for something more interesting, important, exciting, intense or novel. He says interest and importance are judged by a thing's perceived ability to increase pleasure or decrease pain, to cause happiness or unhappiness, or to improve or threaten physical well-being. When one of them captures attention, the breath is abandoned and forgetting happens. When attention tires of that distraction it moves to another, usually along chains of association, and that is mind-wandering. It can last seconds, minutes or a whole session, and it ends only when some unconscious part of the mind wakes you up.\n\nThe evolutionary account. His explanation is that selection pressures have favoured spontaneously moving attention more strongly than stable attention, because constantly moving attention keeps us on the lookout for whatever helps us survive and reproduce. If attention never wandered, he says, your house might burn down around you. So forgetting and mind-wandering are obstacles in meditation and at the same time a normal and necessary part of everyday life, a way of using limited conscious resources efficiently. The second half of the account matters as much. Stable attention is also useful for survival, so we all have that capacity, and evolution has not selected against it. We are simply less strongly predisposed to use it. Meditation trains and strengthens an inborn but less-used capacity.\n\nAnswering the student. I would begin by agreeing with the observation and disagreeing with the conclusion. Yes, the mind will not stay put; no, nothing is wrong with it. He says most novices are surprised by how unruly the mind is and may even feel that meditation is making it more agitated, when in reality they are just becoming aware of what has always been going on, and that recognising this is an important first step. I would add the Second Interlude's reassurance that the skills meditation needs are innate abilities, like mental muscles, and that these difficulties are faced by everybody and are not personal shortcomings. Then the practical turn: since the wandering is built in, the task is not to stop it by effort but to train the capacity that is already there, which at this Stage means welcoming each waking up and returning.\n\nThe adept. Training does not abolish spontaneous movement. He says the mind of an adept still moves spontaneously in daily life, allocating consciousness where it is needed, but without being captured unnecessarily, and that with strong mindfulness attention can be refocused and stabilised wherever and whenever it is needed.\n\nA caution. The evolutionary story is asserted in the book, not argued, and I would offer it as his explanation. Its use to a student does not depend on its being proven: it takes the fault out of the experience.",
+    "rubric": [
+     "Describes the mechanics: the mind produces distractions; alternating attention scans them for what is more interesting, important, exciting, intense or novel (judged by pleasure, pain and well-being); capture brings forgetting; attention then moves by chains of association, which is mind-wandering.",
+     "Gives the evolutionary account: selection favoured spontaneously moving attention as a lookout for what aids survival, so forgetting and mind-wandering are normal and necessary in daily life and an efficient use of limited conscious resources.",
+     "Gives the second half: stable attention is also useful and inborn; evolution has not selected against it; meditation strengthens a less-used capacity.",
+     "Answers the student: nothing is wrong; they are becoming aware of what has always been going on; the needed skills are innate and the difficulty is universal, not a personal shortcoming; the task is to train, not to force.",
+     "States what remains true of an adept (attention still moves spontaneously in daily life but is not captured unnecessarily) and treats the evolutionary story as his explanation, asserted without argument."
+    ]
+   },
+   {
+    "q": "Culadasa prefers the term 'stable attention' to 'concentration'.\n• Give his definition of stable attention and his reason for the change of term.\n• Describe the three kinds of spontaneous movement of attention, and say which parts of stable attention can be done at will and which cannot.\n• Explain how the part that cannot be willed is trained, and when each component matures across the Stages.",
+    "model": "The term and the definition. He finds 'concentration' vague and liable to be filled with a student's preconceptions, and prefers 'stable attention' as more descriptive of what is done in meditation. Stable attention is the ability to intentionally direct and sustain the focus of attention, and to control the scope of attention: choosing the object, keeping attention on it, and adjusting how wide or narrow the focus is. His analogy is vision. To see something in detail you hold your gaze steady for as long as needed, focusing neither too narrowly nor too broadly.\n\nThree spontaneous movements. Scanning: the focus moves from object to object, in the outer world or among the contents of the mind, searching for something of interest. Getting captured: an object such as a thought, a sensation or a siren suddenly takes attention. Alternating: the focus moves very quickly among several objects. He says everyone's attention alternates, but only an experienced meditator sees it, because the speed gives the illusion of attending to two or more things at once, as in multitasking. It has a second form, in which attention seems to stay on one thing while others stand out from peripheral awareness. Anything that stands out in that way does so, he says, because it is intermittently becoming an object of attention. Unless you are multitasking on purpose, alternation means some distraction is present.\n\nWhat can be willed. Directing can: it is a conscious decision about what to attend to. Sustaining cannot. He says the part of the mind that sustains attention for more than a few moments works entirely unconsciously, and that we cannot use our will to control how long we stay with one thing. An unconscious process weighs the importance and interest of the present object against other possible objects, and when something else is judged to matter more the balance tips and attention moves. That is why he calls sustaining trickier than directing.\n\nHow the unwilled part is trained. Through consciously held intentions. Any information held in consciousness is communicated to the unconscious, so the intention to observe the breath, together with returning to it over and over, informs the weighing process that staying with the breath is important. His comparison is learning to throw darts: you hold the intention to hit the target and repeat, and involuntary coordination is trained without being controlled.\n\nWhen each part matures. Directing is exercised from Stages Two and Three, and the Stage Two chapter says redirecting becomes completely automatic by Stage Four. By Stage Four there is a consistent ability to keep attention on the object, though it still alternates with distractions. Exclusive attention, which does not alternate, is reached only in Stage Six. Control of scope is cultivated mainly in Stage Six, and by Stage Eight the focus can be widened to the whole field of conscious awareness. So a Stage Two student who cannot hold attention steady is not failing at something they could will. Putting it that way to a student is my application of his account.",
+    "rubric": [
+     "Gives the reason for the term (concentration is vague and attracts preconceptions) and the definition: the ability to intentionally direct and sustain the focus of attention and to control its scope, with the vision analogy.",
+     "Describes the three spontaneous movements: scanning, getting captured, and alternating, including why alternation is visible only to an experienced meditator and its two forms (apparent simultaneity; objects standing out from peripheral awareness).",
+     "Separates what can be willed (directing) from what cannot (sustaining for more than a few moments), and describes the unconscious weighing of importance and interest.",
+     "Explains the training: consciously held intention plus repeated returning informs the unconscious process, with the dart-throwing comparison.",
+     "Gives the timeline: directing from Stages Two and Three, automatic redirecting and consistent attention by Stage Four, exclusive attention at Stage Six, control of scope mainly at Six and mastered by Eight; marks the application to a Stage Two student as the answerer's own."
+    ]
+   },
+   {
+    "q": "Use the Second Interlude to explain the obstacles a Stage Two meditator meets.\n• Say what the Five Hindrances are, why we have them, and how Culadasa says they are to be approached.\n• Trace distraction and mind-wandering, impatience, and monkey-mind to their hindrances, and give the antidote the Interlude lists for each.\n• Explain the practical difference it makes to a teacher to know which hindrance is at work.",
+    "model": "What the hindrances are. The Second Interlude names five innate and universal psychological predispositions: Worldly Desire, Aversion, Laziness and Lethargy, Agitation due to Worry and Remorse, and Doubt. He says almost every problem in meditation can be traced to one or a combination of them. We have them because they were useful to the species, and each still serves a purpose in daily life: desire moves us towards what supports survival, aversion away from what is harmful, laziness conserves effort, worry and remorse push us to correct and prepare, and doubt keeps us from wasting time. He stresses that everybody meets them and that they are not personal shortcomings.\n\nHow they are approached. In two steps. First understand the purpose each one ordinarily serves. Second, cultivate the five Meditation Factors that oppose them: Directed Attention, Sustained Attention, Meditative Joy, Pleasure/Happiness and Unification of Mind. He says that neither suppression nor self-punishment helps with conditioning so established and often so useful, and that positive reinforcement of the opposing tendencies works very well. He calls this approaching from the positive pole, not fighting a negative.\n\nStage Two's problems. Distraction, forgetting and mind-wandering: Worldly Desire, Aversion, Agitation and Doubt can all appear as distractions. Thoughts about gain, pleasure, fame and praise are more engaging for a novice than the breath, and even a wish to check email is enough. Aversion to pain or noise disturbs the sit, the charge of anger and resentment makes you want to mull things over, and worry and remorse pull towards the future and the past. The antidote listed is that the parts are addressed sequentially: mind-wandering in Stage Two, forgetting in Stage Three, distraction in Stages Four to Six. Impatience: rooted in Aversion, Worldly Desire and Doubt, and different in that it shows up as a disruptive emotion and not as a distracting thought. The antidote is to observe it objectively without identifying with it, and to cultivate joy, peace, contentment and equanimity. Monkey-mind: often from Agitation due to Worry and Remorse, but also from anger and Aversion, the anticipation of a strong Desire, or the restlessness of impatience; any hindrance except Laziness and Lethargy. The antidote is to get grounded in the body.\n\nWhat it changes for a teacher. He gives the chart so that the appropriate antidote can be applied. On the cushion the Stage Two method is the same whatever pulled attention away. But the hindrance tells you what else might help. Agitation due to Worry and Remorse has remedies off the cushion: the practice of virtue, and positive action to resolve what can be resolved. Aversion is opposed by Pleasure/Happiness, which is one of his stated reasons for always seeking out pleasant feelings in practice. Doubt gives way to success through consistent effort. Naming the hindrance also normalises it, since it is a universal predisposition and not this student's defect. One limit, as I read it: Meditative Joy and Unification of Mind mature in later Stages, so at Stage Two those pairings describe a direction more than a tool.",
+    "rubric": [
+     "Names the Five Hindrances as innate, universal predispositions that were useful in evolution and still serve purposes, to which almost every problem in meditation can be traced; they are not personal shortcomings.",
+     "Gives the approach: understand each hindrance's purpose, then cultivate the opposing Meditation Factors; suppression and self-punishment do not work; 'the positive pole' in place of fighting a negative.",
+     "Traces distraction, forgetting and mind-wandering to Worldly Desire, Aversion, Agitation and Doubt, with the sequential antidote (mind-wandering at Stage Two, forgetting at Three, distraction at Four to Six).",
+     "Traces impatience (Aversion, Worldly Desire, Doubt; an emotion, not a distracting thought; observe it objectively and cultivate joy and contentment) and monkey-mind (often Worry and Remorse; any hindrance except Laziness and Lethargy; ground in the body).",
+     "Explains the teacher's use: the on-cushion method is constant, but the hindrance points to further remedies (virtue and positive action for Agitation; pleasant feeling against Aversion; success against Doubt) and normalises the difficulty; marks as a reading that Joy and Unification are not yet available as tools at Stage Two."
+    ]
+   },
+   {
+    "q": "Culadasa's 'formula for success' is: relax and look for the joy; observe; let it come, let it be, let it go.\n• Say what each part means in his words.\n• A student objects that looking for joy is a way of pretending, and conflicts with observing what is without judging. Reconcile the two.\n• Explain why he gives joy this weight at Stage Two, and what he asks for outside the sit.",
+    "model": "The parts. Relax: let go of any mental or physical tension as soon as you become aware of it. Look for the joy: notice the pleasant aspects of the practice in every moment. He grants that negative thoughts and feelings are inevitable, and says you need not get caught up in them or let them colour the practice. Even when there is pain somewhere there will be a pleasant feeling elsewhere, and feelings of peace, satisfaction and happiness are often present; hold them in awareness so that they become a regular part of conscious experience. Observe: be aware of what is happening in the moment without reacting, rejecting or clinging. Whether attention is stable or scattered, whether restlessness or dullness has come, whether the mind is clear or a thought keeps surfacing, just observe what is and do not judge. Let it come, let it be, let it go: whatever thoughts or feelings arise, do not suppress them, struggle against them or let them take you away; they disappear in their own time. He says to commit the formula to memory and recite it at every sit, especially on catching the thought that meditation is difficult.\n\nThe objection. The student has seen something real, and I would say so. The formula is not neutral. Elsewhere he says to focus consistently on the positive rather than the negative aspects of the sit, and in the transition to the breath he even says to purposely induce feelings of peace and happiness. So there is a deliberate tilt. What it is not is pretence, for two reasons that are in the text. Nothing is denied: negative feelings are called inevitable, and the last clause forbids suppressing them. And what is looked for is claimed to be there already: a pleasant feeling elsewhere, peace or satisfaction often present. The two instructions then govern different things. Looking for the joy decides what awareness is invited to include. Observing decides how everything is met, the pleasant included, since the stance excludes clinging as well as rejecting, and it covers the sit in which no joy can be found. That reconciliation is mine. He does not raise the objection.\n\nWhy joy carries this weight. Three reasons from the Stage Two material. Waking up from mind-wandering is trained by positive reinforcement, and he asks that satisfaction and pleasure be made a cornerstone of the whole practice. Impatience comes from conflict among parts of the mind that all want happiness, and enjoyment is what brings them into harmony, towards unification of mind. And the Second Interlude pairs Aversion with Pleasure/Happiness: there is little room for negativity in a mind filled with bliss, which he gives as a reason always to seek out pleasant feelings in practice.\n\nOutside the sit. He asks the meditator to create peace, contentment, happiness and joy in every wholesome way possible in daily life, and to bring that joy to the practice.",
+    "rubric": [
+     "Gives the four parts in his terms: relax (release tension as soon as noticed); look for the joy (notice pleasant aspects in every moment and hold them in awareness, with negative feelings acknowledged as inevitable); observe (no reacting, rejecting or clinging; no judging); let it come, be and go (no suppression or struggle).",
+     "Concedes what is right in the objection: the method deliberately favours the positive, and he even speaks of purposely inducing peace and happiness.",
+     "Reconciles: nothing is denied or suppressed, and what is looked for is claimed to be present already; 'look for the joy' governs what awareness includes while 'observe' governs how everything is met, including the pleasant and including sits without joy; marks this as the answerer's reconciliation.",
+     "Explains the weight given to joy: positive reinforcement of waking up (satisfaction and pleasure as a cornerstone); harmony among parts of the mind and unification; Pleasure/Happiness as the factor opposing Aversion.",
+     "States what he asks outside the sit (create these feelings in every wholesome way in daily life and bring them to practice) and when the formula is to be recited (every sit, especially when meditation seems difficult)."
+    ]
    }
   ],
   "scenario": [
@@ -668,6 +1290,39 @@ const EXTRA_STAGES = [
      "Catches the identification ('I'm an impatient person') and replaces it with 'impatience is arising'.",
      "Explains the conflict among parts of the mind and the disharmony-dissatisfaction-impatience loop, and recognises both plans as the two unskillful exits: giving in (switching) and forcing (doubling the sits).",
      "Prescribes enjoyment concretely and explains the harmony-joy loop; notes the weighting: a mantra is compatible with TMI, so the issue is the motive; teachers differ on whether to hold sit length steady or ease it, and on how firmly to discourage a switch."
+    ]
+   },
+   {
+    "q": "A student at Stage Two reports: 'Last year I misled my business partner about some money. Nobody knows. For the past month it is all that comes up when I sit. I catch it, come back to the breath, and it is there again within seconds, with a sick feeling in my stomach. I try to feel pleased when I notice, but honestly I don't think I deserve to feel pleased about anything. Should I keep meditating?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, the practice is working as designed, and that is worth saying before anything else. The student is catching the thought again and again, which is introspective awareness arising, and is returning each time. They have also told a teacher something hard to tell.\n\nSecond, in the Second Interlude's terms this is the hindrance of Agitation due to Worry and Remorse. Culadasa describes remorse for unwise or unwholesome actions, and worry about their consequences, as states that make it hard to focus mental resources on anything else. He also says what meditation does with them: actions from the past still produce agitation, like seeds buried in the mind, and they emerge fully when we become quiet enough. So the sits have not caused this. They have made room for it.\n\nThird, the hindrance has a function. He says this agitation exists to spur us to correct things where possible and to discourage us from creating similar situations again, and that when the energy cannot be put to use it becomes stress from unresolved impulses to act. I read the month of repetition in that light. That reading is mine.\n\nFourth, the remedies he gives are mostly off the cushion. The best antidote is the practice of virtue, which he distinguishes from following an external moral standard or a code of rules: it is inner purification that results in good behaviour, and it stops new causes of remorse being created. The other remedy is to do whatever is possible to resolve existing sources of remorse by positive action, then to forgive yourself and seek the forgiveness of others for what cannot be resolved, and then to let go of the events and of judgments about them.\n\nFifth, 'I don't deserve to feel pleased'. He says joy and this agitation are opposites, and that joy overcomes remorse because a joyful person sincerely regrets the harm they have caused and is eager to set things right. On his account, appreciating the moment of waking up is not letting oneself off. I would offer that as his view and not insist on it.\n\nWhat I don't know. What, if anything, can still be put right, and what it would cost. Whether there are legal consequences, which are outside anything I can advise on. How the student is sleeping and coping.\n\nResponse. Yes, keep meditating. On the cushion nothing changes: acknowledge the thought in the Six-Point Preparation, resolve to set it aside, and when it comes, notice, let it be, and return gently. Appreciate the noticing, not the content. I would tell them plainly that, by this book, sitting will not make the matter go away, and that the text points to action. What action is theirs to decide, and I would not prescribe it. If the sick feeling becomes overwhelming, later chapters have methods for strong emotion, and beyond that a counsellor is the right person.",
+    "rubric": [
+     "Credits what is working: repeated catching is introspective awareness arising, the returns are being made, and the student has disclosed something difficult.",
+     "Identifies Agitation due to Worry and Remorse, with his account that past actions produce agitation that emerges when the mind grows quiet; meditation has revealed it, not caused it.",
+     "Gives the hindrance's function (to prompt correction and discourage repetition) and his remedies: the practice of virtue as inner purification, positive action to resolve what can be resolved, forgiveness, and then letting go; marks any reading of this student's month as the answerer's own.",
+     "Answers 'I don't deserve to feel pleased' from the text (joy and this agitation are opposites; a joyful person regrets harm and is eager to set things right) without insisting, and keeps the on-cushion method unchanged: set aside, notice, let be, return, appreciate the noticing.",
+     "Does not prescribe the action, names what is outside a meditation teacher's competence (legal questions; overwhelming distress, for which a counsellor), and notes the weighting: teachers differ on whether to engage with the ethical situation at all or to keep strictly to the practice, and on how directly to say that the text points to action."
+    ]
+   },
+   {
+    "q": "A student at Stage Two reports: 'I've worked out that noise is my problem. I now sit in a walk-in cupboard with earplugs in, and it's much better: fewer interruptions, longer stretches on the breath. But the neighbour's dog still gets through, and when it does I am furious, and that's the sit ruined. I'm thinking of noise-cancelling headphones. Am I on the right track?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, the student is problem-solving and reporting accurately, and part of the solution has Culadasa's support. Stage One recommends a place that is quiet and secluded, where you will not be disturbed. Wanting fewer interruptions is not a mistake, and longer stretches on the breath are a real gain.\n\nSecond, the direction of travel is the problem. The instruction at this Stage is explicit: do not try to limit peripheral awareness. To cultivate mindfulness you do the opposite and allow sounds, sensations, thoughts and feelings to continue in the background. He warns that when attention is stabilised by pushing everything else out, peripheral awareness collapses and the breath is forgotten more easily. He also says that distractions go away by themselves, only to be replaced by others. So the cupboard cannot be made quiet enough. Thoughts are the larger supply, and no headphones reach them. That last point is my inference from his list of what continues in the background.\n\nThird, the fury. In the Second Interlude, aversion to noises is given by name as a way the hindrance of Aversion disturbs meditation, and the Seven Problems say of an itch that it is only stimulation of the skin until Aversion and the desire for it to stop turn it into suffering. The bark is over in a second. What ruins the sit is the reaction. I am applying the itch passage to sound, which he does not do himself. The better each sit is defended, the more a single bark seems to cost, so I suspect the arrangement is feeding the reaction.\n\nFourth, the tool for this was given in Stage One. In the first Step of the transition he says that if the mind reacts to something unpleasant, distinguish the reaction from the object that produced it, and let go of the reaction. The Stage Two version is: let it come, let it be, let it go.\n\nWhat I don't know. How noisy the home really is, and whether the earplugs block ordinary sound or only take the edge off. Whether anger at interruption is a pattern elsewhere in their life.\n\nResponse. Start by agreeing: a quiet place is recommended, and the longer stretches are real. Then say what the Stage is training, which is attention that stays with the breath while the world goes on in the background, and that this cannot be practised in the absence of a background. Suggest an experiment and not a rule: some sits without earplugs, with sounds deliberately included in awareness during the transition, and the dog treated as the exercise. When it barks and attention goes, that is one more waking up to appreciate. When fury comes, name it as aversion arising, feel the difference between the sound and the reaction, and return. Add the antidote he pairs with Aversion, which is to seek out what is pleasant in the sit. I would leave the cupboard alone. He says nothing about earplugs or headphones, so the advice on them is mine.",
+    "rubric": [
+     "Credits the problem-solving and what is right in it: Stage One recommends a quiet, secluded place, and longer stretches on the breath are a real gain.",
+     "Identifies the wrong direction: the Stage says not to limit peripheral awareness and to let sounds continue in the background; collapsed awareness makes forgetting easier; distractions are replaced by others, so the environment can never be made quiet enough.",
+     "Identifies the fury as Aversion, which the Second Interlude links to noises by name; marks as the answerer's own the application of the itch passage to sound and the suspicion that defending the sit feeds the reaction.",
+     "Gives the tool: distinguish the reaction from the object and let the reaction go (Step One); let it come, let it be, let it go; a capture by the bark is another waking up to appreciate; seek out pleasant feeling as the factor opposing Aversion.",
+     "Offers an experiment, not a ban, and notes the weighting: teachers differ on whether to take the earplugs away or simply add sits without them, and on whether a beginner in a noisy home should first be allowed all the quiet they can get; the book is silent on earplugs and headphones."
+    ]
+   },
+   {
+    "q": "A student at Stage Two reports: 'I've met someone, and my sits have turned into daydreams about them. Here's the odd part. I do notice. I get the little aha, I even enjoy it as instructed, and then I think: the daydream is nicer than my nostrils, and I go back to it on purpose. Ten minutes later I notice again. I leave the cushion smiling, so where's the harm?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, a good deal is working. Introspective awareness is arising, the student is appreciating it, and the report is unusually honest. They also leave the cushion happy, and Culadasa wants meditation to be pleasurable. None of that should be taken away.\n\nSecond, the distraction is Worldly Desire doing what he says it does. Attention scans for whatever is most interesting, and interest is judged by the promise of pleasure. The Second Interlude says thoughts of pleasure are far more engaging for a novice than the sensations of the breath. On that scale a new love beats the nostrils easily. Nothing here is a moral problem, and he says meditation does not involve repressing worldly desires.\n\nThird, the important detail is 'on purpose'. Being carried off is mind-wandering, the ordinary obstacle of this Stage. Choosing to go back is something else. Stage One calls it resistance: spending the time on fantasies in place of meditating, and the fourth of the Six Points asks for a commitment not to indulge tempting distractions. Stage Two addresses the exact moment. If you are reluctant to let go of an object you find particularly engaging, evoke discipline and diligence, where discipline is not force but a firm, intentional resolve to let go and return, and diligence is doing so consistently and promptly.\n\nFourth, where the harm is. In his model each sit trains something. Appreciating the aha and then returning trains the mind to wake up and come back. Appreciating the aha and then choosing the daydream leaves the second half untrained, and I infer that it rewards the daydream. He does not describe this case, so that is my reading.\n\nFifth, why willpower is the wrong answer. In his account of impatience, the parts of the mind that want to fantasise and the part that wants to meditate share one goal, happiness, and differ about how to reach it. He names two unskillful responses: give in, or force. The student is giving in. Forcing would create the struggle he says can never succeed. His way through is to make the practice itself satisfying, so that the other parts stop resisting and join in.\n\nWhat I don't know. Whether the student wants the training, or wants a pleasant half hour. Both are legitimate, and only one is this method.\n\nResponse. Enjoy the news with them. Then make the distinction between being carried off and choosing, and ask which they want the sit to be for. If it is the training, offer a deal that respects the desire and does not suppress it: the daydream gets its own time, off the cushion, and during the sit the resolve at each aha is to return once, gently and promptly. Then make the breath a fairer competitor, using following as a game and looking for what is pleasant in the body and in the quiet. Expect the pull to stay strong for a while. I would count each chosen return as the success of the sit.",
+    "rubric": [
+     "Credits what is working: introspective awareness arises and is appreciated, the report is honest, and pleasure in sitting is something he wants.",
+     "Identifies Worldly Desire as the source (attention scans for what promises pleasure; such thoughts are more engaging for a novice than the breath) without moralising, noting that the method does not repress desire.",
+     "Separates being carried off (mind-wandering) from choosing to return to the fantasy (Stage One's resistance; indulging a tempting distraction), and cites the Stage Two instruction: discipline as a firm, intentional resolve to let go, diligence as doing so consistently and promptly.",
+     "Locates the harm in what is trained and marks it as the answerer's reading, since he does not describe this case; explains why force is not the answer (parts of the mind sharing the goal of happiness; giving in and forcing as the two unskillful responses; enjoyment as the way through).",
+     "Asks what the student wants the sit to be for, offers the daydream its own time and a single prompt return at each aha, and notes the weighting: teachers differ on how firmly to ask for the return while the infatuation is fresh, and some would simply wait it out; the book gives the principle and not a timetable."
     ]
    }
   ]
@@ -924,6 +1579,256 @@ const EXTRA_STAGES = [
       "why": "Exclusive attention is not achieved until Stage Six, and attention at this point still alternates with distractions."
      }
     ]
+   },
+   {
+    "q": "While following the breath, a student finds that the sensations have faded from one nostril and seem to switch from side to side. What does Culadasa say?",
+    "options": [
+     {
+      "t": "It is the first sign of dullness, so the mind should be energised now",
+      "ok": false,
+      "why": "Dullness shows as a loss of intensity, vividness and clarity overall, whereas this is a change in where the breath is felt."
+     },
+     {
+      "t": "It shows that attention has drifted, so the focus should be tightened",
+      "ok": false,
+      "why": "He lists it among the ordinary changes of the breath under observation, not among the signs of distraction."
+     },
+     {
+      "t": "It is completely normal, and there is nothing to do except notice it",
+      "ok": true,
+      "why": "He says the sensations may grow weaker or even disappear from one nostril, or alternate between nostrils, and that this is completely normal and needs nothing but noticing."
+     },
+     {
+      "t": "It means the breath is being controlled, so let it return to normal",
+      "ok": false,
+      "why": "Changes that arise without your deliberate intention are not yours to correct, and he says to let the breath continue as it is."
+     }
+    ]
+   },
+   {
+    "q": "A student recognises three sensations in each in-breath, while a friend at the same Stage reports a dozen. What does Culadasa say about the number?",
+    "options": [
+     {
+      "t": "It is not that important; what matters is sharper perception and interest",
+      "ok": true,
+      "why": "He says it is possible to identify from four to a dozen or more, but that the actual number is not that important, and what matters is that perception grows sharper and you stay interested in and attentive to the breath."
+     },
+     {
+      "t": "It measures progress, so a dozen is the mark to be reached before moving on",
+      "ok": false,
+      "why": "He gives the range only as what is possible, and says you will not necessarily observe that many."
+     },
+     {
+      "t": "It should be kept low, since counting sensations is a form of analysis",
+      "ok": false,
+      "why": "Recognising individual sensations is the task he sets, and the analysis he warns against is the analysis of distractions."
+     },
+     {
+      "t": "It must match on the in-breath and out-breath before following is done",
+      "ok": false,
+      "why": "He says the out-breath yields a somewhat smaller number, because its sensations are subtler."
+     }
+    ]
+   },
+   {
+    "q": "What form does 'connecting' take when it is first introduced at Stage Three?",
+    "options": [
+     {
+      "t": "Linking features of the breath to how agitated or how dull the mind is",
+      "ok": false,
+      "why": "Connecting the breath to states of mind waits until Stages Four and Five, when introspective awareness has improved enough."
+     },
+     {
+      "t": "Comparing the lengths of breaths and pauses, and how they change over time",
+      "ok": true,
+      "why": "He begins with noticing which pause is longer, then comparing the in-breath with the out-breath, and then tracking relative changes over time."
+     },
+     {
+      "t": "Joining each breath to the next, so that attention is left with no gap",
+      "ok": false,
+      "why": "Connecting is an extension of following that involves making comparisons and associations, not a way of closing gaps between breaths."
+     },
+     {
+      "t": "Tying each distraction to the label it was given, to spot it sooner",
+      "ok": false,
+      "why": "Recognising recurring distractions is the work of labeling, which he treats as a separate practice."
+     }
+    ]
+   },
+   {
+    "q": "What does the Stage Three chapter say about meditating lying down or in a comfortable chair?",
+    "options": [
+     {
+      "t": "Never use it, since stillness can only be learned sitting upright on the floor",
+      "ok": false,
+      "why": "He allows the exception for health, and Stage One accepts a straight-backed chair as readily as the floor."
+     },
+     {
+      "t": "Use it freely, since all four postures work and none of them is more correct",
+      "ok": false,
+      "why": "That is the general statement in Stage One, which this chapter qualifies once drowsiness has become the problem."
+     },
+     {
+      "t": "Use it when drowsy, since a relaxed body lets the mind recover its alertness",
+      "ok": false,
+      "why": "It is the reverse, since his antidotes for drowsiness include standing up and walking."
+     },
+     {
+      "t": "Avoid it unless a health condition requires it, as you may sleep for a long time",
+      "ok": true,
+      "why": "He says that lying down or in a comfortable chair you might sleep for a long time, which is why you should not meditate in these positions unless arthritis or some other health condition absolutely requires it."
+     }
+    ]
+   },
+   {
+    "q": "Why, according to Culadasa, do antidotes such as forceful breathing, tensing the muscles and standing up work against drowsiness?",
+    "options": [
+     {
+      "t": "They stimulate body and mind by increasing the flow of external stimuli",
+      "ok": true,
+      "why": "He says they work because they stimulate you physically and also mentally, by increasing the flow of external stimuli into the mind."
+     },
+     {
+      "t": "They raise the heart rate, which sends a larger supply of oxygen to the brain",
+      "ok": false,
+      "why": "He gives no physiological account of this kind, and his explanation is that the untrained mind needs stimulation to stay awake."
+     },
+     {
+      "t": "They break up the sit, which gives the mind a short rest from the breath",
+      "ok": false,
+      "why": "The antidotes are followed by going straight back to practice, and standing and walking are themselves ways of continuing to meditate."
+     },
+     {
+      "t": "They are unpleasant, and a little aversion is what keeps the mind awake",
+      "ok": false,
+      "why": "The mechanism he names is stimulation, and he warns against doing more than necessary because that creates agitation."
+     }
+    ]
+   },
+   {
+    "q": "What does Culadasa say a meditator will notice about the experience of coming out of drowsiness?",
+    "options": [
+     {
+      "t": "It passes unnoticed, since awareness only returns some time afterwards",
+      "ok": false,
+      "why": "He treats the moment as something to observe closely, and as a great opportunity to investigate how dullness develops."
+     },
+     {
+      "t": "It brings a bright, refreshed clarity that lasts for the rest of the sit",
+      "ok": false,
+      "why": "He says dullness usually sets in again within a short time, like a heavy cloak."
+     },
+     {
+      "t": "It is distinctly unpleasant, and one would probably prefer to stay there",
+      "ok": true,
+      "why": "He says that if you observe closely, coming out of drowsiness is distinctly unpleasant and you would probably prefer to stay there, so returning to the practice means resisting that urge."
+     },
+     {
+      "t": "It is neutral in feeling, though the dullness that follows is pleasant",
+      "ok": false,
+      "why": "He does call the subtle dullness that follows comfortable, but the waking itself he calls distinctly unpleasant."
+     }
+    ]
+   },
+   {
+    "q": "How does Culadasa define mindfulness?",
+    "options": [
+     {
+      "t": "As attention to the present moment that passes no judgment at all on it",
+      "ok": false,
+      "why": "That is a common modern definition, but his is stated in terms of how attention and awareness work together."
+     },
+     {
+      "t": "As remembering to keep attention on the object that has been chosen",
+      "ok": false,
+      "why": "He calls 'mindfulness' a somewhat unfortunate translation of sati precisely because it suggests being attentive or remembering to pay attention."
+     },
+     {
+      "t": "As strong peripheral awareness that is freed from the pull of attention",
+      "ok": false,
+      "why": "Both faculties are needed, and the result he describes includes attention used with greater precision and objectivity."
+     },
+     {
+      "t": "As the optimal interaction between attention and peripheral awareness",
+      "ok": true,
+      "why": "He says that by mindfulness he specifically means the optimal interaction between attention and peripheral awareness, which requires increasing the overall conscious power of the mind."
+     }
+    ]
+   },
+   {
+    "q": "What does Culadasa mean by 'awareness deficit disorder'?",
+    "options": [
+     {
+      "t": "A chronic inability to keep attention on one object for long",
+      "ok": false,
+      "why": "That describes unstable attention, whereas his term names the neglect of peripheral awareness."
+     },
+     {
+      "t": "A chronic lack of awareness that comes from over-using attention",
+      "ok": true,
+      "why": "He describes it as a chronic lack of awareness due to over-using attention, which is under direct conscious control where peripheral awareness is not, so awareness is neglected and stunted."
+     },
+     {
+      "t": "A loss of awareness that is produced by dullness in meditation",
+      "ok": false,
+      "why": "Dullness does rob the mind of conscious power, but this term refers to a lifelong habit of favouring attention."
+     },
+     {
+      "t": "A habit of spreading awareness so widely that nothing stays clear",
+      "ok": false,
+      "why": "The problem he names is too little use of awareness, not too much."
+     }
+    ]
+   },
+   {
+    "q": "According to the First Interlude, why does peripheral awareness fade when attention focuses intensely on something?",
+    "options": [
+     {
+      "t": "Both draw on one limited supply of conscious power, so one dims the other",
+      "ok": true,
+      "why": "He says attention and awareness draw their energy from the same limited source, so there is always a trade-off until the total power of consciousness is increased."
+     },
+     {
+      "t": "Attention pushes awareness aside in order to protect the object that it holds",
+      "ok": false,
+      "why": "He describes a shortage of shared energy, not one faculty acting against the other."
+     },
+     {
+      "t": "Awareness works more slowly than attention, and so it cannot keep pace",
+      "ok": false,
+      "why": "He says peripheral awareness responds more quickly than attention, because it processes information less thoroughly."
+     },
+     {
+      "t": "Awareness is used up as each of its objects is handed over to attention",
+      "ok": false,
+      "why": "Awareness goes on filtering and selecting objects for attention, and what runs short is the energy available to both."
+     }
+    ]
+   },
+   {
+    "q": "How does the First Interlude say attention and peripheral awareness differ in the way they take things in?",
+    "options": [
+     {
+      "t": "Attention is non-conceptual, while awareness turns things into concepts",
+      "ok": false,
+      "why": "He says attention turns its objects into concepts, while peripheral awareness is only minimally conceptual."
+     },
+     {
+      "t": "Attention is objective, while awareness is coloured by mood and feeling",
+      "ok": false,
+      "why": "It is the other way round, since objects of attention are easily distorted by desire, fear and aversion."
+     },
+     {
+      "t": "Attention deals with the outer world, while awareness watches the mind",
+      "ok": false,
+      "why": "Both attention and awareness can be either extrospective or introspective."
+     },
+     {
+      "t": "Attention tends to be self-centred, while awareness is more objective",
+      "ok": true,
+      "why": "He says attention usually involves a strong concern for self and leads us to identify with objects and states, while peripheral awareness is less personal and takes things in more as they are."
+     }
+    ]
    }
   ],
   "open": [
@@ -970,6 +1875,50 @@ const EXTRA_STAGES = [
      "Asks the questions that test the claim: vividness of the breath (strong dullness still clings to the breath), breath as focus versus background, dozing, the state of peripheral awareness, how lapses would have been noticed, and whether conditions were typical.",
      "Responds proportionately: affirms a real achievement where the answers support it, and notes that the Overview allows work on the next Stage's obstacles once the current ones are overcome even temporarily."
     ]
+   },
+   {
+    "q": "Explain what Culadasa means by mindfulness, as a teacher would need to at the point where its training begins.\n• Give his definition, and say why he calls 'mindfulness' an unfortunate translation.\n• Set out what attention and peripheral awareness each normally do, and what goes wrong when awareness fails.\n• Explain why only peripheral awareness can watch the mind, and what that means for the practices of Stage Three.",
+    "model": "Definition. He says 'mindfulness' is a somewhat unfortunate translation of sati, because it suggests being attentive or remembering to pay attention. We are always paying attention to something. With sati we pay attention to the right things and more skilfully, because we are more fully conscious and alert than normal. His own definition is the optimal interaction between attention and peripheral awareness, which requires increasing the overall conscious power of the mind. He offers 'fully conscious awareness' as a clumsier but more accurate phrase.\n\nWhat each faculty does. Attention picks one object out of the field of conscious awareness and analyses and interprets it. To do that quickly it turns its objects into concepts. Peripheral awareness takes in everything the senses provide. It is open, inclusive, holistic and only minimally conceptual, and it supplies context: where we are, what is going on, what we are doing and why. His example is the rope taken for a snake, which context corrects. Awareness has three other jobs. It is where anything new first appears, and it filters out what is unimportant and passes on what deserves attention. It stays on the lookout while attention is occupied, and can free attention and redirect it. And it handles what needs no analysis or happens too fast for attention, because less processing means a quicker response. In turn, what attention takes an interest in trains awareness to watch for it. The last difference is objectivity. Attention carries a strong concern for self, so its objects are easily distorted by desire and fear, and it identifies: 'I am annoyed'. Awareness is less personal: annoyance is arising.\n\nWhen awareness fails. He gives a consequence for each function. Without context we misinterpret, overreact and decide badly. Without the lookout, attention moves blindly and is taken off guard. Without its quick handling we do not react at all, or we react automatically and mindlessly. And when awareness fades, perception becomes self-centred and distorted.\n\nWatching the mind. Both faculties can be extrospective or introspective, but he says only peripheral awareness can observe the overall state of the mind and its activities. Attention cannot observe the mind's activities because its own movements are activities of the mind: we cannot attend to attention. And because it works by isolating objects, it cannot take in an overall state.\n\nWhat this means at Stage Three. Two things, as I read it. The instruction to keep extrospective awareness while following the breath closely is mindfulness training in his exact sense, and he says this training starts in Stage Three. And the faculty that will eventually guard against forgetting has to be awareness. Checking in uses attention, so it can only be a way of training awareness, which is how the chapter presents it. The chapter does not draw that second connection in these words.",
+    "rubric": [
+     "Gives the definition (the optimal interaction between attention and peripheral awareness, requiring more conscious power) and why the translation is unfortunate: it suggests merely being attentive or remembering to pay attention.",
+     "Describes attention (selects one object, analyses and interprets it, conceptualises) and peripheral awareness (open, holistic, minimally conceptual, supplying context), with their interaction: awareness filters and alerts, and attention trains awareness.",
+     "Includes the further differences: awareness responds faster with less processing and handles what needs no analysis; attention is more self-centred and identifies, while awareness is more objective.",
+     "States what goes wrong when awareness fails: misinterpretation and overreaction, attention moving blindly, automatic or absent reactions, and self-centred, distorted perception.",
+     "Explains why only peripheral awareness can observe the mind's state and activities (attention cannot attend to itself, and it isolates objects), and applies this to Stage Three, marking the application as the answerer's reading."
+    ]
+   },
+   {
+    "q": "Stage Three asks for the breath to be followed ever more closely, and in the same passage warns against losing awareness of everything else.\n• Use the First Interlude to explain why these pull against each other in an untrained mind.\n• Give Culadasa's two reasons why mindfulness has to be cultivated, and the ways he says it is lost.\n• Explain how the conflict is resolved, and give the three reasons the Stage Three chapter offers for keeping extrospective awareness.",
+    "model": "Why they pull against each other. He asks us to think of consciousness as a limited power source from which attention and awareness both draw. With a fixed supply there is always a trade-off. When attention focuses intensely, the field of conscious awareness contracts and peripheral awareness of the background fades. Intensify the focus enough and the context and guidance that awareness provides disappear altogether, which he compares to wearing blinders or having tunnel vision. The trade-off runs the other way too. In a relaxed state awareness opens and the intensity of attention dissipates; relax further and attention fades, and more often than not dullness sets in. When one grows brighter the other becomes dimmer.\n\nWhy mindfulness has to be cultivated. Two reasons. The first he calls awareness deficit disorder: a chronic lack of awareness from over-using attention. Attention is under direct conscious control and awareness is not. Awareness arises automatically, so it is easy to neglect, and neglect stunts it. The second is power. We do not have enough conscious power to sustain mindfulness, especially when we need it most. His example is a partner who complains about the food after a bad day: when strong emotion takes hold, all the energy pours into hyper-focused attention, awareness fails, and the remark is taken as a personal attack.\n\nHow it is lost. All the ways come down to not having enough conscious power for an optimal interaction. Intense focus is one. Attending to many things is another, since that takes considerable power, so mindfulness is lost in multitasking. Emotional stress does the same, with many worries competing for attention. And dullness robs us of the power directly.\n\nThe resolution. The answer is not to find the right compromise between the two. The goal is to increase the total power of consciousness available for both, so that there are no more trade-offs. He says there is only one way to do it: exercises in which close attention and strong peripheral awareness are sustained at the same time, like weight training. The more vivid attention can be made while awareness is still sustained, the more power is gained. So the two halves of the Stage Three instruction are one exercise and not two competing demands. That last sentence is my way of putting it.\n\nThe chapter's three reasons. First, when you focus closely the mind naturally tends to drop awareness of bodily sensations and external stimuli, and if that happens you become more vulnerable to both forgetting and drowsiness. Second, emphasising attention and peripheral awareness together increases the total power of consciousness, which he calls the key to progress in later Stages. Third, allowing the full range of awareness has great potential for Insight even at this early Stage, because you are watching and learning from the activity of the mind as a whole and not only observing the breath.",
+    "rubric": [
+     "Explains the trade-off: attention and awareness draw on one limited power source, so intense focus contracts awareness (tunnel vision), and deep relaxation lets attention fade towards dullness.",
+     "Gives the two reasons mindfulness must be cultivated: 'awareness deficit disorder' (awareness neglected because attention is under direct control) and insufficient conscious power, especially under strong emotion.",
+     "Lists the ways mindfulness is lost, all as shortages of conscious power: intense focus, multitasking, emotional stress, dullness.",
+     "Gives the resolution: increase the total power of consciousness by sustaining close attention and strong awareness at the same time (the weight-training comparison), so that the two instructions are one exercise; marks that formulation as the answerer's.",
+     "Gives the chapter's three reasons for keeping extrospective awareness: less vulnerability to forgetting and drowsiness; more total conscious power, the key to later Stages; and the potential for Insight from watching the mind as a whole."
+    ]
+   },
+   {
+    "q": "Explain following and connecting as Stage Three uses them.\n• Say what the two techniques are for at this Stage, and in what manner they are to be done.\n• Give the steps of following beyond Stage Two, including what he says about the number of sensations and about changes in the breath.\n• Describe connecting as introduced here, what is deferred to later Stages, and how much he expects of it now.",
+    "model": "What they are for. Forgetting is overcome by catching distractions before they cause it, and that needs periods of attention long enough to look at the mind. His image is a raft on a turbulent sea: attention to the breath is the anchor, and only when the raft is steady can you stand up, see a wave coming and manoeuvre. Following and connecting supply the steadiness. They give the mind simple tasks, or games, that make the breath more interesting and so counter the tendency of attention to leave it. He adds two conditions. They are to be done without losing peripheral awareness, and always in a relaxed manner, not with driven intensity.\n\nFollowing. In Stage Two the task was to find the beginning and end of the in-breath and out-breath and the pauses between. The first goal now is to discern each of these with equal clarity. When that is easy, the next challenge is the individual sensations inside each half of the breath: first three or four distinct sensations in every in-breath, with the rest of the cycle kept as clear as before, and then the same with the out-breath. On number, he says it is possible to identify from four to a dozen or more on the in-breath and somewhat fewer on the out-breath, where they are subtler, but that the actual number is not that important. What matters is that perception sharpens and that you stay interested and attentive. If you miss, there is always the next breath. On changes in the breath, he mentions two. The breath may become exaggerated as unconscious processes try to help, which is all right so long as you are not doing it intentionally. And the sensations may weaken, disappear from one nostril, or alternate between nostrils, which is normal and needs only noticing.\n\nConnecting. He calls it an extension of following that involves making comparisons and associations, and a more advanced technique, introduced early for those who need a new challenge. It begins with the two pauses: which is longer? Then the in-breath against the out-breath. Then changes over time: are they longer or shorter than earlier, and is the longer pause still the longer one?\n\nWhat is deferred. Connecting the details of the breath to the state of the mind, for example whether the breath is longer, deeper or coarser when the mind is agitated or drowsy, waits until Stages Four and Five, when introspective awareness has improved enough. He says it then becomes another way of detecting subtle and changing states of mind.\n\nHow much to expect. Not much yet. He says not to set expectations too high, that you may find connecting is not particularly useful at this Stage, and that it is described here only because some will benefit from using it sooner. So I would teach following to every Stage Three student and offer connecting only to one who has run out of challenge. That ordering is my inference from his wording.",
+    "rubric": [
+     "States the purpose: longer, steadier attention so that the mind can be observed and distractions caught before forgetting (the raft and anchor), by making the breath more interesting; done without losing peripheral awareness and in a relaxed manner, not with driven intensity.",
+     "Gives the steps of following: all points of the cycle with equal clarity; then three or four distinct sensations in each in-breath; then the same for the out-breath.",
+     "Reports what he says about number (four to a dozen or more is possible, fewer on the out-breath, but the number is not that important) and about changes in the breath (unintended exaggeration is all right; fading or alternating between nostrils is normal).",
+     "Describes connecting as introduced: comparing the two pauses, the in-breath with the out-breath, and their changes over time; and what is deferred to Stages Four and Five: connecting the breath to states of mind.",
+     "States how little he expects of connecting now (it may not be particularly useful at this Stage; expectations kept low) and marks any teaching order built on that as the answerer's inference."
+    ]
+   },
+   {
+    "q": "Culadasa says the three intentions of Stage Three 'are simply elaborations of those from Stage Two'.\n• Set the two sets of intentions side by side and say what each elaboration adds.\n• Explain what stays the same between the two Stages, and what he says will happen to mind-wandering.\n• A student newly at Stage Three still waits for the 'aha' before doing anything. Say what is missing and how you would put it to them.",
+    "model": "Side by side. Stage Two's intentions are to appreciate the 'aha' moment that recognises mind-wandering, to redirect attention gently but firmly to the breath, and to engage with the breath as fully as possible without losing peripheral awareness. Stage Three's are to invoke introspective attention frequently, before the breath has been forgotten or sleep has come; to make corrections as soon as distraction or dullness is noticed; and to sustain peripheral awareness while engaging with the breath as fully as possible.\n\nWhat each elaboration adds. The first moves from receiving to initiating. At Stage Two the waking up is spontaneous and can only be welcomed. At Stage Three the meditator also looks on purpose, with attention, and does so before the loss and not after it. The second moves the correction earlier and widens it. At Stage Two there is one correction, returning after mind-wandering. Now the correction is made when a gross distraction is found, by tightening up on the breath, and it covers dullness as well. The third keeps its wording almost unchanged and deepens in content: engagement now means following in finer detail and, for some, connecting, and the awareness to be sustained is extrospective awareness, with introspective awareness being added to it. The pairing of each intention with its predecessor is my reading. He says only that they are elaborations.\n\nWhat stays the same. The mechanism. In both Stages the meditator holds intentions, the intentions produce simple actions, and repetition turns the actions into habits. He says that once these become habits you will rarely forget the breath. Appreciating spontaneous introspective awareness also continues. He says to keep practising what was learned in Stage Two and that mind-wandering will eventually stop completely. Nothing from Stage Two is dropped.\n\nThe student who waits. What is missing is the first elaboration. Waiting for the 'aha' is Stage Two's method, and it works after forgetting has happened, so by itself it can shorten mind-wandering but cannot prevent forgetting. I would begin by saying that the waiting is not wrong, and that the speed of their waking up is why they are at this Stage. Then I would describe the new step as a small one: every half-dozen breaths or so, without counting, glance at the mind, gently and briefly. Is something other than the breath taking over? Is there dullness? If so, tighten up on the breath. I would give the reason in his terms: attention that takes an interest in the state of the mind trains awareness to watch for it, so that in time the looking happens without being done. And I would warn them that it will feel like an interruption at first, and that at this Stage he calls the interruption the key.",
+    "rubric": [
+     "States both sets accurately: Stage Two (appreciate the 'aha'; redirect gently but firmly; engage fully without losing peripheral awareness) and Stage Three (invoke introspective attention frequently, before forgetting or sleep; correct as soon as distraction or dullness is noticed; sustain peripheral awareness while engaging fully).",
+     "Explains the elaborations: from receiving a spontaneous 'aha' to deliberately looking, and earlier; from one correction after mind-wandering to corrections before the loss, for dullness as well as distraction; closer engagement with awareness sustained; marks the pairing as the answerer's reading.",
+     "States what stays the same: intentions produce actions that become habits; Stage Two's practice continues, and he says mind-wandering will eventually stop completely.",
+     "Diagnoses the waiting student: relying on the 'aha' alone works only after forgetting, so it cannot prevent it; the deliberate check-in is what is missing.",
+     "Puts it to the student by crediting the quick waking up, describing the check-in as small, gentle and brief, giving the reason (attention trains awareness), and warning that the interruption is expected and is the key at this Stage."
+    ]
    }
   ],
   "scenario": [
@@ -1004,6 +1953,39 @@ const EXTRA_STAGES = [
      "Identifies 'clench and wait' as resistance, neither ignoring nor observing, and the fury and second-counting as the suffering that resistance and impatience add to pain.",
      "Rejects 'toughen up' as force and willpower, and prescribes a posture change first, then practice of the sequence on minor discomforts, with explicit permission to move mindfully.",
      "Weighting: teachers differ on how long to encourage a student to stay with pain; when injury is suspected Culadasa's own advice (in Stage Four) is to consult a physician, while suggestions such as shorter sits or walking are the teacher's own."
+    ]
+   },
+   {
+    "q": "A student at Stage Three reports: 'My friend says she gets ten or twelve separate sensations in every in-breath. I get about four, so I've been pushing: really boring in, hunting for more. Now my breathing has gone strange, as if I'm forcing it, one nostril seems to have gone dead, and my jaw aches by the end. I'm also losing the breath more often than I did a month ago. What am I doing wrong?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, the starting point is good, and I would say so. Four distinct sensations in every in-breath is the target Culadasa sets for this step: three or four, every time. The student has reached it. They have also been working diligently and noticing a great deal about their own sits.\n\nSecond, the comparison is the first problem. He says it is possible to identify from four to a dozen or more sensations, and then adds that this does not mean you will necessarily observe that many, and that the actual number is not that important. What matters is that perception grows sharper and that you stay interested in and attentive to the breath. The friend's twelve is not a standard. The Second Interlude's advice for self-doubt is plain on this: do not compare yourself to others.\n\nThird, the manner. He says following and connecting should always be done in a relaxed manner and not with driven intensity. Boring in and hunting is driven intensity, and the aching jaw is what it costs. That the tension comes from the hunting is my inference from the report.\n\nFourth, the losing of the breath. This is the result he predicts for close focus at the expense of awareness. When you focus closely the mind tends to drop awareness of the body and of external stimuli, and he says that if this happens you become more vulnerable to both forgetting and drowsiness. So more effort has produced more forgetting. I would check this by asking whether sounds and the body are still present while they hunt.\n\nFifth, the two things that feel wrong and are not. The strange breathing: when you intend to discern more, unconscious processes try to help by exaggerating the breath, and he says that is perfectly all right so long as you are not doing it intentionally, and warns against taking ownership of something you did not do. I would ask which it is, since deliberately pushing the breath would be something to drop. The dead nostril: sensations may grow weaker, disappear from one nostril or alternate between the two, and he calls this completely normal.\n\nWhat I don't know. Whether the breath is being altered on purpose. Whether the jaw is clenched throughout or only during the hunt. How sleep and stress have been this month, since those also affect forgetting.\n\nResponse. Tell them they had already arrived, and that nothing in the method asks for twelve. Then change the manner and not the task. Relax the face and jaw at the start and whenever tension is noticed. Follow with interest and let the sensations come; if a breath is missed, there is the next one. Keep sounds and the body in the background on purpose. If four has become too easy to hold their interest, the next challenge he offers is not more of the same but connecting: comparing the pauses and the lengths of the breaths. And suggest they stop exchanging numbers with the friend. That last piece of advice is mine.",
+    "rubric": [
+     "Credits the starting point: three or four distinct sensations per in-breath is the target he sets, and the student had reached it.",
+     "Deals with the comparison from the text: four to a dozen or more is possible but the number is not that important; sharper perception and continued interest are what matter; the antidote to self-doubt includes not comparing yourself to others.",
+     "Identifies the manner as the fault (driven intensity where he asks for a relaxed manner), marks the link to the jaw tension as inference, and explains the increased forgetting by close focus dropping extrospective awareness, with a question to test it.",
+     "Normalises the two alarms correctly: exaggeration of the breath is all right if it is not done intentionally (and asks which it is); weakening, loss in one nostril or alternation is completely normal.",
+     "Prescribes a change of manner, awareness kept open, and connecting as the next challenge if one is needed, and notes the weighting: teachers differ on whether to take detailed following away for a while or simply relax it, and on how much weight to give sleep and stress in the extra forgetting; the advice about not swapping numbers is the teacher's own."
+    ]
+   },
+   {
+    "q": "A student at Stage Three reports: 'Labeling has opened something up for me. When I catch a distraction I don't just label it, I trace it back. Planning tomorrow's meeting, because I'm anxious about it, because my manager reminds me of my father. I'm learning more about myself than in years of journaling. The sits are mostly this now, and I come away with real insights. Isn't this exactly what mindfulness is for?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, several things here are worth having. The student is catching distractions and can say what they are, which means introspective awareness is growing and labeling is doing its job. The curiosity about the mind is something Culadasa wants. He says that even at these early Stages there is great potential for Insight, because you are watching and learning from the activity of the mind as a whole.\n\nSecond, what the student is doing is not labeling. The instruction is narrow: at the moment you realise you are off the breath, give the distraction a simple, neutral label, only the most recent thought if there was a series, and gently return. He adds: always avoid analysing distractions, which only creates more distraction. Tracing a thought back to a manager and a father is analysis, and the report confirms his prediction. The sits are now mostly this.\n\nThird, what is and is not being trained. Labeling exists to teach awareness which distractions steal attention, so that it can alert you before forgetting. Each chain of analysis is itself a stretch of discursive thinking with the breath gone. I infer that the sits are training fluent self-reflection, which the student already had from journaling, and are no longer training the skill this Stage is for. That inference is mine.\n\nFourth, the question deserves a straight answer. In his terms, no. Mindfulness is the optimal interaction between attention and peripheral awareness, and the learning he has in mind comes from awareness observing the mind while attention stays on the breath. It does not come from attention leaving the breath to think about the mind. Stage Four makes the same point about insights that arise in a sit: they are often valid, but pursuing them trains the mind to turn every sit into a kind of psychotherapy, so they are noted and taken up afterwards. There he also offers analytical meditation as a separate practice with its own time.\n\nWhat I don't know. Whether the connections the student is finding are distressing or simply interesting. Whether they want what this method offers, or have found something they value more. I would not assume.\n\nResponse. Take the insights seriously and do not argue about their truth. Then separate two activities that have been merged. On the cushion: one neutral word, such as 'planning', and back to the breath, with no tracing. Off the cushion: a set time, soon after the sit, to write down and think through whatever seemed important. If a connection feels urgent mid-sit, make a mental note and promise it that time. I would tell them honestly what the trade is: fewer insights of this kind during the sit for a while, in exchange for attention that stays and an awareness that, by his account, later sees the mind far more directly. If the material about the father turns out to be heavy, that is a conversation for a counsellor as well as a meditation teacher.",
+    "rubric": [
+     "Credits what is working: distractions are caught and identified (introspective awareness growing), and curiosity about the mind is valued, since he sees potential for Insight even at early Stages.",
+     "States the instruction the student has left behind: a simple, neutral label for the most recent thought and a gentle return; 'always avoid analysing distractions, which only creates more distraction'; sits that are 'mostly this' are the predicted result.",
+     "Explains what labeling is for (teaching awareness which distractions steal attention) and marks as inference that the sits now train self-reflection in place of the Stage's skill.",
+     "Answers the question in his terms: mindfulness is the interaction of attention and peripheral awareness, with the mind known in awareness while attention stays on the breath; cites Stage Four's handling of insights (note them, take them up afterwards; analytical meditation as a separate practice).",
+     "Separates on-cushion labeling from off-cushion reflection without disputing the insights, and notes the weighting: teachers differ on how much room to give self-inquiry inside a sit, and those with a therapeutic orientation would value the material more; whether it needs a counsellor depends on how heavy it is, which the report does not show."
+    ]
+   },
+   {
+    "q": "A student who has been at Stage Three for some months reports: 'Most of the sit is steady now, and my check-ins usually find nothing much. But two or three times a sit I get ambushed. A thought about my ex, or about money, and I'm gone instantly, no build-up at all. I wake up thirty seconds later with my heart going. Check-ins can't catch something that fast. Am I stuck here until I've sorted my life out?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, this is a report from near the end of the Stage. A mostly steady sit, check-ins that find little, and a waking up within thirty seconds mean that mind-wandering is short and forgetting is becoming the exception. I would say that before anything else.\n\nSecond, the ambush is in the book. Culadasa says forgetting often happens gradually, but that when the distracting thought is highly charged, attention can be captured quickly and intensely and the meditation object disappears at once from consciousness. So the student's account is accurate, and so is their conclusion about check-ins. A check-in looks for a gross distraction that is still sharing attention with the breath. A capture with no build-up gives it nothing to find.\n\nThird, what the Stage does offer. Labeling: at each waking up, one neutral word for what took you. He says this teaches introspective awareness which distractions are most likely to steal attention, the faces of your abductors, until it can alert you before forgetting. Two topics that ambush repeatedly are exactly what that is for. Peripheral awareness: Stage Two says that if it is maintained you learn to notice potential distractions as they arise, and attention is less likely to be captured. And the Six-Point Preparation asks for an inventory of what might come up, with a resolve to set it aside. None of these is a guarantee against a charged thought. He does not claim one, and I would not.\n\nFourth, where this belongs. Emotionally charged material is named among the distractions of Stage Four, which has its own methods for it. The Overview lets a meditator begin on the next Stage's obstacles once the present ones are overcome even temporarily, and its wording for mastery of Stage Three is that you rarely forget. Reading two or three brief ambushes as compatible with moving on is my judgment. Others would hold to the stricter wording of the chapter, that forgetting no longer occurs.\n\nFifth, 'until I've sorted my life out'. Partly. The Second Interlude treats worry and remorse as agitation that also has remedies off the cushion: positive action where something can be resolved. But it does not make progress wait for that.\n\nWhat I don't know. Whether the pounding heart settles quickly. Whether the thirty seconds are spent lost in the story or already half aware. Whether these topics are live crises.\n\nResponse. Congratulate them, and agree that check-ins will not catch this. Then give the three things that bear on it: name the two topics in the preparation and set them aside; label at each waking up and appreciate it; and keep awareness of the body and of sounds open through the sit. When the heart is going, relax the body before returning. Tell them that this is Stage Four's territory arriving a little early, that a method for charged material is coming, and that some of the charge may ease if the money and the ex are given attention at another time of day.",
+    "rubric": [
+     "Credits the stage of practice: mostly steady sits, quiet check-ins and waking within thirty seconds indicate that forgetting is becoming the exception.",
+     "Confirms the student's account from the text: a highly charged thought can capture attention quickly and intensely, with the object disappearing at once; agrees that a check-in, which looks for gross distraction still sharing attention with the breath, cannot catch that.",
+     "Gives what the Stage does offer without overclaiming: labeling to teach awareness the 'faces of your abductors'; maintained peripheral awareness, which makes capture less likely; the preparation's inventory and resolve; none of them a guarantee.",
+     "Places the problem: emotionally charged material is Stage Four's distraction; the Overview allows work on the next Stage once obstacles are overcome even temporarily; answers 'sort my life out' with the Second Interlude (off-cushion remedies exist, but progress does not wait on them).",
+     "Weighting: teachers differ on whether a few brief captures a sit are compatible with moving on, since the Overview says 'rarely' and the chapter says forgetting no longer occurs; and on whether to bring Stage Four's method for charged material forward now or to keep to Stage Three's tools."
     ]
    }
   ]
@@ -1260,6 +2242,256 @@ const EXTRA_STAGES = [
       "why": "In the chapter's conclusion he says that by the end of this Stage perception of the meditation object has become non-verbal and non-discursive."
      }
     ]
+   },
+   {
+    "q": "A strong distraction takes centre stage and the breath slips out of attention altogether, though it is still faintly present in peripheral awareness. How does Culadasa classify this?",
+    "options": [
+     {
+      "t": "Subtle distraction, since awareness of the breath is still present",
+      "ok": false,
+      "why": "A distraction is subtle only while the breath remains the primary focus of attention, and here the distraction has taken the centre."
+     },
+     {
+      "t": "Forgetting, since the breath is no longer an object of attention",
+      "ok": false,
+      "why": "He grants that the breath is no longer an object of attention, yet says this is different from forgetting so long as it remains in consciousness."
+     },
+     {
+      "t": "Mind-wandering, since attention has now left the breath entirely",
+      "ok": false,
+      "why": "Mind-wandering follows forgetting, when the breath has gone from consciousness and attention moves from thought to thought, which has not happened here."
+     },
+     {
+      "t": "Gross distraction still, since the breath has not left consciousness",
+      "ok": true,
+      "why": "His note says that, strictly speaking, the breath is then no longer an object of attention, but that as long as it has not disappeared entirely from consciousness this differs from the forgetting of Stage Three."
+     }
+    ]
+   },
+   {
+    "q": "Culadasa singles out two types of subtle distraction as especially troublesome at Stage Four. Which two?",
+    "options": [
+     {
+      "t": "Those that come as pain, and those that come as strong emotion",
+      "ok": false,
+      "why": "Pain and emotions belong to his three persistent distractions that become gross, which is a different list from the two troublesome types of subtle distraction."
+     },
+     {
+      "t": "Those with a special allure, and those that sneak in gradually",
+      "ok": true,
+      "why": "He names the noticeably attractive ones, which pull through allure or interest, and those that divert attention by the manner of their arising, sneaking in gradually until they displace the focus."
+     },
+     {
+      "t": "Those that arise as words, and those that arise as mental images",
+      "ok": false,
+      "why": "He draws no line here between verbal and visual distractions, and defines the two types by allure and by gradual arising."
+     },
+     {
+      "t": "Those from outside the body, and those that the mind itself makes",
+      "ok": false,
+      "why": "He does not sort the troublesome ones by sensory or mental origin, only by their allure and by how gradually they arise."
+     }
+    ]
+   },
+   {
+    "q": "Culadasa says you could make attention more stable simply by bringing it back to the breath over and over. What does he say anchoring attention on the breath while sustaining introspective awareness does that this would not?",
+    "options": [
+     {
+      "t": "It prevents subtle dullness, and not only the strong kind of it",
+      "ok": false,
+      "why": "Stable subtle dullness is still tolerated at this Stage, and overcoming all subtle dullness is left to Stage Five."
+     },
+     {
+      "t": "It produces exclusive attention, and not only continuous attention",
+      "ok": false,
+      "why": "Exclusive attention is the work of Stage Six, and he warns that attempting it now costs you introspective awareness."
+     },
+     {
+      "t": "It cultivates mindfulness, and not only stability of attention",
+      "ok": true,
+      "why": "He says sustained introspective awareness does not just make attention more stable, since returning over and over would do that, and that anchoring attention while maintaining it is cultivating mindfulness."
+     },
+     {
+      "t": "It gives Insight into the mind, and not only a calmer experience",
+      "ok": false,
+      "why": "He promises a better understanding of how the mind behaves, but Insight experience belongs to his fourth level of mindfulness and is not what he claims here."
+     }
+    ]
+   },
+   {
+    "q": "Besides major traumas and lesser trials such as teasing or parental favouritism, what further source of the charged material of Stage Four does Culadasa name?",
+    "options": [
+     {
+      "t": "Internalised belief systems that are dysfunctional or in conflict",
+      "ok": true,
+      "why": "He says charged material also arises from internalised dysfunctional or conflicting belief systems, such as a work ethic that makes you feel guilty for meditating."
+     },
+     {
+      "t": "Imprints of experiences carried over from one's previous lives",
+      "ok": false,
+      "why": "He mentions past-life recollections only among the seductions of dullness, and says that whatever surfaces was caused by something in your own history."
+     },
+     {
+      "t": "Innate programming that is shared by every human being alike",
+      "ok": false,
+      "why": "Innate programming is what the Third Interlude says Insight reconditions at the fourth level, whereas this purification concerns conditioning from personal history."
+     },
+     {
+      "t": "Unwholesome acts of the past that still call for making amends",
+      "ok": false,
+      "why": "That is the ground of Agitation due to Worry and Remorse in the Second Interlude, and it is not on his list of sources in this passage."
+     }
+    ]
+   },
+   {
+    "q": "On catching a gross distraction, the natural tendency is to yank attention straight back to the breath. What does Culadasa say about this?",
+    "options": [
+     {
+      "t": "It works for thoughts, but not for pain or for strong emotions",
+      "ok": false,
+      "why": "He makes no such division here, and asks for a gentle return whenever the mind has been drawn into gross distraction."
+     },
+     {
+      "t": "It is right at this Stage, since gross distraction grows quickly",
+      "ok": false,
+      "why": "Speed of return is not his remedy for gross distraction, which is introspective awareness and fuller engagement with the breath."
+     },
+     {
+      "t": "It is harmless, provided that no annoyance comes along with it",
+      "ok": false,
+      "why": "He treats the abruptness itself as what slows you down, and annoyance as one more thing to be let go of."
+     },
+     {
+      "t": "It slows progress in the long run, so let go gently and easily",
+      "ok": true,
+      "why": "He says abruptly yanking yourself back will slow you down in the long run, and asks for a gentle, unhurried, even loving return that appreciates the part of the mind that noticed."
+     }
+    ]
+   },
+   {
+    "q": "Culadasa tells the meditator to 'dissociate' from a difficult emotion. What does he say this means?",
+    "options": [
+     {
+      "t": "Feeling only its bodily side, and leaving the mental side alone",
+      "ok": false,
+      "why": "Bodily sensations are where the investigation starts, and he then turns attention to the mental aspects once you are ready."
+     },
+     {
+      "t": "Cooling it down by turning attention back to the breath at once",
+      "ok": false,
+      "why": "He rules out pouring cold water on the emotion, and at this point the emotion is itself the meditation object."
+     },
+     {
+      "t": "Letting it come and do its dance without getting absorbed in it",
+      "ok": true,
+      "why": "He says dissociating does not mean failing to feel the emotion fully or pouring cold water on it, but letting it come into consciousness and do its dance without getting absorbed."
+     },
+     {
+      "t": "Treating it as not yours, so that it need not be felt so fully",
+      "ok": false,
+      "why": "He does say there is no self in emotions, but he also says that dissociating does not mean you do not feel them fully."
+     }
+    ]
+   },
+   {
+    "q": "A disturbing image arises that seems to have nothing to do with the meditator or with anything they have lived through. What does Culadasa say about it?",
+    "options": [
+     {
+      "t": "Something in their history caused it, and knowing what is not important",
+      "ok": true,
+      "why": "He says that however bizarre it seems you can be sure something in your history caused it, perhaps a long-forgotten film image, and that whether you know the cause is not important."
+     },
+     {
+      "t": "It is random mental noise, and it carries no significance of any kind",
+      "ok": false,
+      "why": "He says nothing in meditation is ever random or meaningless, and that everything arising is part of your psychic make-up."
+     },
+     {
+      "t": "It is symbolic, and its meaning should be worked out after the sitting",
+      "ok": false,
+      "why": "He does say images symbolise material the mind is not comfortable confronting directly, but he says knowing the cause is not important and prescribes no decoding."
+     },
+     {
+      "t": "It is a product of dullness, and the mind needs rousing straight away",
+      "ok": false,
+      "why": "Dream imagery in dullness is treated separately under the seduction of dullness, whereas this passage concerns material that surfaces as the mind grows calm."
+     }
+    ]
+   },
+   {
+    "q": "A meditator notices progressive subtle dullness and responds only by strengthening the intention to observe the breath clearly and in more detail. When does Culadasa say this will work?",
+    "options": [
+     {
+      "t": "Whenever the dullness has not yet reached the point of drowsiness",
+      "ok": false,
+      "why": "For dullness short of drowsiness that was not caught very early he gives stronger measures, such as expanding peripheral awareness or opening the eyes."
+     },
+     {
+      "t": "Only for very subtle dullness that is identified very early on",
+      "ok": true,
+      "why": "He says raising the mind's energy just by strengthening this intention will only work for very subtle dullness, identified very early on."
+     },
+     {
+      "t": "Only once the dullness has stopped returning for several minutes",
+      "ok": false,
+      "why": "Three to five minutes without dullness is his test that an antidote was strong enough, not a condition for using this one."
+     },
+     {
+      "t": "Whenever it is paired with a brief check-in on the state of mind",
+      "ok": false,
+      "why": "He attaches no check-in to this antidote, and at this Stage he is replacing checking in with continuous introspective awareness."
+     }
+    ]
+   },
+   {
+    "q": "In the Third Interlude, why does Culadasa say there is no 'magic' in the first level of mindfulness, moderating behaviour?",
+    "options": [
+     {
+      "t": "It works on behaviour, whereas suffering comes from wrong views",
+      "ok": false,
+      "why": "Misconceptions about self and reality are what the fourth level reconditions, but his stated reason here is simply that the first level changes nothing lasting."
+     },
+     {
+      "t": "It relies on attention alone, with no peripheral awareness in it",
+      "ok": false,
+      "why": "He describes the first level as staying mindful, attentive to our feelings and aware of the situation, so both faculties are at work."
+     },
+     {
+      "t": "It happens off the cushion, and reprogramming needs meditation",
+      "ok": false,
+      "why": "The second level also happens in daily life and does reprogram conditioning, and only the third level is confined to meditation."
+     },
+     {
+      "t": "It changes behaviour in the moment but makes no permanent change",
+      "ok": true,
+      "why": "He says awareness in the present moment lets us slow down and change our behaviour but makes no permanent changes, so that next time we react the same way unless we are mindful again."
+     }
+    ]
+   },
+   {
+    "q": "In the thorn bush metaphor of the Third Interlude, what is the third level of mindfulness, the kind that happens on the cushion?",
+    "options": [
+     {
+      "t": "Cutting off a whole trunk at the root, though the root survives",
+      "ok": true,
+      "why": "He says each purification in meditation cuts off an entire trunk with all its branches, yet the root still survives and new trunks can grow back."
+     },
+     {
+      "t": "Trimming back the branches that hang across the path you walk",
+      "ok": false,
+      "why": "Trimming the branches is the second level, mindfulness sustained in daily life, where new branches keep growing to replace them."
+     },
+     {
+      "t": "Destroying the root, so that the thorn bush can never grow back",
+      "ok": false,
+      "why": "Destroying the root is the fourth level, the Insight of Awakening, and not the purification that meditation brings."
+     },
+     {
+      "t": "Dodging the thorn bush, so that it no longer scratches your face",
+      "ok": false,
+      "why": "Dodging the bush is the first level, moderating behaviour, which he says changes nothing in the long term."
+     }
+    ]
    }
   ],
   "open": [
@@ -1306,6 +2538,50 @@ const EXTRA_STAGES = [
      "Cannot be disregarded: deliberately make it the meditation object, with the specific handling for pain (investigate; sensation versus reaction), a recurring thought (label, don't analyse) and emotion (acknowledge, allow, accept); return to the breath when it subsides.",
      "States the common principle: the focus of attention is always chosen, never dragged and never used to suppress ('finesse the situation'); stilling the mind means less movement of attention, not an empty awareness; the manner is gentle and affirming."
     ]
+   },
+   {
+    "q": "A student asks why sitting on a cushion should change anything that being mindful in daily life does not. Answer from the Third Interlude.\n• Explain what Culadasa means by 'invisible programs', why they do not change, and how mindfulness changes them.\n• Set out the four levels at which he says mindfulness works, and where each takes place.\n• Explain why he says meditation accomplishes more than mindfulness in daily life, and what even meditation leaves undone.",
+    "model": "The programs. He says imprints of past experience shape our emotional reactions and behaviour, mostly without our knowing it. He calls this unconscious conditioning a collection of invisible programs: reactions that may have been appropriate once and are now submerged and fixed. They lie dormant until something triggers them. When that happens we get so focused on the triggering event and our own emotions that the programs take in no new information about the present situation. That is why they do not change. Mindfulness works because it supplies that information. When attention is not so captured by the moment that awareness fades, the unconscious mind is informed, in real time, that its reaction does not fit the situation and is harming more than helping.\n\nThe four levels. One: moderating behaviour. Staying mindful, we react less quickly, see more options and choose better. He says this makes no permanent change: next time we react the same way unless we are mindful again. There is no magic here. Two: becoming less reactive and more responsive. When mindfulness in daily life is strong enough, for long enough and often enough, the context and consequences of our reactions reach their unconscious sources and real reprogramming happens. Duration and consistency both matter. Even when emotion wins in the moment, or mindfulness is lost completely, he says honest, non-judgmental reflection afterwards begins the process, provided we do not become submerged in self-reproach. Three: reprogramming deep conditioning. He says this occurs only in meditation. It is the purification of mind, which he places mainly in Stage Four and also at Stage Seven. Four: the radical reconditioning of the innate tendencies that create all our suffering, which occurs only through Insight experience.\n\nWhy meditation does more. He gives two reasons. In daily life, conditioning can be reprogrammed only when something triggers it; in meditation, as the mind grows stable and quiet, deep memories, thoughts and emotions come to the surface without a trigger. And what surfaces is more fundamental: conditioning that drives a wide range of reactive behaviours, which daily life could reach only piecemeal, through many different triggering events. His metaphor is a thorn bush beside a path. The first level dodges it. The second trims the branches across the path, and new ones keep growing. The third cuts off an entire trunk at the root, with every branch on it.\n\nWhat it leaves undone. The root survives, and new trunks can grow back unless you remain vigilant. Only the fourth level, the Insight of Awakening, destroys the root. So the answer to the student has two halves. Practice in daily life is, in his word, essential, and he asks for it especially when it is easy, to build the capacity for when it is hard. Sitting reaches what daily life would have to wait for.\n\nCalibration. All of this is his account, asserted and illustrated but not demonstrated; 'informing unconscious processes' is a model of what happens. That purification is not confined to Stage Four is his statement. That it therefore need not be finished before a meditator moves on is my inference.",
+    "rubric": [
+     "Explains the programs: conditioned reactions stay fixed because, when triggered, we focus on the event and our emotions, so no new information gets in; mindfulness supplies that information in real time.",
+     "Gives the four levels in order, with where each occurs: moderating behaviour (no permanent change, no magic); less reactive and more responsive (daily life; duration and consistency; reflection afterwards counts); deep conditioning (only in meditation; purification, mainly Stage Four and also Stage Seven); innate tendencies (only through Insight experience).",
+     "Gives both reasons meditation does more: no trigger is needed, and what surfaces is more fundamental conditioning that drives many reactive behaviours.",
+     "States what is left undone: the root survives and trunks can regrow; only the Insight of Awakening destroys it; daily-life practice remains essential.",
+     "Calibration: presents the mechanism as his model, and marks any claim about how complete purification must be before moving on as inference."
+    ]
+   },
+   {
+    "q": "Stage Four tells the meditator to tighten up on the breath, and also not to focus on it too intensely. Reconcile the two.\n• Say when and why Culadasa asks for more intensity, and how much.\n• Set out what he says goes wrong when focus is too intense, at once and over a longer stretch.\n• Explain the balance he names as a challenge of this Stage, and how subtle distraction and subtle dullness are 'made use of' in finding it.",
+    "model": "When and how much. He asks for more intensity at two moments: when introspective awareness shows a subtle distraction with the potential to become gross, and whenever you return to the breath after a gross distraction. The measure is specific. Intensify the focus, 'but not too much', only enough to keep other subtle distractions from becoming gross ones. The tools are following and connecting from Stage Three, and he says connecting is particularly useful now. He also asks that it be done in as relaxed and gentle a way as possible.\n\nWhat goes wrong with too much. At once: trying to force exclusive attention is, he says, a big mistake at this Stage. Hyper-focused tunnel vision is the kind of attention that goes with the fight-or-flight response, and it comes with tension and anxiety. Peripheral awareness may be lost completely, which leaves you more exposed to distraction and dullness, not less. Over a longer stretch there are two further costs, and they point in opposite directions. Focusing too intensely for too long excludes the thoughts and sensations that usually keep the mind alert, so its energy drops and dullness follows. And focusing too intensely can leave you over-energised and agitated. He adds that when attention is too intense for too long, mindfulness fades.\n\nThe balance. He names it among the practice goals: learning to identify and sustain a balance between an over-energised, easily distracted mind and a dull, lethargic one. His summary of close attention is that focus should be neither too intense and tight nor too relaxed and loose. So the two instructions are corrections on one dial, applied in opposite directions according to what introspective awareness reports. Distractions gaining ground: tighten. Tension, agitation or fading awareness: relax the force of attention.\n\nMaking use of the subtle forms. The chapter says you will learn to tolerate and even make use of subtle distractions and subtle dullness, and that they help with this balance. For dullness he is explicit. If you become over-energised, relax the force of attention 'to allow a little subtle dullness in', which lowers the energy of the mind; and stable subtle dullness is tolerated because it keeps the mind from becoming agitated and restless. For subtle distraction he is less explicit. My reading is that it does two jobs. Staying aware of things in the background keeps the brain stimulated, which is his stated reason for 'looking beyond' the meditation object. And the strength of the subtle distractions is the gauge that tells you how much to tighten. That second point is mine.\n\nWhat reconciles them. Introspective awareness. Without it, 'tighten' and 'relax' are guesses; with it, each is a response to something seen. That is why he tells the meditator to aim for a balance between attention and introspective awareness, and why the chapter that asks for tightening also forbids the single-pointed focus that would cost you the faculty doing the steering.\n\nFor teaching. Students tend to hear one half. The diligent hear 'tighten' and end up tense; the relaxed hear 'let it be' and drift. I would ask which mistake a student usually makes and give them the other half. That advice is mine, not the book's.",
+    "rubric": [
+     "When and how much: on spotting a subtle distraction that could turn gross, and on each return to the breath; only enough to keep subtle distractions from becoming gross; by following and especially connecting; relaxed and gentle.",
+     "Costs of too much: fight-or-flight tunnel vision with tension and anxiety; loss of peripheral and introspective awareness; over time, dullness from excluding stimulation, or over-energised agitation; mindfulness fades.",
+     "Names the balance between an over-energised, easily distracted mind and a dull, lethargic one (neither too tight nor too loose), and treats the two instructions as opposite corrections on one dial.",
+     "Subtle forms made use of: allow a little subtle dullness in to lower energy; stable subtle dullness tolerated; marks the account of how subtle distraction is used as inference, since the chapter does not spell it out.",
+     "Identifies introspective awareness as what steers between the two, which is why forced exclusive attention is ruled out at this Stage."
+    ]
+   },
+   {
+    "q": "A student believes they have finished Stage Four. Set out how you would judge it.\n• Give Culadasa's marks of mastery for attention, for dullness and for mindfulness.\n• Say what may still be present in a meditator who has mastered the Stage.\n• Say what a verbal report can and cannot establish, and what you would ask.",
+    "model": "The marks. He says you have mastered Stage Four when you are free from both gross distractions and strong dullness. For attention: physical sensations, thoughts, memories and emotions still arise, but they no longer draw attention away, and you can direct and sustain attention at will, which he calls a unique and powerful ability. For dullness: it no longer leads to drowsiness, nor causes perception of the breath to grow dim or take on hypnagogic distortions. Within the chapter the goal is put as progressive subtle dullness rarely arising, and being quickly noticed and corrected when it does. For both problems, noticing and correcting have become automatic. For mindfulness, which he says has reached an important threshold: attention can precisely examine every part of the breath with little effort; perception of the meditation object has become non-verbal and non-discursive; and awareness can clearly discern how the breath changes over time. He ties this to the Buddha's words on knowing a long breath as long and a short breath as short.\n\nWhat may remain. Subtle distraction: the goal is that the breath stays the primary focus, not that the background is empty. Stable subtle dullness: he says you will still experience it until you overcome it in Stage Five. Pain: he says it disappears completely only in the later Stages. And purification: the Third Interlude says it occurs mainly in Stage Four but also at Stage Seven, so charged material may still surface. That a meditator can be past the Stage with purification unfinished is my inference from that sentence. He does not make it a criterion either way.\n\nWhat a report can and cannot establish. A report gives me the student's impression of their sits. It cannot easily separate a clear mind from a pleasantly dull one, because subtle dullness impairs the introspective awareness that would detect it, and a peaceful state with fewer distractions is just what he says tolerated stable subtle dullness produces. Nor does one report tell me how consistent the result is. The Overview says to move on only when you have achieved mastery, and warns that isolated experiences of more advanced Stages have no real significance for progress. Reading mastery as 'in most sits, not the best one' is my gloss on that.\n\nWhat I would ask. When a thought or a sound comes, does the breath stay as clear as before, or does it fade for a moment? That separates subtle from gross distraction. Does the breath ever go soft, dim or dreamlike, and does the head ever nod? Is the result the same late in a long sit? He allows that even a well-trained mind slips into strong dullness when extremely fatigued, so one sleepy sit after a bad night settles nothing. Are you still checking in with attention, or does the noticing happen while attention stays on the breath? Is there a running commentary on the breath, or is it known without words? And when something charged comes up, does it take over the sit?\n\nIf the answers fit, I would have them begin Stage Five, and say plainly that the Overview expects sits to move back and forth between Stages.",
+    "rubric": [
+     "Attention: free of gross distraction; sensations, thoughts, memories and emotions still arise but no longer draw attention away; attention can be directed and sustained at will; noticing and correcting are automatic.",
+     "Dullness: free of strong dullness; no drowsiness, dimming or hypnagogic distortion of the breath; progressive subtle dullness rarely arises and is quickly corrected.",
+     "Mindfulness: every part of the breath examined with little effort; perception non-verbal and non-discursive; awareness discerns how the breath changes over time.",
+     "What may remain: subtle distraction, stable subtle dullness (Stage Five's work), some pain, and further purification (also at Stage Seven), with the last marked as inference where it is used as a criterion.",
+     "Limits of a report and the questions that probe them: clear versus pleasantly dull, consistency across sits, whether checking in has given way to continuous introspective awareness."
+    ]
+   },
+   {
+    "q": "Explain Stage Four's teaching on pain as a teacher would need to hold it.\n• Say how Culadasa accounts for pain at this Stage, as against Stage Three, and what limits he sets before giving the method.\n• Set out the method, including what to investigate and the formula he borrows.\n• Give the three ways he says pain resolves, what to do when it does not, and what he claims the practice shows.",
+    "model": "His account. In Stage Three, he says, pain came because you were not used to sitting still for long periods. Now pain becomes a way for the mind to resist practising. The mind magnifies ordinary discomforts, and will even create painful sensations that have no physical cause, especially in longer sits and on retreat. Such pain often disappears once it is made the focus of attention, only to show up elsewhere a little later. Regardless of its source, he says, pain must now be confronted as part of the practice.\n\nThe limits. You do not have to seek out pain. Do not suppress or ignore pain with a definite physical origin. If you suspect injury or disease and are not sure, consult a physician, since sitting posture could exacerbate an existing condition. Make yourself as comfortable as possible, with pillows, pads or anything else, so that the body does not interfere with training the mind.\n\nThe method. The basic strategy is already known: ignore unpleasant sensations as long as possible; make them the meditation object if they persist; move mindfully only when absolutely necessary. At this Stage you examine the pain more thoroughly and wait even longer before moving. Investigate its qualities: sharp, piercing, burning, aching, dull. Is it solid and unchanging, or does it fluctuate in intensity, area or location? Is it one sensation or a composite of several? Then search within the sensation for the source of the unpleasantness: how much is inherent in the sensation, and how much is the mind's reaction to it? The formula is Shinzen Young's: suffering equals pain multiplied by resistance. If resistance is zero, so is the suffering.\n\nHow it resolves. At first, attention may seem only to intensify the pain. After sustained investigation it often resolves in one of three ways: its intensity fades entirely; it continues as a strong sensation that no longer feels particularly painful; or it stays painful but can be effectively disregarded. He attributes this to no longer resisting, and warns that expecting it every time brings the resistance back. When pain disappears or can be ignored, always return to the breath, and repeat as needed.\n\nWhen it does not. Stay with the pain as the meditation object. He says the mind can be trained just as effectively with pain as with the breath, and names two advantages: pain draws attention so intensely that dullness and distraction are less likely, and because it generates many thoughts and emotions, strong introspective awareness is easier to maintain.\n\nWhat it shows. Unavoidable discomfort is an opportunity to distinguish the sensation from the mind's unnecessary reaction to it, which is the suffering. He quotes the Buddha: the uninstructed person feels two things, a bodily one and a mental one; the instructed disciple feels only the bodily one.\n\nCalibration. That the mind produces pain in order to resist practice is his claim, and nothing in a student's report can confirm it for a given pain. Two instructions also pull against each other: wait even longer before moving, and do not ignore pain of physical origin. He gives no test for telling the two apart beyond suspicion and a physician. My own rule, not his, is that pain which outlasts the sit or worsens from week to week is treated as physical until shown otherwise.",
+    "rubric": [
+     "Account and contrast: Stage Three's pain came from not being used to sitting still; now pain is a way the mind resists practice, magnified or created, and often moves when attended to.",
+     "Limits: no need to seek pain; do not suppress or ignore pain of definite physical origin; physician if unsure; make yourself as comfortable as possible.",
+     "Method: ignore, then make it the object, move mindfully only when necessary; investigate qualities, change and composition; separate sensation from reaction; suffering equals pain times resistance (Shinzen Young).",
+     "Resolution: the three ways; the warning about expectation; return to the breath; if pain stays, keep it as the object, with the two advantages he names.",
+     "Calibration: marks the resistance account as his claim, names the tension between waiting longer and respecting physical pain, and labels any practical test as the answerer's own."
+    ]
    }
   ],
   "scenario": [
@@ -1340,6 +2616,39 @@ const EXTRA_STAGES = [
      "Answers the student's question: not Insight in his sense and not jhāna, which in TMI depends on exclusive attention with awareness intact; cites the warning that unrecognised dullness leads to overestimating one's Stage.",
      "Treats the friend's tradition fairly, as Culadasa does: such states are deliberately cultivated elsewhere and may have meaning, but for training attention and awareness they are a hindrance to be avoided at this Stage.",
      "Gives the instruction without contempt (let go, strengthen the intention to perceive the breath in detail, rouse the mind, keep any meaning for later) and notes the weighting: teachers differ on how firmly to call it dullness from a report alone, and those from other systems would value the experiences themselves."
+    ]
+   },
+   {
+    "q": "A student whose attention has become continuous reports: 'Meditation has turned into the most productive hour of my day. Last week I saw exactly how to restructure my team, on Tuesday I finally understood why my marriage ended, and yesterday the whole outline of my book arrived. I keep a notebook beside the cushion now so that I lose nothing. My thinking has never been this sharp. Isn't this what the practice is for?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nThis is the gross distraction Culadasa calls discursive brilliance, and it is a sign of progress before it is a problem. I would say that first. He says that as attention grows more stable and mindfulness more powerful, the mind becomes better at creating and linking novel ideas and at appreciating their significance. The sharper thinking is what he predicts. He grants that such insights are often quite valid and very useful. The stability behind them is the student's own work.\n\nThe difficulty is what the hour is now training. He says that if you keep engaging with insights and thinking them through, compelling issues will arise whenever you sit: you will have trained the mind to make meditation into a kind of personal psychotherapy, or a tool for intellectual or artistic creativity. He names a further risk, which the student has just voiced: deciding that the new powers of analysis are the real benefit of meditation. And he predicts a decline. As the mind keeps dredging up material the quality drops, and ideas that seemed profound on the cushion often look trivial afterwards.\n\nThe notebook is not in the book. His instruction is a mental note and a resolve to address the insight after meditating. My reading is that a notebook beside the cushion tells the mind that producing ideas is what the sit is for, and rewards it each time. That inference is mine.\n\nWhat I don't know.\n\nWhether the insights are any good; he says the first ones may indeed be significant. How much of the sit they take: one idea noted in forty minutes is a different matter from an hour of thinking. Whether the student can still return to the breath at will, or whether, as he describes, returning has become difficult and the mind goes looking for something else to think about. And what the student wants from practice. If the aim is a clearer head for work, they are getting it, and I should say honestly that the Ten Stages ask for something else.\n\nResponse.\n\nI would not argue with the value of the ideas. I would say: these came because your mind is steadier, and the steadiness is the asset. Spend all of it on thinking and it stops growing. His word is trap, because it draws you away from the practice again and again.\n\nThen the method. When an insight comes, make a mental note, resolve to take it up afterwards, and return to the breath. If a thought keeps coming back with force, make it the object for a while without analysing its content, label it 'thinking, thinking', hold it until the intensity subsides, and return. He also recommends a separate session of analytical meditation on what came up, on another occasion, and calls that extremely useful. I would move the notebook out of the room and try ten minutes with it straight after the sit. That arrangement is mine, not his.\n\nI would name the cost plainly: for a few weeks the sits will feel less rewarding than the brilliant ones. And I would offer a test, his observation turned into an experiment: read last week's cushion insights cold, and count how many still look as good.",
+    "rubric": [
+     "Identifies discursive brilliance as a gross distraction, and credits it as a product of progress: more stable attention and stronger mindfulness improve thinking, and such insights are often valid.",
+     "Names the trap: thinking insights through trains the mind to turn sits into therapy or a creativity tool; their quality declines; the conclusion that sharper analysis is the real benefit is one he warns of.",
+     "States what a report leaves open: the worth of the insights, how much of the sit they take, whether returning to the breath is still possible at will, and what the student wants from practice.",
+     "Gives his method: mental note and resolve to address it afterwards; a recurring thought taken as temporary object and labelled without analysing its content; analytical meditation as a separate practice.",
+     "Weighting: the verdict on the notebook and the slot after the sit are the answerer's own; teachers differ on whether a notebook by the cushion is a harmless release or a reward for thinking, and on how hard to press a student whose stated aim is clearer thinking."
+    ]
+   },
+   {
+    "q": "A student working on Stage Four reports: 'I sit at six, before work. Within ten minutes my head drops. I take the deep breaths, I clench and release, and I'm clear for maybe a minute, then it's back. By the end I've been jolted awake a dozen times and I've hardly felt a breath. It has been like this every morning for three weeks. Standing up feels like giving up on the sit. Honestly, I think I'm wasting my time.' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nStrong dullness, and the student is doing more right than they think. They recognise it, they apply antidotes unprompted, and they have sat every morning for three weeks through sits with no reward. I would say so before anything else. Culadasa says strong dullness becomes the next major obstacle as skill with distraction grows, and tells the meditator to be prepared to spend entire sessions working with it.\n\nThe specific problem has a name. He says that when dullness stays away for at least three to five minutes, the antidote was strong enough; when it returns sooner, the antidote was not strong enough or not applied for long enough; and when it returns almost immediately you are 'sinking', and need a much stronger antidote. A minute of clarity is sinking, or close to it. Deep breaths and clenching are the antidotes he says work well if the dullness is not too strong. For very strong dullness he prescribes walking meditation for a few minutes, or meditating while standing, and if nothing else works, getting up to splash cold water on the face and then going back to practising. So standing is the instruction for exactly this case, and the sit continues through it.\n\nThere is also a reason the alarm comes late. He says that when dullness is deep enough there is no introspective awareness left to alert you, so you find out by nodding. The second of his three steps, catching the return early, is hard because subtle dullness impairs the faculty that would catch it.\n\nWhat I don't know.\n\nWhether this is meditation dullness or ordinary tiredness. Stage Three says the two must be clearly distinguished: fatigue from stress, illness or lack of sleep will make anyone sleepy, a good night's rest is part of the practice, and when you meditate makes a difference. Stage Four adds that even a well-trained mind slips into strong dullness when extremely fatigued. So: how much sleep, and is it the same in a sit at another hour? I also don't know the posture, whether the eyes are closed, or how hard the student is focusing between episodes; he says focusing too intensely for too long lowers the mind's energy.\n\nResponse.\n\nFirst the question about sleep, asked without any suggestion of fault. If they are short of it, no antidote will hold.\n\nThen the change of method. Tomorrow, at the first nod, stand, or walk for a few minutes, and sit again only when fully alert. Judge each antidote by his clock: three to five clear minutes. Between episodes, keep peripheral awareness wide, taking in the body and sounds while attention stays on the breath, or meditate with the eyes open. And try one sit at a different hour as a comparison. That last suggestion is mine, drawn from Stage Three's remark about time of day.\n\nThen the reframe. A sit spent waking up twelve times is twelve repetitions of the first step. What is missing is the second, and it grows by catching the slide a little earlier each time: the breath going soft or vague before the head goes. He says the sooner dullness is caught, the milder the antidote it needs. He also says that at some point, usually after many interventions, the dullness may lift and the mind feel light and alert. I would not promise when.",
+    "rubric": [
+     "Credits recognition, self-applied antidotes and three weeks of persistence, and normalises with his statement that entire sessions may go to working with dullness.",
+     "Identifies 'sinking' by his test (dullness back well inside three to five minutes) and matches the stronger antidotes: walking, standing, cold water; standing is the instruction for this case, not a defeat.",
+     "Explains the late alarm: deep dullness leaves no introspective awareness to give warning, which is why catching the return early is the hard step and the one to train.",
+     "States what a report leaves open: lack of sleep or fatigue as against dullness due to meditation, time of day, posture and eyes, over-intense focus between episodes.",
+     "Weighting: teachers differ on whether to move or shorten the sit or to hold the six o'clock sit and work the antidotes; a good answer says which it chooses and why, and marks the comparison sit as the answerer's own."
+    ]
+   },
+   {
+    "q": "A student six months into practice reports: 'On the cushion things are steadier than ever. Off it, nothing has changed. On Thursday my teenage son rolled his eyes at me and I heard myself shouting before I knew I had started, the same as always. Afterwards I was so ashamed that I couldn't bear to think about it, and when I did I just went round and round on what a bad parent I am. If mindfulness worked, wouldn't I have caught it?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nIn the Third Interlude's terms, an invisible program ran. Culadasa describes exactly this: something pushes one of our buttons and, without mindfulness, we react before we choose. He says such programs lie dormant until triggered, and that when they fire we are so focused on the trigger and our own emotions that no new information reaches them. That is why it was 'the same as always'. Nothing here shows the practice failing. I would start with what is going well: steadier sits, and a reaction seen clearly enough afterwards to be described this honestly.\n\nTwo things in the report matter more than the shouting. The first is avoidance: 'I couldn't bear to think about it'. He says this is what usually happens. Revisiting is painful, so we put the event out of mind or justify ourselves, and that keeps vital new information from reaching unconscious processes. The second is self-reproach: 'round and round on what a bad parent I am'. He is specific that if you get caught up in self-reproach you are just reacting from, and reinforcing, more unwholesome programming. So the student has used both of the responses he names as blocking change, and not yet the one he recommends.\n\nAs for 'wouldn't I have caught it?': he says it is much harder to stay mindful when it matters most. He also says that being mindful and still unable to change how you feel and act is all right, and that when mindfulness is lost completely in the heat of the moment it can still be used afterwards.\n\nWhat I don't know.\n\nWhether this is rare or daily. Whether the student practises mindfulness in ordinary moments at all, or only on the cushion. And how heavy the shame is. If it is part of something larger, I would want to hear more before offering any technique.\n\nResponse.\n\nI would say: catching it in the moment is the hardest form of the skill, and you attempted it untrained. He asks for intentional practice in everyday life especially when it is easy, such as driving or eating a meal, to build the capacity for greater challenges. Choose one or two ordinary activities a day.\n\nThen Thursday. His instruction is to recall the event vividly and examine it honestly and non-judgmentally: what happened, your reaction, and its impact on yourself and others. That includes your feelings about how you acted. Guilt can be acknowledged as an unpleasant consequence of the action without becoming submerged in it. He says this reflection begins the reprogramming and makes it easier to stay mindful in future. If the review turns into the round-and-round, stop and name it: 'self-reproach'. The naming is my borrowing from Stage Four's handling of emotions; the Interlude does not give it.\n\nWhat to expect, in his terms: with consistent mindfulness, reactions to similar situations grow weaker and easier to let go of, sometimes without your realising it. He also says conditioning of this fundamental kind can surface in the stillness of meditation and be changed more radically there. I would mention that without promising it.\n\nWhether and how to repair things with the son is outside TMI. I would say it is worth doing, as my own view.",
+    "rubric": [
+     "Reads the outburst as a triggered program that took in no new information, credits the steadier sits and the honest recall, and does not treat the episode as failed practice.",
+     "Identifies avoidance and self-reproach as the two responses he says keep new information from the unconscious, the second as reacting from and reinforcing more unwholesome programming.",
+     "Gives his remedies: practise mindfulness in daily life when it is easy; afterwards recall vividly and examine honestly and non-judgmentally, feelings included, without becoming submerged in them.",
+     "States what a report leaves open: how frequent this is, whether there is any daily-life practice, and how heavy the shame is.",
+     "Weighting: teachers differ on how far to go beyond the Interlude, for instance towards repair with the son, self-compassion practices or outside support; a good answer marks which parts are TMI and which are the answerer's own."
     ]
    }
   ]
@@ -1596,6 +2905,256 @@ const EXTRA_STAGES = [
       "why": "Exclusive attention and subdued subtle distractions are the work of Stage Six."
      }
     ]
+   },
+   {
+    "q": "According to the Moments of Consciousness model, why is conscious experience a series of discrete moments and not a continuous stream?",
+    "options": [
+     {
+      "t": "Attention can hold only one object, so it alternates between them",
+      "ok": false,
+      "why": "That describes how attention appears to behave, whereas the reason he gives for discreteness is that each moment draws on a single sense."
+     },
+     {
+      "t": "We can be conscious of content from only one sense organ at a time",
+      "ok": true,
+      "why": "He says consciousness is a series of discrete events because we can only be conscious of information coming from one sense organ at a time, so a moment of seeing must end before a moment of hearing or thinking can occur."
+     },
+     {
+      "t": "Non-perceiving moments break up the stream of perceiving moments",
+      "ok": false,
+      "why": "Non-perceiving moments are interspersed among perceiving ones, but the perceiving moments are already discrete from one another by sense."
+     },
+     {
+      "t": "Each moment must be bound with the others before it is experienced",
+      "ok": false,
+      "why": "Binding moments are a further kind of moment that integrates what earlier moments held, and they are not his reason for discreteness."
+     }
+    ]
+   },
+   {
+    "q": "In the Moments of Consciousness model, what is a binding moment of consciousness?",
+    "options": [
+     {
+      "t": "A moment of the mind sense in which a sensation becomes a concept",
+      "ok": false,
+      "why": "Turning a sensation into a concept is what he describes for moments of attention from the mind sense, and binding is a distinct seventh category."
+     },
+     {
+      "t": "A moment of attention that holds two sense objects at the same time",
+      "ok": false,
+      "why": "No moment holds content from two senses at once in the model, which is why a separate moment is needed to present their combination."
+     },
+     {
+      "t": "A moment that presents the integrated content of earlier moments",
+      "ok": true,
+      "why": "He says the contents of many separate moments from the six senses are briefly stored in a kind of working memory and combined, and that the product is projected into consciousness as a seventh kind of moment."
+     },
+     {
+      "t": "A moment of awareness that monitors the other kinds of moments",
+      "ok": false,
+      "why": "Awareness of the mind's own activity is introspective awareness, which he describes as moments of peripheral awareness with mental content."
+     }
+    ]
+   },
+   {
+    "q": "In the Moments of Consciousness model, what does a single moment of peripheral awareness contain?",
+    "options": [
+     {
+      "t": "Many objects at once, lightly processed but simply interpreted",
+      "ok": true,
+      "why": "He says moments of awareness provide minimally processed information about many things at once, while still including simple interpretations of sense data such as 'traffic' or 'trees'."
+     },
+     {
+      "t": "Many objects at once, as raw sense data with no interpretation",
+      "ok": false,
+      "why": "He says moments of awareness do include some simple interpretations, which help to categorise the information and establish the present context."
+     },
+     {
+      "t": "A single object, held with less intensity than attention gives",
+      "ok": false,
+      "why": "Awareness is not weak attention in his account, and its moments are distinguished by holding many objects where attention holds only a few."
+     },
+     {
+      "t": "Objects of the physical senses only, and never any mental ones",
+      "ok": false,
+      "why": "He gives sensory content as a general rule only, and names a growing feeling of annoyance as awareness with mental content."
+     }
+    ]
+   },
+   {
+    "q": "How does the Fourth Interlude describe introspective awareness in the terms of the model?",
+    "options": [
+     {
+      "t": "Moments of the mind sense holding a concept such as 'the breath'",
+      "ok": false,
+      "why": "A concept such as 'breath' held in the mind sense is the usual content of attention to the breath, and is not awareness of the mind itself."
+     },
+     {
+      "t": "Moments of attention turned inward to examine the state of mind",
+      "ok": false,
+      "why": "Attention turned inward is introspective attention, the checking in of Stage Three, and not peripheral awareness of the mind."
+     },
+     {
+      "t": "Binding moments that combine the contents of the other senses",
+      "ok": false,
+      "why": "Binding moments integrate content from the other six senses, and he does not use them here to define introspective awareness."
+     },
+     {
+      "t": "Moments of peripheral awareness of mental objects and mind states",
+      "ok": true,
+      "why": "He defines it as moments of peripheral awareness of mental objects and of the states and activities of the mind, and says mindfulness training increases them."
+     }
+    ]
+   },
+   {
+    "q": "A meditator has the breath in focus while a knee pain and thoughts about lunch stand out as subtle distractions, and attention seems to flick between them. What does the model say is actually happening?",
+    "options": [
+     {
+      "t": "One stream of attention is moving quickly from object to object",
+      "ok": false,
+      "why": "That is how it seems subjectively, and he says explicitly that attention is not actually moving."
+     },
+     {
+      "t": "Successive moments of attention are taking different objects",
+      "ok": true,
+      "why": "He says attention is not actually moving between the breath and the distractions, and that instead successive moments of attention hold different objects."
+     },
+     {
+      "t": "Each moment of attention is divided among the three objects",
+      "ok": false,
+      "why": "These objects come through different senses, and in the model no single moment can hold content from more than one."
+     },
+     {
+      "t": "Attention stays on the breath while awareness takes the others",
+      "ok": false,
+      "why": "Objects held only by awareness are background, whereas subtle distractions are by definition the objects of some moments of attention."
+     }
+    ]
+   },
+   {
+    "q": "In the model, why does a distraction tend to keep attention once it has captured it?",
+    "options": [
+     {
+      "t": "Each moment of attention to it carries an intention to stay on it",
+      "ok": true,
+      "why": "He says each moment of attention to the pain also carries a subconscious intention for subsequent moments to stay on the pain, since intention determines the objects of the moments that follow."
+     },
+     {
+      "t": "Moments on the distraction carry more vital energy than others",
+      "ok": false,
+      "why": "Vital energy separates perceiving from non-perceiving moments in his account, and he does not rank perceiving moments by their object."
+     },
+     {
+      "t": "Awareness moments about it are referred to attention for analysis",
+      "ok": false,
+      "why": "Referral from awareness explains how something first reaches attention, whereas what keeps it there in his example is the intention each moment carries."
+     },
+     {
+      "t": "Non-perceiving moments leave the breath with too few moments",
+      "ok": false,
+      "why": "That describes dullness, and in his example the breath loses moments to the distraction and not to non-perceiving moments."
+     }
+    ]
+   },
+   {
+    "q": "What does 'stable attention' mean in the Moments of Consciousness model?",
+    "options": [
+     {
+      "t": "Every moment of consciousness now takes the meditation object",
+      "ok": false,
+      "why": "Stable attention includes moments of peripheral awareness of other things, and even exclusive focus concerns only the moments of attention."
+     },
+     {
+      "t": "Moments of attention outnumber the moments of peripheral awareness",
+      "ok": false,
+      "why": "He says the number of moments of peripheral awareness has nothing to do with stable attention, which is defined only by what the moments of attention take as object."
+     },
+     {
+      "t": "Non-perceiving moments have fallen to a small share of the total",
+      "ok": false,
+      "why": "The share of non-perceiving moments is his measure of dullness, a separate matter from which objects the moments of attention take."
+     },
+     {
+      "t": "Most moments of attention take the meditation object as theirs",
+      "ok": true,
+      "why": "He says stable attention simply means that most of your moments of attention are devoted to the meditation object, and that how many moments of peripheral awareness you have has nothing to do with it."
+     }
+    ]
+   },
+   {
+    "q": "How does the Fourth Interlude account for the powerful imagery and visions that often come with strong dullness?",
+    "options": [
+     {
+      "t": "Binding moments combine fragments of memory in inaccurate ways",
+      "ok": false,
+      "why": "Inaccurate binding is his explanation of ventriloquism, and he does not use it to explain visions."
+     },
+     {
+      "t": "Non-perceiving moments carry dream content in place of sensation",
+      "ok": false,
+      "why": "Non-perceiving moments have no content at all in the model, so the imagery has to be the object of perceiving moments."
+     },
+     {
+      "t": "Unoccupied mind moments let subconscious content become conscious",
+      "ok": true,
+      "why": "He says the imagery is not part of dullness itself, and that the large proportion of non-perceiving, non-intending moments creates an opportunity for subconscious content to become the object of perceiving moments, as in dreaming."
+     },
+     {
+      "t": "Stable attention lets early signs of meditative joy show through",
+      "ok": false,
+      "why": "He ties these visions to strong dullness, and warns in Stage Five against reading the effects of dullness as signs of meditative joy."
+     }
+    ]
+   },
+   {
+    "q": "Culadasa likens subtle dullness in meditation to resting in a lounge chair under a beach umbrella on a warm day. Which features of that state is he pointing to?",
+    "options": [
+     {
+      "t": "Not sleepy, somewhat aware, seemingly clear yet not very alert",
+      "ok": true,
+      "why": "He says that in this state you are not asleep or even sleepy and are still somewhat aware of what is around you, and that it may even seem you have a clear mind though you are not very alert."
+     },
+     {
+      "t": "Pleasantly numb, with hazy awareness and free-floating attention",
+      "ok": false,
+      "why": "That is his description of the dullness of alcohol, drugs and mindless entertainment, which he calls quite different from dullness in meditation."
+     },
+     {
+      "t": "Drowsy and drifting, with dreamlike images beginning to appear",
+      "ok": false,
+      "why": "Drowsiness and dream imagery belong to strong dullness, which the Stage Five meditator has already overcome."
+     },
+     {
+      "t": "Calm and bright, with attention resting easily on its object",
+      "ok": false,
+      "why": "That is closer to the wholesome pleasure of stable attention, which he calls bright and alert and sets against the warm, soft, quiet pleasure of dullness."
+     }
+    ]
+   },
+   {
+    "q": "According to the Stage Five chapter, what happens when the intention to perceive very subtle sensations is applied properly and often enough?",
+    "options": [
+     {
+      "t": "Attention becomes exclusive, and subtle distractions drop away",
+      "ok": false,
+      "why": "Subduing subtle distractions with exclusive attention is the work of Stage Six, and the Stage Five meditator still has them."
+     },
+     {
+      "t": "Mindfulness reaches the fixed level that marks the Stage's end",
+      "ok": false,
+      "why": "He says mastering the Stage does not involve reaching any particular level of mindfulness, which goes on growing through the later Stages."
+     },
+     {
+      "t": "Powerful mindfulness becomes a habit, on and off the cushion",
+      "ok": true,
+      "why": "He says that when this intention is applied properly and often enough, powerful mindfulness turns into a habit both on and off the cushion."
+     },
+     {
+      "t": "Effort falls away, and the mind sustains attention on its own",
+      "ok": false,
+      "why": "Effortlessness is reached at the end of Stage Seven, and at Stage Five the intentions still have to be set and held."
+     }
+    ]
    }
   ],
   "open": [
@@ -1642,6 +3201,50 @@ const EXTRA_STAGES = [
      "Describes mastery from the conclusion (intense, clear perception in attention and introspective awareness through most or all of the sit, sensations experienced arising and passing, concepts dropped, extrospective awareness retained, automatic detection and correction) as an ability to sustain and increase, not a fixed level.",
      "Identifies the unclear point: 'completely overcome stable subtle dullness' and the Overview's 'completely disappeared' after Stage Six, against the Fourth Interlude (everyday alertness is stable subtle dullness; 'less subtle dullness' at Stage Five), the conclusion's continuing automatic correction and Stage Seven's cruise-control warning; offers a reading marked as inference."
     ]
+   },
+   {
+    "q": "A student about to start Stage Five says the Moments of Consciousness model looks like theory they can skip. Set out what a teacher needs to be able to say about it.\n• Give the model's basic picture: what a moment of consciousness is, why experience is said to be discrete, and the seven kinds of moment.\n• Explain what binding moments are for, and how attention and peripheral awareness are placed in the model.\n• State the standing Culadasa gives the model, and say where you would be careful in presenting it.",
+    "model": "The picture. Experience seems to flow seamlessly. The model says this is an illusion: experience is divided into individual moments of consciousness that occur one at a time, like the frames of a film, so brief and numerous that they seem continuous. The reason given is that we can be conscious of information from only one sense organ at a time. A moment of seeing must end before a moment of hearing, or a thought about what was seen, can occur. Within each moment nothing changes; each is a freeze-frame holding a single static chunk of information. Because successive moments come from different senses, he says consciousness is less like a film and more like a string of differently coloured beads.\n\nThe seven kinds. Six are named for the sense that supplies the content: sight, sound, smell, taste, somatic sensation, and the mind sense, which covers mental objects such as thoughts and emotions. He adds that 'touch' and 'mind' are blanket labels for many distinct senses, and that he keeps six categories for simplicity. The seventh is the binding moment.\n\nBinding. If each moment is gone before the next arises, something has to put the pieces together. The contents of many moments are held briefly in a kind of working memory and combined, and the product is projected into consciousness as a separate moment. That is how words seem to come from a speaker's mouth, and why a ventriloquist can fool us: binding does not always combine things accurately.\n\nAttention and awareness. Any moment, of any of the seven kinds, is either a moment of attention or a moment of peripheral awareness. Moments of awareness hold many objects with little processing; moments of attention hold a few and process them in depth. He adds that the two are not so neatly divided in experience.\n\nIts standing. He says the model is drawn from the Theravada Abhidhamma with elaborations from the later Yogācāra school, restated in modern terms. He tells the reader not to bother deciding whether it is literally true: what matters is that it is useful for making sense of experience and of the instructions, and there will be time to judge it from one's own experience. He also says it is not just a theory someone thought up. The premise of discrete moments arising and passing rests, he says, on the meditation experiences of advanced practitioners across many traditions, and it is an experience the reader will have in the later Stages.\n\nWhere I would be careful. First, those are two different claims: that the model is useful whether or not it is true, and that it is grounded in what adepts observe. I would teach the first and report the second as his. Second, he calls the framework 'more science-based', but the Interlude's text offers no evidence for discrete moments or for one sense per moment, so I would not tell a student that science has shown it. That caution is mine. Third, a student does not need to see moments in order to use the model. At Stage Five its job is practical: it says what dullness is and why intention counters it.\n\nSo to the student: skip the metaphysics if you like, but not the vocabulary. The chapter's instructions are written in it.",
+    "rubric": [
+     "Basic picture: discrete moments occurring one at a time, because only one sense organ's content can be conscious at once; nothing changes within a moment; film frames, or better, a string of differently coloured beads.",
+     "Seven kinds: the five physical senses, the mind sense and the binding moment; may note that somatic sensation and the mind sense are blanket labels kept as single categories for simplicity.",
+     "Binding and placement: binding moments present the integrated product of earlier moments held in working memory (speech, ventriloquism); every moment is either a moment of attention (few objects, in-depth processing) or of peripheral awareness (many objects, little processing).",
+     "Standing: from the Abhidhamma with Yogācāra elaborations; not to be judged for literal truth but used because it is useful; said to rest on the experience of advanced practitioners, which the reader will have in later Stages.",
+     "Care in presentation: separates 'useful' from 'true', does not claim scientific confirmation, and marks these cautions as the answerer's own."
+    ]
+   },
+   {
+    "q": "Students often believe they are feeling the breath when they are mostly thinking 'breath'. Trace what TMI says about concepts and sensations from the Fourth Interlude through Stage Five.\n• Say what the Interlude claims moments of attention usually contain, and what this means for attention to the breath.\n• Show how following, and the first step of the body scan, are meant to change that.\n• State what mastery of Stage Five says on the point, and say where the book's statements do not quite fit together.",
+    "model": "The claim. The Interlude says attention's job is to isolate objects and interpret them, and that moments of attention contain conceptual representations, usually from the mind sense. His example is an unusual sound. Awareness attributes it to footsteps, and what becomes the object of attention is not the sound but the idea that someone is walking up the stairs. As a general rule, he says, the content of awareness comes from the physical senses and the content of attention from the mind sense. Even when a sensory object does become an object of attention, it is quickly replaced by a more highly processed conceptual formation.\n\nThe breath. He applies this directly. Paying attention to breath sensations usually generates many more moments from the mind sense than from the sense of touch, especially for beginning meditators. Moments of attention that hold actual sensory information are 'few and far between', greatly outnumbered by those holding concepts such as 'breath', 'air', 'in', 'out' and 'nose'. So the student's situation is, on his account, the ordinary condition and no fault.\n\nWhat changes it. He says that only by diligently following the breath, observing ever-finer details, will you train the mind to produce more moments of attention to actual breath sensations. That gives a reason for an instruction that has run since Stage Three: looking for finer detail is how the proportion shifts. Stage Five's body scan begins the same way. At the abdomen you focus as much as you can on the sensations themselves, and not on the concepts of expansion, contraction, skin, breath, air and movement, noticing in particular their changing qualities. There is a qualification that is easy to miss. This is done 'without losing awareness of the breath as a familiar, repeated, cyclical event'. The concept is not attacked. It stays in the background while attention takes the sensations.\n\nMastery. The conclusion says attention gains intensity, so that the details are quite vivid, and clarity, so that you can experience the actual arising and passing away of individual breath sensations. It says you will naturally abandon abstract concepts like 'inhale' and 'exhale', which you were in the habit of using to follow the breath. The word is 'naturally'. He gives no instruction to suppress the labels.\n\nWhere it does not quite fit. Stage Four's conclusion already says that perception of the meditation object has become non-verbal and non-discursive. Stage Five's then describes a meditator who has been in the habit of using 'inhale' and 'exhale' until now. My reading is that Stage Four's phrase means the running commentary has stopped, while Stage Five concerns the quieter conceptual framing that remains. The book does not say so. Second, the elements practice in the scan uses concepts, earth, water, fire, wind and space, to investigate sensations. He calls it simply a help toward greater clarity, to be skipped if it does not help. I take that to show the aim is finer perception and not the elimination of concepts. That inference is mine.\n\nFor teaching. I would not tell a student to stop thinking 'in, out'. I would ask what they can feel that the word leaves out: where the sensation starts, how it changes, when it ends. Interest in the detail does the work, and the label drops when it is no longer needed. That advice is my gloss on 'naturally'.",
+    "rubric": [
+     "Claim: moments of attention usually hold conceptual representations from the mind sense (the idea of footsteps, not the sound), while awareness's content is usually sensory; stated as a general rule.",
+     "Breath: attention to the breath generates far more mind-sense moments than touch moments, especially in beginners; moments holding actual sensory information are few and far between; so the student's situation is the normal condition.",
+     "Remedy: following with ever-finer detail trains more moments of attention to actual sensations; the scan's first step asks for sensations and not concepts, without losing awareness of the breath as a familiar cyclical event.",
+     "Mastery: clarity enough to experience individual sensations arising and passing away; concepts such as 'inhale' and 'exhale' naturally abandoned, with no instruction to suppress them.",
+     "Calibration: notes the imperfect fit with Stage Four's 'non-verbal and non-discursive' and the conceptual nature of the elements practice, and marks its readings as inference."
+    ]
+   },
+   {
+    "q": "Stage Five asks for more vivid attention and stronger peripheral awareness together, and Stage Six will ask for exclusive attention. Use the Fourth Interlude to explain why these demands are not in conflict.\n• Place forgetting, gross distraction, subtle distraction and exclusive focus in the model, and say what stable attention is.\n• Say what mindfulness and its loss are in the model, and what he gives as the solution to any loss of it.\n• Explain his answer on whether mindfulness is compatible with single-pointedness, and what happens when its condition is not met.",
+    "model": "One continuum for attention. He says forgetting, gross distraction, subtle distraction and exclusive focus all lie on one continuum, and that position on it depends on one thing only: the proportion of moments of attention, in a given period, whose object is the breath as against some distraction. With forgetting, no moments of attention take the breath. With gross distraction, more go to the distraction than to the breath. With subtle distraction, more go to the breath. In the exclusive focus of an advanced practitioner, distractions rarely if ever become objects of moments of attention. Stable attention 'simply means' that most moments of attention are devoted to the meditation object. He adds that it includes moments of peripheral awareness, and that how many of those there are has nothing to do with it.\n\nMindfulness. This is a second measure. Mindfulness means that, in whatever situation we find ourselves, the balance between moments of attention and moments of awareness is just right; lose that balance and mindfulness is lost. The First Interlude described attention and awareness as drawing on one limited capacity. Here the limit is given a unit: there are only so many perceiving moments to go around.\n\nThe solution. He states it without exception. The solution to any loss of mindfulness is to increase the total power of consciousness, which means raising the proportion of perceiving to non-perceiving mind moments by converting the second into the first. With more perceiving moments there are enough to sustain peripheral awareness while attention stays on the task. This is why Stage Five's two demands do not compete: in the model's terms, vivid attention and bright awareness are both supplied from moments that were non-perceiving, not from each other.\n\nSingle-pointedness. He asks directly whether mindfulness is compatible with focusing on the meditation object to the exclusion of everything else, and answers yes. Even while moments of attention are focused exclusively on one thing, enough moments of peripheral awareness can be intermixed to remain mindful. Exclusivity is a fact about what the moments of attention take as their object. It says nothing about whether moments of awareness continue.\n\nThe condition. There must be enough conscious power. Otherwise, as the moments devoted to objects of attention increase, the moments of awareness must drop, because there are not enough moments of consciousness to go around. I read this as the model's account of two warnings in the chapters: Stage Four's, that forcing exclusive attention costs awareness, and Stage Five's, that a state in which awareness has faded can pass for exclusive focus.\n\nSequence. On this reading the model gives a reason for the order: raise conscious power at Stage Five, then narrow attention at Stage Six. That inference is mine; he says only that Stage Five must not be skipped. He also says that from Stage Five onward the moments to increase are those of introspective awareness, leading to metacognitive introspective awareness: being aware of the state of mind in every moment, even while focused on the breath. The Stage Four chapter had already shifted the emphasis to introspective awareness, so the two passages date that shift differently.\n\nCalibration. 'Conscious power' and the counting of moments are the model's terms, not measurements anyone has made.",
+    "rubric": [
+     "Continuum: position is fixed by the proportion of moments of attention on the breath as against distraction (forgetting: none on the breath; gross: more on the distraction; subtle: more on the breath; exclusive focus: distractions rarely if ever objects of attention); stable attention means most moments of attention take the object, whatever the number of awareness moments.",
+     "Mindfulness as just the right balance between moments of attention and moments of awareness, and its loss as the loss of that balance.",
+     "Solution: increase the total power of consciousness by converting non-perceiving into perceiving moments, so that attention and awareness are both supplied and need not compete.",
+     "Single-pointedness: compatible with mindfulness, because awareness moments can be intermixed with exclusively focused attention; the condition is enough conscious power, failing which awareness moments must drop.",
+     "Calibration: marks the links to Stage Four's and Stage Five's warnings, and the reasoning about the order of the Stages, as the answerer's reading; may note that the two passages date the shift to introspective awareness differently."
+    ]
+   },
+   {
+    "q": "Use the Moments of Consciousness model to trace how TMI handles dullness from Stage Three to Stage Five.\n• Describe the continuum on which the model places dullness, and say what it claims about ordinary waking alertness and why that state is stable.\n• Explain what changes when we sit down to meditate, and what each of Stages Three, Four and Five contributes.\n• Give the model's explanation of the visions that come with strong dullness, and say what a teacher can and cannot conclude from it.",
+    "model": "The continuum. Dullness is determined by the number of non-perceiving moments mixed in with perceiving ones. As their proportion rises we experience subtle dullness, then strong dullness, then sleep; when all perceiving moments have gone we are completely unconscious. At the other end, where every mind moment is an actively perceiving one, is what he calls the ultimate degree of alertness.\n\nOrdinary alertness. He says ordinary consciousness includes a significant proportion of non-perceiving moments, and gives as evidence our capacity for increased awareness and alertness in an emergency. The different degrees of alertness of everyday life are therefore varying degrees of stable subtle dullness. It is stable, he says, for one reason only: enough different stimuli are constantly streaming in, producing new moments of consciousness, to keep us alert.\n\nSitting down. Meditation cuts off much of that stimulation by turning from sensations and thoughts to a relatively boring object. The proportion of perceiving moments starts to fall, and the mind's energy level with it. Non-perceiving moments are also non-intending, so they generate no intent to perceive in the moments that follow, and still more moments become non-perceiving. Without intervention, this cycle turns the stable subtle dullness of daily life into the progressive subtle dullness of meditation, and then into strong dullness and drowsiness.\n\nThe three Stages. In Stage Three the meditator kept a balance between attention and peripheral awareness so as not to become too inwardly focused and fall asleep; the moments of extrospective awareness helped keep the mind energised. In Stage Four the power of intention raised the mind's energy enough to overcome progressive subtle dullness before it became strong. The result, he says, is a mind able to sustain stable subtle dullness in meditation, just as it does in daily life. Stage Five has a different kind of task: reducing the proportion of non-perceiving moments, for less subtle dullness, more conscious power and greater mindfulness. On this account the earlier Stages recover in meditation the alertness we ordinarily have, and Stage Five is the first to go beyond it. That summary is my gloss.\n\nVisions. He says the powerful imagery, visions and sense of profundity that often occur with strong dullness are not part of dullness itself. The large proportion of non-perceiving, non-intending moments leaves many mind moments unoccupied by external stimuli or intended objects, so that otherwise subconscious material can become the object of perceiving moments. Dreaming happens in the same way. He adds that drumming, chanting and other shamanic practices are used to induce the same openness on purpose, usually with a prior intention for visionary objects to arise.\n\nWhat a teacher can conclude. My reading is that the explanation removes one inference: vivid content is no evidence of alertness or of attainment, since it is what the model expects when many moments stand empty. It also allows that the content is real subconscious material, so there is no need to tell a student that a vision was nothing. What it does not provide is a way to tell these visions, from a report, from the charged material that Stage Four says surfaces as the mind grows calm. The book gives no test. I would ask about the state they arose in: was the breath vivid and awareness open, or had both faded?",
+    "rubric": [
+     "Continuum and ordinary state: dullness is the proportion of non-perceiving moments, running from unconsciousness to the ultimate degree of alertness; ordinary waking is stable subtle dullness (shown by heightened alertness in an emergency), stable only because stimuli keep streaming in.",
+     "Sitting down: meditation removes much of the stimulation; non-perceiving moments are non-intending, so the fall feeds itself and becomes progressive subtle dullness, then strong dullness.",
+     "The three Stages: Three keeps extrospective awareness to energise the mind; Four uses intention to overcome progressive subtle dullness, leaving stable subtle dullness as in daily life; Five reduces the proportion of non-perceiving moments.",
+     "Visions: not part of dullness itself; unoccupied moments let subconscious material become the object of perceiving moments, as in dreaming; shamanic practices induce this on purpose.",
+     "Calibration: marks as the answerer's own the summary that Stage Five is the first to exceed everyday alertness and the conclusions drawn for teaching, and states that the book gives no test separating these visions from Stage Four's purification material."
+    ]
    }
   ],
   "scenario": [
@@ -1676,6 +3279,39 @@ const EXTRA_STAGES = [
      "Reads both responses fairly: straining is force (Stage Four: brute force never works for long, and over-intense attention loses mindfulness and over-energises; applied here by inference), and going loose is Stage Four's own correction for an over-energised mind, which Stage Five no longer allows as a place to settle; contrasts forcing with firmly held intention, without claiming that no effort is needed.",
      "Gives the Stage Five practices: standing intentions (vivid perception, continuous awareness of mind, knowing how well and why), check-ins with comparison, connecting breath changes with alertness, deliberate widening, after-sit review, and the body scan when perception is clear; marks the preference for low-force energisers as the teacher's own.",
      "Weighting: teachers differ on whether the first job is to take the straining out or to supply energising methods that need no force; some would treat the swing between wired and loose as unfinished Stage Four balance work and go back to it; teachers from open-awareness or 'do nothing' approaches would endorse the looseness that TMI treats as settling into dullness; and sleep, meals and time of day may explain more than method does, which a report cannot settle."
+    ]
+   },
+   {
+    "q": "A student at Stage Five reports: 'Something has started happening in the body scan. When I get to my arms and hands there is a tingling that swells and fades with each breath, and last week it spread up my back like a current. It is exhilarating. I now spend the whole sit scanning for it and trying to push it further, and I have stopped going back to the nose because the breath there seems dull by comparison. A friend who teaches yoga says it is my kundalini waking up. Is it?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, this is the scan doing what it is for, and the student has earned it. Culadasa says that as the scan proceeds you will eventually detect very subtle changes related to the breath in every part of the body, and that as sensitivity grows you will have direct experience of what traditional terms like 'the flow of prāṇa', 'the movement of the inner winds' and 'the circulation of qi' mean. A tingling in the hands that swells and fades with each breath fits that description. His instruction on finding such sensations is to linger and explore them thoroughly.\n\nTwo things have gone off course. One is the purpose. He says the scan exists to develop sustained, clear attention to the usual meditation object, and that you always return to the breath at the nose: whenever perception has become much more powerful, shift back, sustain that sharper perception as long as you can, and go back to the scan when it declines. The student has kept the scan and dropped what it serves. The other is 'trying to push it further'. The scan asks you to perceive and to search. It does not ask you to produce anything.\n\nWhat I don't know.\n\nWhat the 'current' up the back was. It may be more breath-related sensation; the upper back is among the first places he says it shows. It may be something the book places later. Stage Seven says strange sensations such as tingling may already have occurred from time to time when attention was particularly stable, and the Sixth Interlude describes the earliest manifestations of energy as little more than electrical tingling or vibrations, with full energy currents coming as the mind unifies in later Stages. A report cannot separate these. Nor do I know whether exhilaration has replaced alertness. Stage Five warns that pleasant feelings can be misread as first signs of meditative joy, so I would ask whether peripheral awareness is intact during these episodes, and why the breath at the nose seems dull.\n\nOn kundalini: the Sixth Interlude lists kundalinī among the names traditions give this energy, alongside qi and prāṇa, so the friend's word and the book's point at the same family of experience. Whether anything is 'waking up' is not a claim TMI makes at this Stage, and not one I can assess from a report.\n\nResponse.\n\nI would say: you have found what the scan is designed to reveal, and that takes real sensitivity. Now use it as designed. Keep the breath at the abdomen in peripheral awareness, explore the sensations where you find them, and ask one question of each: does it change with the breath? When perception is clearly sharper, go back to the nose and see what the breath is like with that sharper mind.\n\nAbout pushing. For milder manifestations of energy the Sixth Interlude says just letting it be is certainly the best advice, since it is so easy to get caught up in trying to control and manipulate it, and Stage Seven says of such phenomena: don't chase them, and don't push them away. Those passages address later Stages. Applying them here is my judgement.\n\nI would leave the kundalini question open, and say that the practice with these sensations is the same whatever they are called.",
+    "rubric": [
+     "Credits the sensitivity and normalises with the chapter: subtle breath-related sensations in every part of the body are the scan's expected yield and what terms like prāṇa, inner winds and qi refer to; lingering and exploring is his instruction.",
+     "Identifies what has gone off course: the scan serves sustained, clear attention to the usual object, with a return to the nose whenever perception is heightened; and it asks for perceiving and searching, not for producing or pushing sensations.",
+     "States what a report leaves open: whether the 'current' is breath-related sensation or an early instance of what the book places with later Stages, and whether exhilaration has displaced alertness and peripheral awareness.",
+     "Handles 'kundalini' accurately: the Sixth Interlude lists it among traditional names for this energy; that something is 'awakening' is not a claim TMI makes at this Stage or one a report can settle.",
+     "Weighting: teachers differ on how far to engage with energy frameworks, from 'note it and let it be' to working with the energy actively; a good answer says which it chooses, and marks its use of later-Stage advice at Stage Five as the answerer's own."
+    ]
+   },
+   {
+    "q": "A student at Stage Five reports: 'Since reading about moments of consciousness I have been trying to see them. I stare at the breath looking for the gaps between frames, and I try to catch the non-perceiving moments as they go by so that I can count how dull I am. I cannot see any of it. My sits have become a strain, I get a tight band across my forehead, and I spend half the time thinking about the model. Either I am not concentrated enough or the model is wrong. Which is it?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nNeither, most likely, and I would begin by saying that the impulse is a good one: this student wants to check the model against experience instead of taking it on trust. But the Interlude also says what kind of thing the model is, and the student is using it for a job it is not offered for.\n\nThree points from the text. First, its standing. Culadasa says not to bother deciding whether the description is literally true; it is there to help make sense of experience and of the instructions, and there will be plenty of time to judge it as skills mature. Second, timing. He says the experience of distinct moments arising and passing is one the reader will have in the later Stages, and that the model will help long before then. Not seeing moments at Stage Five is what the book predicts. Third, non-perceiving moments are defined as moments in which no perception occurs, because no sense provides them with content. My inference is that they cannot be caught going by, since there is nothing in them to perceive. What can be observed is their effect, and the chapter lists it: vividness and clarity declining, peripheral awareness fading, and a comfortable, pleasant feeling.\n\nTwo ordinary problems have come in with the project. The strain and the tight forehead look like force. Stage Four says brute force never works for long in meditation, and Stage Five asks for intention, not staring. And half a sit spent thinking about the model is discursive thought, however interesting. Stage Four's instruction for attractive ideas is a mental note and a return to the breath.\n\nWhat I don't know.\n\nWhether the tension comes from the staring. It is the likely cause, but a report cannot confirm it, and if it persists outside sits it is a matter for a doctor; that caution is mine. What the sits were like before: was this student stable at Stage Five, or has the reading run ahead of the practice? And what 'see them' means to them. Stage Five's own marker of clarity is experiencing individual breath sensations arising and passing away. That is about sensations. He does not say that mind moments themselves become visible at this Stage, and I would not let the student assume the two are the same.\n\nResponse.\n\nI would say: you are testing the model, which is right, but with the wrong instrument. Use it the way the chapter does. Set the intention to perceive the breath as clearly and vividly as you can, and the intention to know the state of your mind while you do. In the model's terms those intentions are what turn non-perceiving moments into perceiving ones. Then judge by what you can observe: is the breath more vivid, are sounds and the body still present in the background, and does that hold through the sit?\n\nDrop the hunt for frames for a month. When thoughts about the model come, note them and return. For thinking it through, he recommends analytical meditation as a separate session.\n\nAnd relax the forehead. A sign that the effort is right is that awareness stays open. If it narrows to a stare, the method has gone wrong, whatever the model says. That test is mine.\n\nOn whether the model is wrong: I don't know, and he does not ask anyone to decide yet.",
+    "rubric": [
+     "Credits the close reading and the wish to test it, and answers the either/or: neither conclusion follows from not seeing moments.",
+     "Uses the Interlude's own framing: literal truth is not to be decided now; the model is for making sense of experience and instructions; the experience of discrete moments is placed in the later Stages.",
+     "Explains how the model is used at Stage Five: non-perceiving moments have no content (with the inference that they cannot be observed directly), so dullness is known by its three characteristics, and the working tool is intention, judged by vividness and awareness.",
+     "Names the two ordinary problems (straining as force; thinking about the model as discursive distraction, to be noted and taken up outside the sit), and states what a report leaves open: the cause of the tension, the student's prior stability, and what 'seeing' means to them.",
+     "Weighting: teachers differ on whether an analytical student should set theory aside altogether for a while or be shown how to use it; a good answer says which it chooses, and marks its own inferences."
+    ]
+   },
+   {
+    "q": "A student who has an ADHD diagnosis reports: 'I can stay with the breath now, which I never thought I would manage. But peripheral awareness is hopeless. The moment I let sounds or the body in, attention chases them and I am off. I have read that mindfulness is a balance of attention and awareness, and I have decided my brain can do one or the other, not both. So my plan is to forget awareness and go all out for one-pointed focus. Does TMI allow that?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nThe first thing to say is how much has been done. Staying with the breath is something this student did not expect to manage, and they have managed it. Culadasa addresses the case directly, and I would read them the passage. In the Fourth Interlude he calls Attention Deficit Disorder 'basically a form of involuntary multi-tasking', and says people with it will definitely have a harder time increasing peripheral awareness in the earlier Stages, since their attention is so unstable to begin with. So the difficulty is the one he predicts, in the place he predicts it. He then says that by increasing the total number of perceiving mind moments they can generate enough moments of awareness to achieve a balance, and that they are 'as able as anyone to achieve a high level of mindfulness'.\n\nThat answers the plan. In the model, the solution to any loss of mindfulness is more total conscious power: converting non-perceiving moments into perceiving ones, so that there are enough for both attention and awareness. The student has concluded that the budget is fixed and must be spent on one side. The model's claim is that the budget grows.\n\nThe plan also has a cost that the book names. Stage Four calls forcing exclusive attention a big mistake at that Stage: you lose awareness and become more vulnerable to distraction and dullness. The Interlude says that without enough conscious power, as moments of attention increase, the moments of awareness must drop. And Stage Five describes where attention without awareness tends to end: in a pleasant dullness that passes for focus.\n\nWhat I don't know.\n\nWhich Stage this is. 'Attention chases them and I am off' could be a brief capture or losing the breath altogether, and the work differs. How the breath is being held: by relaxed interest, or by clamping, which would explain why opening up feels like falling. Whether 'letting sounds in' means allowing awareness or deliberately attending to sounds, which is moving attention. I don't know about medication or its timing, and it is not my place to advise on it. And I cannot verify 'as able as anyone'. It is his claim, stated without evidence, and I would offer it as encouragement and not as a promise.\n\nResponse.\n\nI would say: TMI does want exclusive attention eventually, at Stage Six, but with awareness still running, and it says the way there is through more power, not less awareness.\n\nThen make the task smaller. Don't 'let things in'. Keep attention on the breath and simply don't shut the background out: know that sound is there without going to it. A few seconds counts. When attention does chase something, that is where the training happens: notice, return gently, no verdict.\n\nLater, when gross distraction is rare, the tools that build power are Stage Five's: holding the intention to perceive vividly while staying aware of the mind, and the body scan, which keeps the breath at the abdomen in awareness while attention works elsewhere. That is the divided task this student finds hardest, in a graded form.\n\nShorter sits and more walking practice are adaptations I would consider. They are mine, not the Interlude's.",
+    "rubric": [
+     "Credits the achievement and normalises with the Interlude: Attention Deficit Disorder as 'involuntary multi-tasking'; a harder time increasing peripheral awareness in the earlier Stages; yet able to reach a balance by increasing total perceiving moments, 'as able as anyone'.",
+     "Answers the plan from the model: the solution to any loss of mindfulness is more total conscious power, not giving up one faculty; without enough power, more moments of attention mean fewer moments of awareness.",
+     "Names the cost in the chapters: forced exclusive attention loses awareness and invites distraction and dullness (Stage Four); attention without awareness can pass for focus (Stage Five); Stage Six's exclusive attention keeps awareness.",
+     "States what a report leaves open: which Stage (brief capture or loss of the breath), clamping, what 'letting in' means, medication (not the teacher's to advise on), and that 'as able as anyone' is his claim, given without evidence.",
+     "Weighting: teachers differ on how far to adapt the method for ADHD (shorter sits, more walking practice, delaying the body scan) as against holding the standard sequence; a good answer marks its adaptations as its own."
     ]
    }
   ]
@@ -1932,6 +3568,256 @@ const EXTRA_STAGES = [
       "why": "He says this shift usually means awareness has faded and dullness is possible, and that absorption without metacognitive awareness is not really jhāna."
      }
     ]
+   },
+   {
+    "q": "In the Mind-System model, what carries out the executive functions, such as inhibiting a habitual response or deciding between conflicting intentions?",
+    "options": [
+     {
+      "t": "The conscious mind, acting as the chairperson of the boardroom",
+      "ok": false,
+      "why": "In his metaphor the conscious mind is the boardroom itself, a passive space, and no one acts as chairperson."
+     },
+     {
+      "t": "An executive sub-mind at the top of the discriminating hierarchy",
+      "ok": false,
+      "why": "He does describe a hierarchy in which sub-minds for values and self-image tend to dominate, but says plainly that no sub-mind acts as the executive."
+     },
+     {
+      "t": "The narrating mind, which organises what the others have produced",
+      "ok": false,
+      "why": "The narrating mind combines conscious content into a story and projects it back, and he gives it no role as decision-maker."
+     },
+     {
+      "t": "Many sub-minds reaching a working consensus through consciousness",
+      "ok": true,
+      "why": "He says there is no executive sub-mind in charge, and that executive functions are the result of many sub-minds communicating through consciousness to arrive at a working consensus."
+     }
+    ]
+   },
+   {
+    "q": "In the Mind-System model, what makes an intention a conscious intention?",
+    "options": [
+     {
+      "t": "It is projected into consciousness, where sub-minds can back or oppose it",
+      "ok": true,
+      "why": "He says all intentions are ultimately generated by unconscious sub-minds, and that a conscious intention is just one that has been projected into consciousness, where many sub-minds can support or oppose it before it produces an action."
+     },
+     {
+      "t": "It arises in the conscious mind itself and not in any unconscious sub-mind",
+      "ok": false,
+      "why": "He says the conscious mind is not the source of its content, and that all intentions ultimately come from unconscious sub-minds."
+     },
+     {
+      "t": "It comes from the sub-minds at the top of the hierarchy, such as values",
+      "ok": false,
+      "why": "Rank in the hierarchy is not his criterion, since an intention from any sub-mind is conscious once it has been projected into consciousness."
+     },
+     {
+      "t": "It has been put into words, so that it can be known and then acted upon",
+      "ok": false,
+      "why": "He says a conscious intention may be subliminal or felt only as an impulse, and that putting things into words is a separate activity of another sub-mind."
+     }
+    ]
+   },
+   {
+    "q": "According to the Fifth Interlude, what is the effect of repeatedly paying attention to your own state of mind?",
+    "options": [
+     {
+      "t": "The mind habituates, and its states stop being presented to consciousness",
+      "ok": false,
+      "why": "Habituation is what he describes for content that is consistently ignored, and content that is attended to goes on being presented."
+     },
+     {
+      "t": "Introspective awareness falls, as attention takes the moments it needs",
+      "ok": false,
+      "why": "That is the trade-off between attention and awareness at a given time, whereas his point here concerns what the sub-minds learn to present in future."
+     },
+     {
+      "t": "Introspective awareness increases, as that field is flagged as important",
+      "ok": true,
+      "why": "He says repeatedly attending to any sensory field, introspective or extrospective, flags its contents as potentially important, so that introspective attention leads to an overall increase in introspective awareness."
+     },
+     {
+      "t": "The thinking mind is pacified, because its activity is being observed",
+      "ok": false,
+      "why": "Pacification comes from consistently ignoring mental objects, and observing the mind's activity is not what he says quiets it."
+     }
+    ]
+   },
+   {
+    "q": "In the Mind-System model, what most often makes for a decision that is later regretted?",
+    "options": [
+     {
+      "t": "The emotional sub-minds outvoted the ones that reason and plan",
+      "ok": false,
+      "why": "He does not set emotion against reason here, and locates the fault in limited participation, whichever sub-minds were missing."
+     },
+     {
+      "t": "Too few of the sub-minds with relevant input took part in it",
+      "ok": true,
+      "why": "He says that when sub-minds whose input is particularly relevant stay dormant or are preoccupied, a bad choice is more likely, and that the best decisions come from the fullest participation of every part of the mind-system."
+     },
+     {
+      "t": "It was made at an unconscious level and not by conscious choice",
+      "ok": false,
+      "why": "He says every decision is a collective one made at an unconscious level, so that cannot be what separates good decisions from bad."
+     },
+     {
+      "t": "The narrating mind credited it to an 'I' that had not made it",
+      "ok": false,
+      "why": "Attribution to an 'I' follows every decision in his account, good or bad, and is not offered as a cause of poor ones."
+     }
+    ]
+   },
+   {
+    "q": "What does Culadasa say about the relation between the narrating mind and putting experience into words?",
+    "options": [
+     {
+      "t": "It works only on verbal thoughts, binding them into connected stories",
+      "ok": false,
+      "why": "It takes in all the information projected by other sub-minds, such as an image, a recognised concept and a feeling, and not only verbal thought."
+     },
+     {
+      "t": "It is the source of verbal thought, which is why it is called narrating",
+      "ok": false,
+      "why": "He warns against mistaking its activity for language, and the name refers to weaving conscious content into the episodes of a story."
+     },
+     {
+      "t": "Its output is easily put into words, but another sub-mind does that",
+      "ok": true,
+      "why": "He says the output of the narrating mind is particularly easy to convert into words, but that putting something into words is a separate activity carried out by a completely different sub-mind."
+     },
+     {
+      "t": "It stops working when verbal thought has been subdued in meditation",
+      "ok": false,
+      "why": "Its binding moments are what he says make up metacognitive awareness, which Stage Six cultivates while thoughts are being subdued."
+     }
+    ]
+   },
+   {
+    "q": "How does the Fifth Interlude describe unification of mind?",
+    "options": [
+     {
+      "t": "More and more sub-minds uniting around a single conscious intention",
+      "ok": true,
+      "why": "He says unification of mind happens because more and more sub-minds unite around a single conscious intention, the intention to meditate, and that it brings powerful feelings of happiness and contentment."
+     },
+     {
+      "t": "The thinking mind falling silent as its thoughts stop being projected",
+      "ok": false,
+      "why": "That is pacifying the mind, and the Stage Six chapter says its completion brings you one giant step closer to unification, not that it is unification."
+     },
+     {
+      "t": "Attention and peripheral awareness merging into one single faculty",
+      "ok": false,
+      "why": "He keeps attention and awareness distinct throughout, and defines unification by agreement among sub-minds."
+     },
+     {
+      "t": "The narrating mind no longer producing an 'I' to hold the story",
+      "ok": false,
+      "why": "Seeing through the narrative 'I' belongs to his account of no-Self, whereas unification is defined by sub-minds sharing one intention."
+     }
+    ]
+   },
+   {
+    "q": "Culadasa says the same factors are present in access concentration and in jhāna. What does he say distinguishes the two?",
+    "options": [
+     {
+      "t": "A marked increase in joy and pleasure beyond the level of access",
+      "ok": false,
+      "why": "Joy and pleasure are already among the factors of access concentration, and he marks the difference by the shift into flow and not by their strength."
+     },
+     {
+      "t": "A shift into flow: spontaneous, effortless, with a sense of control",
+      "ok": true,
+      "why": "He says what distinguishes access concentration from jhāna is the shift into a flow state characterised by conditions five to seven: spontaneity with no sense of a separate self, effortlessness, and a sense of successfully exercising control."
+     },
+     {
+      "t": "The complete absence of thought, which access does not yet require",
+      "ok": false,
+      "why": "He says some thinking, investigation or evaluation still intrudes in the very light jhānas of this Stage."
+     },
+     {
+      "t": "The fading of peripheral awareness as the absorption becomes total",
+      "ok": false,
+      "why": "He says absorption without metacognitive awareness is not really jhāna, and treats fading awareness as the opening for dullness."
+     }
+    ]
+   },
+   {
+    "q": "What does Culadasa mean by calling the jhānas available at Stage Six 'very light'?",
+    "options": [
+     {
+      "t": "Their joy and pleasure are faint beside those of the deeper jhānas",
+      "ok": false,
+      "why": "He calls them very enjoyable, and defines their lightness by the intrusion of thinking and not by a lack of pleasure."
+     },
+     {
+      "t": "A bright inner light appears and then serves as the object of focus",
+      "ok": false,
+      "why": "An inner light used as the object belongs to the luminous jhānas taught later in the book, and 'light' here describes how shallow the absorption is."
+     },
+     {
+      "t": "They last a few seconds at most before the mind drops out again",
+      "ok": false,
+      "why": "He expects the mind to slip out and return, but speaks of periods growing longer and of staying for up to fifteen minutes, so brevity is not what 'light' means."
+     },
+     {
+      "t": "Some thinking or evaluation intrudes, which makes them unstable",
+      "ok": true,
+      "why": "He says the jhānas you can enter at this Stage are very light, meaning that some amount of thinking, investigation or evaluation will intrude and make the jhāna unstable."
+     }
+    ]
+   },
+   {
+    "q": "How does Culadasa say to prepare for the whole-body jhāna, and when should this be done?",
+    "options": [
+     {
+      "t": "Set pleasure aside until exclusive attention is completely stable",
+      "ok": false,
+      "why": "He asks for the pleasant qualities to be kept in awareness throughout every sitting as attention moves toward exclusivity, and not postponed."
+     },
+     {
+      "t": "Move attention onto the pleasure itself, once it has become strong",
+      "ok": false,
+      "why": "Taking joy and pleasure as the object is the deeper jhāna of Stage Seven, and for now a shift of attention to pleasure is the signal to abandon the jhāna."
+     },
+     {
+      "t": "Hold stillness, alertness and pleasure in awareness, every sitting",
+      "ok": true,
+      "why": "He says to prepare by purposely noticing and holding in awareness any feelings of stillness, alertness and pleasure, and that you should always do this, whether you intend to practise jhāna or not."
+     },
+     {
+      "t": "Return to the nose and wait for the breath sensations to fade out",
+      "ok": false,
+      "why": "For this jhāna the meditator stays with the breath sensations in the whole body, and nothing in the instruction calls for them to fade."
+     }
+    ]
+   },
+   {
+    "q": "At Stage Six the breath can seem to come apart from the body, for instance appearing off to one side of where the nose should be. Culadasa says experiences like this can bring profound Insight. On what condition?",
+    "options": [
+     {
+      "t": "Attention is then turned onto the gap between breath and body shape",
+      "ok": false,
+      "why": "He says recombining them would take only a momentary shift of attention to the body's shape and position, and he does not ask for the gap to be examined."
+     },
+     {
+      "t": "Subtle dullness is overcome and introspective awareness is powerful",
+      "ok": true,
+      "why": "He says such Insight cannot happen unless you have completely overcome subtle dullness and cultivated mindfulness with powerful introspective awareness."
+     },
+     {
+      "t": "The experience recurs in jhāna, where it can be held for far longer",
+      "ok": false,
+      "why": "In jhāna he treats breath sensations that seem vague and disconnected from the body as a warning of dullness, and not as a ground for Insight."
+     },
+     {
+      "t": "Thoughts have ceased entirely, in attention and in awareness as well",
+      "ok": false,
+      "why": "At this Stage thoughts are subdued and still intrude now and then, and the condition he states concerns dullness and introspective awareness."
+     }
+    ]
    }
   ],
   "open": [
@@ -1978,6 +3864,50 @@ const EXTRA_STAGES = [
      "Asks the questions that test the claim: vividness, presence of sounds and body, continuous knowledge of the mind's activity and state, time to settle and duration, consistency across sits, what happens when effort eases, control of scope.",
      "Uses the acquired appearance correctly: sensations relatively free of concepts, with not knowing in-breath from out-breath and the displaced breath as signs; treats them as supporting evidence that depends on dullness being overcome, not as a criterion of mastery."
     ]
+   },
+   {
+    "q": "Explain the Mind-System model's basic picture as a teacher would need to at Stage Six.\n• Describe the two parts of the mind-system, and what the sensory and discriminating minds each produce.\n• Explain what the conscious mind is and does in this model, including why Culadasa says it 'doesn't actually do anything' and why it still matters.\n• State where the model comes from, and say where you would be careful in presenting it.",
+    "model": "Two parts. He calls it the mind-system because what we speak of as one mind is many distinct, interconnected processes. It has two main parts. The conscious mind is what we experience directly. The unconscious mind, the much larger part, can be known only indirectly, through inference. The unconscious is divided into the sensory mind and the discriminating mind, each made up of many sub-minds that work simultaneously and autonomously, like the departments of a corporation.\n\nWhat they produce. The sensory mind has five sub-minds, one for each physical sense. Each turns raw sensory data into sense-percepts ('warmth', 'blue', a 'chirp'), recognises and evaluates them, and attaches a hedonic feeling of pleasant, unpleasant or neutral. Most of what they process never becomes conscious; he says it is filtered out at the level of subconscious awareness. They also run automatic reactions, which is why we are never conscious of an intention behind a reflex. The discriminating mind takes what reaches consciousness and builds more complex representations: perceptions, thoughts and ideas, and also emotions, which is why its greater part is called the thinking/emotional mind. Its sub-minds each keep their own evolving model of reality and produce their own hedonic feelings, which trigger desire and aversion and so become the source of intentions. They are arranged in a hierarchy and, unlike the sensory sub-minds, are continuously active, even in deep sleep.\n\nThe conscious mind. He compares it to a screen, or a space, onto which the sub-minds project the seven kinds of moments of consciousness. It is not the source of its content. Its function is to be an interface: a universal recipient, able to receive from every sub-mind, and a universal source, since whatever enters it becomes available to all of them at once. His image is a boardroom to which the departments send their reports. Only one sub-mind can present at a time, which is what creates single moments of consciousness. Key Point One says the conscious mind 'doesn't actually do anything': decisions, intentions, actions and even the sense of self come from the unconscious. He then blocks the obvious inference. Consciousness is not an incidental by-product. Without it the sub-minds could not work together to do their jobs.\n\nWhere it comes from. He attributes the model to the Yogācāra school of Buddhism, explained with ideas from modern cognitive psychology, with some new concepts added. He calls it a powerful tool: useful for what has been experienced so far and for what is to come, including metacognitive awareness, unification of mind and no-Self.\n\nWhere I would be careful. First, by his own account the unconscious is known only by inference. The sub-minds are a way of organising what is observed, and I would not present them as things anyone has found. Second, he says the picture may seem reductionist or even materialistic, asks the reader not to jump to that conclusion, and calls it only the beginning of the real story. I would pass that on as his, without claiming to know the rest. Third, the model's use at Stage Six is practical. It explains why distractions arrive unbidden, and why holding an intention and ignoring what lies outside it changes what the mind presents. That selection of what matters for this Stage is mine.",
+    "rubric": [
+     "Two parts: the conscious mind, experienced directly, and the much larger unconscious, known only by inference and divided into the sensory and discriminating minds, each made of many sub-minds working simultaneously and autonomously.",
+     "Products: sensory sub-minds produce sense-percepts with a hedonic feeling, and automatic reactions; the discriminating (thinking/emotional) mind produces perceptions, thoughts, emotions and its own hedonic feelings, and through desire and aversion, intentions; its sub-minds are continuously active.",
+     "Conscious mind: a screen or space that is not the source of its content; a universal recipient and universal source; the boardroom in which one sub-mind presents at a time.",
+     "Key Point One and its limit: the conscious mind does nothing itself, since decisions, intentions and the sense of self come from the unconscious; yet it is no mere by-product, because without it the sub-minds could not work together.",
+     "Source and care: Yogācāra restated through cognitive psychology with some added concepts, and offered as a tool; the answerer marks the unconscious as inferred, reports the 'not reductionist' assurance as his, and labels its own selection."
+    ]
+   },
+   {
+    "q": "Stage Six says the practice of exclusive attention is 'an exercise of executive function' that trains unconscious sub-minds to stop projecting distractions. Use the Fifth Interlude to explain what that means.\n• Distinguish top-down from bottom-up processes, and say what executive functions are and who performs them.\n• Explain what happens to content that is consistently ignored and to content that is attended to, and what this implies for the instruction to ignore distractions completely.\n• Explain how sub-minds are trained, including the part played by satisfaction and by repetition, and what remains true at Stage Six however well this has gone.",
+    "model": "Two directions. Bottom-up: an individual sub-mind projects something into peripheral awareness, along with an intention for it to become an object of attention. If nothing opposes that intention, attention moves. He calls this stimulus-driven, and spontaneous movements of attention are his example. Top-down: an intention is projected into consciousness, where many sub-minds can support or oppose it, and an action follows only from their consensus. He says all intentions come from unconscious sub-minds; a conscious intention is simply one that has gone through this process. That is why the chapter calls it always stronger: it is an agreement among several sub-minds, not the push of one.\n\nExecutive functions. These are the higher-order tasks, such as inhibiting, planning and correcting errors, that are needed wherever pre-programmed behaviour is not sufficient. He is emphatic that there is no executive sub-mind and no chairperson. Executive function is what many sub-minds do together through consciousness: coordinate, communicate, discriminate between conflicting information, decide between conflicting intentions, integrate new information and program new behaviour. Resisting a tempting distraction in order to stay with the breath is his example of the inhibitory kind.\n\nIgnored and attended. When something appears in peripheral awareness, the mind-system as a whole makes a quick evaluation of the object and of the intention to attend to it. If the intention is blocked, the object may keep appearing in awareness but no longer vies for attention. Content that is consistently dismissed or ignored eventually stops being presented to the conscious mind; his everyday case is getting used to the water after jumping into a swimming pool. The converse also holds. Whatever is attended to goes on being presented, and what is attended to repeatedly, or for a long time, is flagged as significant, along with similar objects and even the whole sensory field. For the instruction this has a sharp consequence, which I draw myself: a distraction that is pushed at, argued with or checked on is being attended to. 'Completely ignore' is the working part of the instruction and not an exaggeration. The chapter's remark that any attention gives a thought energy says the same.\n\nTraining. Sub-minds change when new information is exchanged in consciousness and digested. He names two conditions. One is outcome. The results of an intended action are evaluated; a good result brings pleasure and satisfaction, and positive affect makes the activities and intentions of the sub-minds involved more likely to be repeated. A negative reaction has the opposite effect. The other is repetition. The more often the same conscious intention leads to the same action in the same situation, the more likely the sub-minds are to act automatically. His general principle is that conscious intentions, repeatedly acted upon, eventually give rise to automatic actions that no longer require conscious intention. Pacifying the mind is that principle applied to the thinking/emotional mind.\n\nWhat remains true. The discriminating sub-minds are continuously active, so thoughts go on being generated at an unconscious level. Staying on the breath requires an ongoing, uninterrupted consensus, and the chapter says that at this Stage distractions return as soon as the intention weakens. The training is real, and it is not complete until Stage Seven.\n\nFor teaching. The model leaves no need for talk of willpower. The student's part is to set the intention clearly, ignore fully, and let satisfaction register. That summary is mine.",
+    "rubric": [
+     "Directions: bottom-up intentions come from a single sub-mind and move attention automatically when unopposed; top-down conscious intentions are projected into consciousness and acted on by consensus, hence stronger; all intentions originate in unconscious sub-minds.",
+     "Executive functions: higher-order tasks needed where programmed behaviour is not sufficient (inhibition is the meditation example), performed by many sub-minds interacting through consciousness, with no executive sub-mind.",
+     "Ignored and attended: blocked or consistently ignored content stops vying for attention and eventually stops being presented (habituation); attended content keeps being presented and is flagged, with similar objects and whole fields; the consequence drawn for 'completely ignore' is marked as the answerer's.",
+     "Training: positive affect after a result judged good reinforces the sub-minds' activity, and a negative reaction does the opposite; repetition turns conscious intentions into automatic actions; pacifying the mind is the application.",
+     "Limits at Stage Six: discriminating sub-minds stay active unconsciously; an uninterrupted consensus is needed; distractions return when the intention weakens; pacification completes in Stage Seven."
+    ]
+   },
+   {
+    "q": "The Fifth Interlude gives an account of where the sense of being a self comes from. Explain it, and say how a teacher should handle it at Stage Six.\n• Describe what the narrating mind does, using his example of seeing a bird, and say what it does not do.\n• Explain how the 'I' and the 'it' arise and become a Self and a world, and what he says follows from that.\n• State what he invites the meditator to observe, and say what this account does and does not establish for a student who has only read it.",
+    "model": "The narrating mind. It is a sub-mind of the discriminating mind with a special role. It takes in what other sub-minds have projected into consciousness, combines and organises it into a meaningful summary, and projects that back as a binding moment of consciousness. The result is a continuing chronicle of the mind's conscious activities, available to the whole system.\n\nHis example. The visual mind projects an image: colour, shape, contrast. In that seeing there is only the seen. The discriminating mind recognises it, say as an oriole, and projects the concept: in the recognising there is only the recognised concept. A hedonic feeling accompanies it: in the feeling there is only the felt pleasure. These are three separate moments of consciousness. The narrating mind then weaves them into causally connected episodes: I saw it, I recognised it, I enjoyed it.\n\nWhat it does not do. It does not speak. Its output is easy to put into words because language reflects its patterns, but putting things into words is the work of a different sub-mind. And on his account it does not produce the belief in a Self. It only tells the story.\n\nFrom story to Self. The 'I' is a fictional but convenient construct, the centre of gravity that holds the story together. The 'it' is another, imputed in order to link the parts; he says we never actually experience any entity corresponding to it, only image, concept, feeling and emotion. The error comes next and belongs to the discriminating mind, which takes the 'I' and the 'it' for actual entities. The narrative 'I' becomes an ego-Self with traits and a personal history, and the 'it' is seen as the cause of the feelings. From that misperception come intentions rooted in desire and aversion: I wanted it, I pursued it, I obtained it, and in the end I lost it and I grieved. Key Point Three says the contents of the conscious mind are always and only mental constructs. Key Point Four says the enduring sense of self is a useful but fictional construct of the narrating mind, reified by the discriminating mind.\n\nWhat he invites. Observation, not belief. Notice that the 'I' is imputed only after the fact. A memory arises, and only then comes 'I just remembered something'. Sadness can be present long before the thought 'I feel sad'. A decision appears, seemingly from nowhere, and then comes 'I have decided'. His image is a room full of people all named George, whose debate reaches you only as 'George said this' and 'George said that'.\n\nWhat it establishes. For a student who has only read it: an explanation, and a list of things to look for. It is not the Insight the Third Interlude describes, where such seeing has to sink in on an experiential level. That distinction is the book's; applying it to this chapter is my step. He himself expects resistance, since the sense of self feels very real.\n\nAt Stage Six. The account earns its place by explaining two things the meditator will meet: why a witness appears when attention is turned on the mind, and why 'the breath' turns out to be a concept built from other concepts. I would teach it for that, discourage hunting for the self in sits, and leave the larger claim to the Stages that address it. That policy is mine.",
+    "rubric": [
+     "Narrating mind: a sub-mind of the discriminating mind that integrates conscious content into episodes and projects them back as binding moments; the bird example with its three separate moments (seen, recognised, felt) woven into 'I saw it, I recognised it, I enjoyed it'.",
+     "What it does not do: putting things into words is a separate sub-mind's work; the narrating mind tells the story and does not itself take the 'I' for real.",
+     "From story to Self: 'I' and 'it' as convenient fictions; the discriminating mind reifies them into an ego-Self and a world, which gives rise to desire and aversion; Key Points Three and Four.",
+     "Invitation: to observe the 'I' being imputed after the fact (memory, sadness, decision); the George image.",
+     "Calibration: reading the account is not Insight; says how it is used at Stage Six (the witness, the conceptual breath), and marks that policy and the link to the Third Interlude as the answerer's own."
+    ]
+   },
+   {
+    "q": "Stage Six introduces meditative absorption through the idea of flow. Set out what a teacher needs to know before guiding a student into the whole-body jhāna.\n• Give the Seven Conditions for Achieving Flow, and say which of them mark the difference between access concentration and jhāna.\n• State the traditional factors he gives for access concentration, and why he says absorption becomes workable only now.\n• Describe how the whole-body jhāna is prepared for and entered, what 'very light' means, and what he says these jhānas are for.",
+    "model": "Flow. He borrows the term from Csikszentmihalyi: concentration so focused that it amounts to complete absorption in an activity. Four conditions make flow possible. The activity is performed as an end in itself. Its goals are clear and its feedback immediate, the feedback carrying the message 'I have succeeded in my goal'. It is neither taxingly difficult nor too easy. And it requires complete focus of attention, leaving no room in the mind for anything else. Three more must arise for the activity to become flow. It becomes spontaneous, almost automatic, with no sense of a self apart from the activity. A feeling of effortlessness arises, though continuous skilled performance is required. And there is a sense of successfully exercising control, which he says is not the same as feeling that 'you' are in control.\n\nAccess and jhāna. Meditative absorptions are flow states that occur in meditation, traditionally called jhāna. The traditional factors he lists are directed and sustained attention, exclusive focus and unification of mind, and joy and pleasure. When these are present the meditator is in access concentration, the state that immediately precedes jhāna. Put more simply, he says, access requires exclusive focus of attention, joy and pleasure. The same factors are present in jhāna. What distinguishes jhāna is the shift into flow, marked by conditions five to seven.\n\nWhy now. Before Stage Six, becoming too absorbed in the object ended in dullness or distraction. With subtle dullness overcome and subtle distractions temporarily subdued, absorption can be entered without that happening. The acquired appearance of the breath is also a far more suitable object than the initial appearance.\n\nPreparation and entry. Prepare by cultivating joy: purposely notice, and hold in awareness, any feelings of stillness, alertness and pleasure. He says to do this in every sitting, whether or not jhāna is intended. The object is all the breath-related sensations in the whole body at once, and the one change from the usual practice is that you stay with them and do not return to the nose. Some background noise and occasional thought do not matter, provided there are periods of stable, exclusive attention in which the sensations are extremely clear, together with metacognitive awareness of pleasure. Follow the sensations as smoothly as possible, treating each moment of doing your best as a success. When everything is just right, the mind seems to slip into a groove and flow for a little while. It will slip out, and you return. He advises noticing exactly what was happening in the mind just before entry.\n\n'Very light'. Some thinking, investigation or evaluation will intrude, which makes the jhāna unstable. When the first can be held for up to fifteen minutes without interruption, the second can be begun, from Appendix D.\n\nWhat they are for. He says not to worry about practising all four. Jhānas are not an end in themselves, and for now their only purpose is to help master Stage Six and prepare for faster progress.\n\nTwo observations of my own. His first flow condition, an activity performed as an end in itself, sits oddly beside 'their only purpose is'. I read the first as the attitude within a sit and the second as the place of jhāna in the training, but he does not reconcile them. And the conclusion's description of mastery does not mention jhāna, so I treat it as a help and not a requirement.",
+    "rubric": [
+     "Seven conditions: four that make flow possible (an end in itself; clear goals with immediate feedback; challenge balanced with ability; complete focus) and three that mark it (spontaneity with no sense of a separate self; effortlessness; a sense of successfully exercising control).",
+     "Access and jhāna: the traditional factors (directed and sustained attention; exclusive focus and unification of mind; joy and pleasure) define access concentration; jhāna has the same factors and is distinguished by the shift into flow, conditions five to seven.",
+     "Why now: earlier absorption ended in dullness or distraction; subtle dullness is overcome and subtle distractions are subdued; the acquired appearance is a more suitable object.",
+     "Preparation and entry: joy cultivated by holding stillness, alertness and pleasure in awareness, in every sitting; stay with the whole-body breath sensations and do not return to the nose; periods of stable exclusive attention with metacognitive awareness of pleasure; the mind slips into a groove, slips out, and is brought back.",
+     "'Very light' and purpose: thinking or evaluation intrudes and makes the jhāna unstable; jhānas are not an end in themselves, their purpose now being to help master Stage Six; any tension noted between 'end in itself' and that purpose is marked as the answerer's observation."
+    ]
    }
   ],
   "scenario": [
@@ -2012,6 +3942,39 @@ const EXTRA_STAGES = [
      "Explains the witness from the text: metacognitive content in awareness is just information, but taken as an object of attention it passes through the discriminating mind, which imputes a Self, so a witness seems to be present; he does not present this as awakening.",
      "Marks as inference that searching for the witness pulls attention off the breath and that chasing the state gets in its way; asks whether the silence was bright or partly dull; redirects to the two intentions, the whole-body practice, and knowing the mind in awareness.",
      "Weighting: teachers differ sharply on the witness, since some traditions cultivate it as a practice and TMI itself uses it later, so how far to discourage it here is a judgment; they also differ on whether to interpret the student's experience at all or only to say how this book accounts for it."
+    ]
+   },
+   {
+    "q": "A student at Stage Six reports: 'I have been trying to get into jhāna for three weeks. I sit down, go straight to the whole body and wait for the click. Every few minutes I check whether this is it yet. Nothing happens. The sits feel flat and a bit desperate now, and I have stopped doing the ordinary practice at the nose because it seems pointless by comparison. A friend got in within two days. What am I doing wrong?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nFirst, nothing here is a failure of ability, and I would say so. The student can stay with the whole body through a sit, which is Stage Six work. But on Culadasa's account jhāna is a flow state, and the report describes, almost point by point, conditions under which flow does not arise.\n\nHe gives seven conditions. The first is that the activity is performed as an end in itself, not for any other purpose. Three weeks of sitting in order to get the click is the opposite. The second is clear goals with immediate feedback whose message is 'I have succeeded'. The student's only measure is whether jhāna has happened, so the feedback every few minutes is 'not yet'. His own instruction supplies a different measure: follow the sensations as smoothly as possible, and each moment of doing your best is a success. The marks of flow itself include spontaneity, effortlessness and no sense of a self apart from the activity. Checking 'is this it?' is a self standing apart from the activity. It is also the thinking and evaluation that he says make the light jhānas of this Stage unstable.\n\nThere is a second gap. Access to jhāna, put simply, requires exclusive focus together with joy and pleasure. He says to prepare by purposely noticing, and holding in awareness, feelings of stillness, alertness and pleasure, in every sitting. The report mentions waiting, flatness and desperation, and no pleasure at all.\n\nWhat I don't know.\n\nWhether the ground is there. He asks for periods of stable, exclusive attention in which the breath sensations in the whole body are extremely clear. Is that so, or is the student going straight to the whole body before attention has settled? The conclusion says that even at mastery it takes a little while for attention to stabilise. Whether subtle dullness is really behind them: flat sits can be dull sits. And what the friend entered. I cannot assess a report of getting in within two days, and Stage Five warns that pleasant dullness can pass for absorption.\n\nResponse.\n\nI would say: you are not doing the practice badly. You are doing a different practice, which is waiting.\n\nDrop jhāna as a target for two weeks. He says jhānas are not an end in themselves and that for now their only purpose is to help master Stage Six, and the conclusion's description of mastery does not mention them.\n\nGo back to the full exercise: abdomen, parts, whole body, then the nose, with the period of exclusive attention there that the whole-body work produces. He says that with practice exclusive focus at the nose can be sustained for longer and longer, so the return is the work and not a detour.\n\nIn every sit, look for what is already pleasant: stillness, alertness, the smoothness of the breath. Keep it in awareness, and leave attention on the breath sensations.\n\nStop checking. If 'is this it?' comes, it is a thought, and it is ignored like any other.\n\nLater, when sits contain clear stretches of exclusive attention with pleasure in the background, stay with the whole body instead of returning to the nose, and let the following itself be the measure. He says to practise jhāna whenever conditions are right for access. The work is the conditions.",
+    "rubric": [
+     "Reassures on ability and reads the report against the flow conditions: sitting for the sake of the click is not an activity done as an end in itself; the only feedback is 'not yet'; checking is a self apart from the activity and the evaluation that makes a light jhāna unstable.",
+     "Identifies the missing preparation: access requires exclusive focus with joy and pleasure; stillness, alertness and pleasure are to be held in awareness in every sitting, and the report contains none.",
+     "States what a report leaves open: whether there are periods of stable exclusive attention with clear whole-body sensations, whether attention is given time to settle, whether the flatness is dullness, and what the friend actually entered.",
+     "Gives the corrections from the text: jhāna is a help toward mastering Stage Six and not an end; return to the full whole-body exercise, including the nose; keep pleasure in awareness; let each moment of smooth following be the success; practise jhāna when the conditions for access are present.",
+     "Weighting: teachers differ on whether to take jhāna off the table for a while, to coach entry more closely, or not to teach it at this Stage at all; a good answer says which it chooses, and marks the two-week pause as the answerer's own."
+    ]
+   },
+   {
+    "q": "A student at Stage Six reports: 'The chapter on the mind-system has knocked me sideways. If there is no one in charge and the I is just a story the narrating mind tells, then who is meditating? I keep trying to catch the I in my sits and I end up dizzy and a bit frightened. And honestly, why make an effort at all if effort is just sub-minds voting? My practice has gone slack since I read it.' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nTwo different things, and I would separate them for the student. One is a reaction to an idea. The other is a change in what they are doing on the cushion.\n\nThe reaction is one Culadasa expects. He writes that you may object to the idea that your sense of being a self is a mere construct, since it feels very real, and that this view of the mind may at first seem reductionist or even materialistic. He asks the reader not to jump to those conclusions, and calls the model only the beginning of the real story. So the unease is no sign that anything is wrong with the student.\n\nThe slackness rests on a misreading. The model does not say effort is pointless. It says what effort is: a conscious intention, held by a consensus of sub-minds, which he says has a powerful programming effect on individual sub-minds. He says we are not entirely at the mercy of unconscious intentions. He says the conscious mind, though it does nothing itself, is no incidental by-product, because without it the sub-minds could not work together. As I read it, 'who is meditating?' has an answer in the model's own terms: the mind-system as a whole, to the extent that its parts agree. Setting an intention is how that agreement is built.\n\nThe change on the cushion is the more practical problem. Trying to catch the 'I' is not a Stage Six instruction. What he invites is noticing, in ordinary experience, that the 'I' is attributed after the fact: a memory arises, and then comes 'I just remembered'. And the Stage Six chapter says what happens when attention is turned on the mind's own activity: attention always involves the discriminating mind, which imputes a Self, so it feels as though there is a witness. Hunting for the 'I' with attention tends to produce one. My inference is that this is the loop the student is caught in.\n\nWhat I don't know.\n\nHow strong the fear is, and whether it stays on the cushion. A philosophical wobble is one thing. Persistent feelings of unreality, or fear that follows them through the day, would be another, and not something to manage with a model. I also don't know what the practice was like before: slack because of the idea, or already flagging when the idea supplied a reason.\n\nResponse.\n\nI would say: you have understood the chapter and it has unsettled you, which he anticipates. You don't have to settle the question. He presents the model as a tool, and its use at this Stage is narrow: it explains why distractions arrive unbidden, and why holding an intention and ignoring the rest changes what the mind presents.\n\nStop looking for the 'I' in sits. The Stage's two tasks are exclusive attention and awareness of the mind's state and activity, with attention kept on the breath. If 'who is watching?' arises, it is a thought, and thoughts are ignored.\n\nKeep the effort, and notice afterwards how the decision to sit actually came about.\n\nIf the fear persists or spreads, I would set the model aside, go back to practices that steady the student, and ask them to talk it through with an experienced teacher. Stage Four's advice for someone acutely disturbed, to ground yourself first, is the nearest the book comes to this case. Borrowing it here is my judgement.",
+    "rubric": [
+     "Separates the reaction to the idea from the change in practice, and normalises the first from the text: he expects the objection, says the view may seem reductionist, and asks the reader not to jump to that conclusion.",
+     "Corrects the inference about effort from the model itself: a conscious intention is a consensus with a powerful programming effect; we are not at the mercy of unconscious intentions; the conscious mind is no mere by-product; the mind-system as a whole is what acts.",
+     "Identifies hunting for the 'I' as outside Stage Six's instructions: he invites noticing the after-the-fact 'I' in ordinary experience, and attention turned on the mind produces a 'witness', with the inference that this explains the student's loop marked as such.",
+     "States what a report leaves open: how strong and how persistent the fear is, whether it extends beyond sits, and the state of the practice before the reading.",
+     "Weighting: teachers differ on when to introduce no-Self material, and on whether a shaken student should be steered away from it or helped to look more closely; a good answer says which it chooses, and marks its borrowing of Stage Four's advice as its own."
+    ]
+   },
+   {
+    "q": "A student at Stage Six reports: 'My mother died five weeks ago. In sits the grief keeps coming up. The Stage says to ignore everything outside the scope completely, so I have been shutting it out, and for a few days that worked. Now the sits feel brittle, like holding a door closed, and outside them I feel flat and far away from everyone. I was doing so well before. Am I failing at exclusive attention?' What's happening in TMI terms, and how would you respond?",
+    "model": "What's happening.\n\nNo. And before anything about method I would say that I am sorry, and that five weeks is very recent.\n\nIn TMI's terms the student is applying the right instruction to the wrong object. Stage Six's 'completely ignore' is addressed to subtle distractions: thoughts and sensations with which attention briefly alternates while the breath stays the main focus. Grief that keeps coming up and has to be held out is not that. Culadasa's instructions for a strong emotion are in Stage Four. They begin the same way, ignore it for as long as you can, and then turn: when something becomes too strong to disregard, make it the meditation object. He says not to resist, avoid or reject it, because it will only go back into the unconscious and resurface later, and he gives acknowledging, allowing and accepting as the antidotes. His examples there are of material from the past. Applying the method to a fresh loss is my step, though he offers it as the technique for strong emotions generally.\n\nSo the book has two uses of ignoring, and the difference matters. In the Fifth Interlude, content that is consistently ignored eventually stops being presented, which is how the thinking mind is pacified. That describes material that fades when it gets no attention. 'Holding a door closed' is the student's description of something else: effort spent against something that is not fading. My reading is that this is the resisting Stage Four warns of. The book does not draw that line explicitly.\n\nGoing back to a Stage Four method is no demotion. The Overview says meditators move back and forth between Stages over weeks, days or a single session, and calls this perfectly normal.\n\nWhat I don't know.\n\nWhether the flatness and distance come from the shutting out, which is my suspicion, or from the grief itself, or from something that needs more than meditation advice. A report cannot tell me. I don't know what support the student has, how they are sleeping, or whether sitting is helping at all just now.\n\nResponse.\n\nI would say: you are not failing. You have used a tool for small things on something that is not small.\n\nFor now, let the Stage Six goal go. Sit with the breath as usual. When grief comes, let it be in the background if it will stay there. When it won't, turn toward it as Stage Four describes: know where you are and that you are safe, begin with how it feels in the body, name it as 'grief is arising', and let it be until it eases. Then return to the breath. Don't analyse it. He says the process is tiring and that you may take a break from the sit.\n\nShorter sits are fine. If it becomes overwhelming, he says to ground yourself: company, good food, exercise. If it stays overwhelming, he suggests loving-kindness practice, and after that professional help. I would say plainly that seeking help would not mean the practice had failed.\n\nI would also ask who they are talking to. He says someone who knows how to listen can be very helpful. The flatness is what I would watch, and I would ask to hear from them again within the week. That request is mine.",
+    "rubric": [
+     "Opens with condolence and a clear 'no', and identifies the misapplication: 'completely ignore' addresses subtle distractions, whereas grief that has to be held out is a strong emotion, for which the instructions are Stage Four's.",
+     "Gives Stage Four's sequence: ignore while that is possible; when too strong, make it the object; do not resist, avoid or reject, since it only returns; acknowledge, allow and accept; present-moment safety, the body first, a verbal label, then back to the breath; no analysis.",
+     "Distinguishes ignoring that lets content fade (pacification) from effort spent holding something out, marks that reading as inference, and treats the return to an earlier Stage's method as normal, as the Overview does.",
+     "States what a report leaves open: whether the flatness comes from the shutting out, from the grief itself, or from something needing more than meditation advice; the student's support and sleep; whether sitting is helping at present.",
+     "Weighting: teachers differ on whether a bereaved student should keep formal sits going, shorten them or switch to loving-kindness, and on how early to suggest outside support; a good answer names his exits (grounding, loving-kindness, professional help) and marks its own additions."
     ]
    }
   ]
