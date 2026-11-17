@@ -383,9 +383,9 @@ const EXTRA_STAGES = [
     "q": "Why does Culadasa suggest treating the beginning of the out-breath as the start of each breath cycle when counting?",
     "options": [
      {
-      "t": "The pause then falls in mid-cycle, where the mind is less likely to wander",
+      "t": "It moves the pause after the out-breath from the cycle's end to its middle",
       "ok": true,
-      "why": "He says the mind tends to shift focus when it has completed a task, so a pause at the end of the cycle is the perfect opportunity for thoughts to wander off."
+      "why": "Counted from the in-breath, the pause after the out-breath is where each breath ends, and the mind tends to shift focus once a task is complete, so that is where thoughts wander off. Starting the cycle at the out-breath puts that pause in the middle, where it is less likely to trip you up."
      },
      {
       "t": "The out-breath is the more soothing half, so that each count begins in calm",
@@ -395,7 +395,7 @@ const EXTRA_STAGES = [
      {
       "t": "The in-breath sensations are clearer, so they are best saved until last",
       "ok": false,
-      "why": "He makes no such claim, and the alternative he offers is to say the number during the pause so as to fill the gap."
+      "why": "He makes no such claim, and the alternative he offers is to say the number during the pause at the end of the out-breath so as to fill the gap."
      },
      {
       "t": "Counting on the out-breath slows the breathing, which settles the mind",
