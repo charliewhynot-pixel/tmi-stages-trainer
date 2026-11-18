@@ -11,6 +11,16 @@ img{max-width:100%}
 </style>
 <title>TMI Stages Trainer</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Free study app for Stages 1–6 of The Mind Illuminated: train, multiple-choice grill, open questions and teaching scenarios, with explanations for every answer.">
+<meta property="og:title" content="TMI Stages Trainer">
+<meta property="og:description" content="Free study app for Stages 1–6 of The Mind Illuminated: train, grill, test and teaching scenarios, with explanations for every answer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://charliewhynot-pixel.github.io/tmi-stages-trainer/">
+<meta property="og:image" content="https://charliewhynot-pixel.github.io/tmi-stages-trainer/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317171c'/%3E%3Ccircle cx='32' cy='34' r='14' fill='%23e0a85a'/%3E%3Ccircle cx='32' cy='34' r='24' fill='none' stroke='%23e0a85a' stroke-opacity='.35' stroke-width='3'/%3E%3C/svg%3E">
 <style>
 /* Layout: a calm, single-column study app — stage rail up top, mode cards, one-question-at-a-time flow.
    Palette grounded in the subject: lamp-lit "mind illuminated" warmth (amber light) against deep contemplative indigo-night. */
@@ -264,6 +274,20 @@ button { font-family: inherit; cursor: pointer; }
 .fb-view .stats b { color: var(--ink); font-variant-numeric: tabular-nums; }
 .fb-view label { display: block; font-size: 0.82rem; color: var(--ink-soft); margin: 0 0 5px; }
 
+/* ---- Header buttons, About, Grill setup ---- */
+.head-btns { display: flex; gap: 8px; align-items: center; flex: 0 0 auto; }
+.about-btn { background: var(--surface); color: var(--ink-soft); border: 1px solid var(--line); border-radius: 999px; height: 34px; padding: 0 14px; font-size: 0.84rem; }
+.about-btn:hover { color: var(--accent); border-color: var(--accent); }
+.about p { font-size: 0.93rem; margin: 10px 0 0; max-width: 62ch; }
+.about h3 { font-size: 0.95rem; margin: 18px 0 6px; color: var(--accent); }
+.about dl { margin: 6px 0 0; display: grid; gap: 8px; }
+.about dt { font-family: var(--font-head); font-weight: 600; font-size: 0.92rem; }
+.about dd { margin: 0 0 0 0; font-size: 0.9rem; color: var(--ink-soft); }
+.about .unofficial { background: var(--surface-2); border: 1px solid var(--line); border-radius: 11px; padding: 12px 14px; font-size: 0.88rem; }
+.grill-setup { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 12px 0 4px; font-size: 0.95rem; }
+.grill-setup select { font: inherit; font-size: 0.95rem; color: var(--ink); background: var(--surface-2); border: 1px solid var(--line); border-radius: 9px; padding: 8px 10px; }
+a.btn { display: inline-block; text-decoration: none; }
+
 .footer-note { text-align: center; color: var(--ink-soft); font-size: 0.78rem; margin-top: 28px; line-height: 1.5; }
 
 @media (max-width: 440px) {
@@ -281,9 +305,12 @@ button { font-family: inherit; cursor: pointer; }
     <div>
       <h1>TMI Stages Trainer</h1>
     </div>
-    <button class="theme-btn" id="themeBtn" aria-label="Toggle light or dark theme" title="Toggle theme">◐</button>
+    <div class="head-btns">
+      <button class="about-btn" id="aboutBtn">About</button>
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle light or dark theme" title="Toggle theme">◐</button>
+    </div>
   </div>
-  <p class="sub">Train · Grill · Test — Stages 1–6 of <em>The Mind Illuminated</em></p>
+  <p class="sub">Train · Grill · Test · Scenario — Stages 1–6 of <em>The Mind Illuminated</em></p>
 
   <div class="rail-label">Choose a stage</div>
   <div class="stages" id="stages"></div>
@@ -312,7 +339,7 @@ button { font-family: inherit; cursor: pointer; }
     </button>
   </div>
 
-  <div class="fb-bar"><button class="fb-link" id="fbBtn">Export feedback</button></div>
+  <div class="fb-bar"><button class="fb-link" id="fbBtn">Send feedback</button></div>
 
   <div id="panel"></div>
 
@@ -396,6 +423,14 @@ button { font-family: inherit; cursor: pointer; }
   // file ("S5 grill Q3" = 3rd grill item in the Stage 5 file), so feedback maps
   // straight back to the source. Original app items are "old-Q<n>".
   var ITEMS = {};
+  var RETIRED = {
+    "S1 open old-Q2": 1, "S1 open old-Q3": 1, "S2 open old-Q1": 1, "S3 open old-Q2": 1,
+    "S4 open old-Q1": 1, "S5 open old-Q1": 1, "S5 open old-Q2": 1, "S6 open old-Q2": 1
+  };
+
+  // Google Form for feedback. Paste the form's link and the entry number of its
+  // "feedback" field here (from the form's pre-filled link) to switch it on.
+  var FEEDBACK_FORM = { url: "", entry: "" };
   function tagItems(n, kind, list, prefix) {
     (list || []).forEach(function (it, i) {
       it.id = "S" + n + " " + kind + " " + prefix + (i + 1);
@@ -411,6 +446,8 @@ button { font-family: inherit; cursor: pointer; }
       tagItems(s.n, "grill", s.grill, "old-Q");
       tagItems(s.n, "open", s.open, "old-Q");
       tagItems(s.n, "scenario", s.scenario, "old-Q");
+      // Original questions superseded by the expanded banks.
+      [s.grill, s.open].forEach(function (list) { list.forEach(function (x) { if (RETIRED[x.id]) x.retired = true; }); });
       // Retired items keep their IDs (so old feedback still matches) but are not shown.
       s.grill = s.grill.filter(function (x) { return !x.retired; });
       s.open = s.open.filter(function (x) { return !x.retired; });
@@ -444,7 +481,7 @@ button { font-family: inherit; cursor: pointer; }
   function updateFbBtn() {
     var n = Object.keys(fbData.flags).length;
     var b = document.getElementById("fbBtn");
-    if (b) b.textContent = "Export feedback" + (n ? " · " + n + " flagged" : "");
+    if (b) b.textContent = "Send feedback" + (n ? " · " + n + " flagged" : "");
   }
   function recordGrill(item, opt) {
     var g = fbData.grill[item.id] || (fbData.grill[item.id] = { n: 0, right: 0, picks: {} });
@@ -564,7 +601,7 @@ button { font-family: inherit; cursor: pointer; }
   function renderFeedback() {
     var panel = el("div", "panel fb-view");
     var head = el("div", "panel-head");
-    head.appendChild(el("h2", null, "Export feedback"));
+    head.appendChild(el("h2", null, "Send feedback"));
     head.appendChild(el("span", "eyebrow", "saved on this device"));
     panel.appendChild(head);
     var st = el("div", "stats");
@@ -581,15 +618,33 @@ button { font-family: inherit; cursor: pointer; }
     nm.addEventListener("input", function () { fbData.tester = nm.value.trim(); saveFb(); ta.value = buildExport(); });
 
     var row = el("div", "btn-row");
-    var copy = el("button", "btn", "Copy to clipboard");
     var msg = el("span", "hint", "");
-    copy.addEventListener("click", function () {
+    function copyText(okMsg) {
       var txt = ta.value;
       function fallback() { ta.focus(); ta.select(); msg.textContent = "Text selected — copy it with your device's Copy."; }
       try {
-        navigator.clipboard.writeText(txt).then(function () { msg.textContent = "Copied. Paste it into a message or the chat."; }, fallback);
+        navigator.clipboard.writeText(txt).then(function () { msg.textContent = okMsg; }, fallback);
       } catch (e) { fallback(); }
-    });
+    }
+    var formOn = !!(FEEDBACK_FORM.url && FEEDBACK_FORM.entry);
+    if (formOn) {
+      var send = document.createElement("a");
+      send.className = "btn"; send.target = "_blank"; send.rel = "noopener";
+      send.textContent = "Send feedback form ↗";
+      var setHref = function () {
+        var enc = encodeURIComponent(ta.value);
+        // Long exports may not fit in a link; then the form opens empty and they paste.
+        send.href = FEEDBACK_FORM.url + "?usp=pp_url" + (enc.length < 6000 ? "&entry." + FEEDBACK_FORM.entry + "=" + enc : "");
+      };
+      setHref();
+      nm.addEventListener("input", setHref);
+      send.addEventListener("click", function () {
+        copyText("Form opened in a new tab. Your feedback is filled in, and also copied in case you need to paste it.");
+      });
+      row.appendChild(send);
+    }
+    var copy = el("button", formOn ? "btn subtle" : "btn", "Copy to clipboard");
+    copy.addEventListener("click", function () { copyText("Copied. Paste it into a message to whoever shared the app with you."); });
     var clear = el("button", "btn subtle", "Clear all feedback");
     var armed = false;
     clear.addEventListener("click", function () {
@@ -599,7 +654,41 @@ button { font-family: inherit; cursor: pointer; }
     row.appendChild(copy); row.appendChild(el("span", "spacer")); row.appendChild(clear);
     panel.appendChild(row);
     panel.appendChild(msg);
-    panel.appendChild(el("p", "hint", "Everything here stays in this browser until you clear it. Export and send it after a testing session."));
+    panel.appendChild(el("p", "hint", "This is everything you've flagged, the Grill questions you got wrong, and your self-ratings. It stays in this browser until you send or clear it; nothing is sent automatically."));
+    panelEl.innerHTML = ""; panelEl.appendChild(panel);
+  }
+
+  // ---------- ABOUT / intro ----------
+  function renderAbout() {
+    var panel = el("div", "panel about");
+    var head = el("div", "panel-head");
+    head.appendChild(el("h2", null, "About this app"));
+    head.appendChild(el("span", "eyebrow", "free · unofficial"));
+    panel.appendChild(head);
+    panel.appendChild(el("p", null, "A study aid for Stages 1–6 of <em>The Mind Illuminated</em> by Culadasa (John Yates), with Matthew Immergut and Jeremy Graves. It's for anyone learning the method, and for teachers in training who need to explain it."));
+    panel.appendChild(el("h3", null, "How to use it"));
+    panel.appendChild(el("p", null, "Pick a stage at the top, then a mode. A good order is Train first, then Grill, then Test and Scenario."));
+    var dl = el("dl");
+    [["Train", "The stage's essentials, to learn or refresh."],
+     ["Grill", "Multiple choice. Choose how many questions per round. Every answer explains why it's right or wrong."],
+     ["Test", "Open questions. Answer in your own words, then compare with a model answer and tick off a checklist."],
+     ["Scenario", "A student describes a problem. Work out what's happening in TMI terms and how you'd respond, as a teacher would."]
+    ].forEach(function (r) { dl.appendChild(el("dt", null, r[0])); dl.appendChild(el("dd", null, r[1])); });
+    panel.appendChild(dl);
+    panel.appendChild(el("h3", null, "Your data"));
+    panel.appendChild(el("p", null, "Progress is saved only in this browser. Nothing is sent anywhere unless you choose to send feedback."));
+    panel.appendChild(el("h3", null, "Feedback"));
+    panel.appendChild(el("p", null, "Spot something wrong, unclear or too easy? Tap <strong>⚑ Flag this question</strong> on it, then use <strong>Send feedback</strong> under the mode buttons."));
+    panel.appendChild(el("h3", null, "Who made it"));
+    panel.appendChild(el("p", "unofficial", "Made by Charlie, a fellow TMI practitioner in teacher training. This is an unofficial study aid, not connected with the authors or publishers. It draws on the book and quotes it briefly; it's meant to be used alongside the book, not instead of it. <em>The Mind Illuminated</em> is published by Touchstone (Simon &amp; Schuster) and is available from bookshops and libraries."));
+    var row = el("div", "btn-row");
+    var go = el("button", "btn", "Start →");
+    go.addEventListener("click", function () {
+      try { localStorage.setItem(LS_KEY + "-about-seen", "1"); } catch (e) {}
+      state.mode = null; renderPanel(); renderModeStats();
+    });
+    row.appendChild(go);
+    panel.appendChild(row);
     panelEl.innerHTML = ""; panelEl.appendChild(panel);
   }
 
@@ -630,7 +719,7 @@ button { font-family: inherit; cursor: pointer; }
     var se = document.getElementById("stat-test");
     st.textContent = p.trainSeen ? "✓ reviewed" : "";
     var g = getStage(state.stage);
-    sg.textContent = (p.grillBest != null) ? ("best " + p.grillBest + "/" + g.grill.length) : "";
+    sg.textContent = (p.grillLast != null && p.grillLastOf) ? ("last round " + p.grillLast + "/" + p.grillLastOf) : (g.grill.length + " questions");
     se.textContent = p.testDone ? ("done · self-rated " + (p.testAvg != null ? p.testAvg + "/4" : "")) : "";
     var sc = document.getElementById("stat-scenario");
     var nScen = (g.scenario || []).length;
@@ -661,11 +750,9 @@ button { font-family: inherit; cursor: pointer; }
       panel.appendChild(item);
     });
     var row = el("div", "btn-row");
-    var done = el("button", "btn", "Mark reviewed →");
-    done.addEventListener("click", function () { prog(s.n).trainSeen = true; save(); state.mode = "grill"; renderPanel(); renderRail(); renderModeStats(); });
-    var toGrill = el("button", "btn ghost", "Skip to Grill");
-    toGrill.addEventListener("click", function () { state.mode = "grill"; renderPanel(); renderModeStats(); });
-    row.appendChild(done); row.appendChild(toGrill);
+    var toGrill = el("button", "btn", "Start Grill →");
+    toGrill.addEventListener("click", function () { state.mode = "grill"; renderPanel(); renderModeStats(); window.scrollTo(0, 0); });
+    row.appendChild(toGrill);
     panel.appendChild(row);
     panelEl.innerHTML = ""; panelEl.appendChild(panel);
     // mark seen on open as well (they're reading it)
@@ -675,12 +762,46 @@ button { font-family: inherit; cursor: pointer; }
   // ---------- GRILL ----------
   function renderGrill() {
     var s = getStage(state.stage);
-    var items = shuffle(s.grill);
+    var items = [];
     var idx = 0, correct = 0, answered = false;
     var results = [];
 
     var panel = el("div", "panel");
     panelEl.innerHTML = ""; panelEl.appendChild(panel);
+
+    // Setup: choose how many questions this round.
+    var total = s.grill.length;
+    var pref = 10;
+    try { var sv = parseInt(localStorage.getItem(LS_KEY + "-grill-n"), 10); if (sv > 0) pref = sv; } catch (e) {}
+    var sh = el("div", "panel-head");
+    sh.appendChild(el("h2", null, "Grill"));
+    sh.appendChild(el("span", "eyebrow", "Stage " + s.n + " · " + s.title));
+    panel.appendChild(sh);
+    panel.appendChild(el("p", "goal-line", "Multiple choice, " + total + " questions in this stage. Each answer tells you why it's right or wrong."));
+    var setup = el("div", "grill-setup");
+    var lab = el("label", null, "Questions this round");
+    lab.setAttribute("for", "grill-n");
+    var sel = document.createElement("select");
+    sel.id = "grill-n";
+    for (var k = 1; k <= total; k++) {
+      var opt = document.createElement("option");
+      opt.value = k; opt.textContent = k === total ? k + " (all)" : k;
+      sel.appendChild(opt);
+    }
+    sel.value = Math.min(pref, total);
+    setup.appendChild(lab); setup.appendChild(sel);
+    panel.appendChild(setup);
+    var srow = el("div", "btn-row");
+    var go = el("button", "btn", "Start →");
+    srow.appendChild(go);
+    panel.appendChild(srow);
+    go.addEventListener("click", function () {
+      var n = parseInt(sel.value, 10) || total;
+      try { localStorage.setItem(LS_KEY + "-grill-n", String(n)); } catch (e) {}
+      items = shuffle(s.grill).slice(0, n);
+      draw();
+    });
+    return;
 
     function draw() {
       panel.innerHTML = "";
@@ -759,7 +880,7 @@ button { font-family: inherit; cursor: pointer; }
     function drawResults() {
       var p = prog(s.n);
       if (p.grillBest == null || correct > p.grillBest) p.grillBest = correct;
-      p.grillLast = correct;
+      p.grillLast = correct; p.grillLastOf = items.length;
       save(); renderRail(); renderModeStats();
 
       panel.innerHTML = "";
@@ -960,6 +1081,7 @@ button { font-family: inherit; cursor: pointer; }
     else if (state.mode === "test") renderTest("test");
     else if (state.mode === "scenario") renderTest("scenario");
     else if (state.mode === "feedback") renderFeedback();
+    else if (state.mode === "about") renderAbout();
     renderModeStats();
   }
   function renderAll() { renderRail(); renderModeStats(); renderPanel(); }
@@ -976,6 +1098,11 @@ button { font-family: inherit; cursor: pointer; }
 
   // ---------- boot ----------
   document.getElementById("fbBtn").addEventListener("click", function () { state.mode = "feedback"; renderPanel(); });
+  document.getElementById("aboutBtn").addEventListener("click", function () { state.mode = "about"; renderPanel(); renderModeStats(); });
+  // First visit on this device: open with the About panel.
+  var aboutSeen = false;
+  try { aboutSeen = localStorage.getItem(LS_KEY + "-about-seen") === "1"; } catch (e) {}
+  if (!aboutSeen) state.mode = "about";
   mergeExtras();
   load();
   loadFb();
