@@ -430,7 +430,8 @@ a.btn { display: inline-block; text-decoration: none; }
 
   // Google Form for feedback. Paste the form's link and the entry number of its
   // "feedback" field here (from the form's pre-filled link) to switch it on.
-  var FEEDBACK_FORM = { url: "", entry: "" };
+  // Without an entry number the form opens empty and the feedback is pasted in.
+  var FEEDBACK_FORM = { url: "https://docs.google.com/forms/d/e/1FAIpQLSdLAjm-2qmk-6a5JYAj4rtqJv_QXO7NURAGYmKxV2PUFPmuzg/viewform", entry: "" };
   function tagItems(n, kind, list, prefix) {
     (list || []).forEach(function (it, i) {
       it.id = "S" + n + " " + kind + " " + prefix + (i + 1);
@@ -626,20 +627,24 @@ a.btn { display: inline-block; text-decoration: none; }
         navigator.clipboard.writeText(txt).then(function () { msg.textContent = okMsg; }, fallback);
       } catch (e) { fallback(); }
     }
-    var formOn = !!(FEEDBACK_FORM.url && FEEDBACK_FORM.entry);
+    var formOn = !!FEEDBACK_FORM.url;
+    var prefill = false;
     if (formOn) {
       var send = document.createElement("a");
       send.className = "btn"; send.target = "_blank"; send.rel = "noopener";
-      send.textContent = "Send feedback form ↗";
+      send.textContent = "Copy & open feedback form ↗";
       var setHref = function () {
         var enc = encodeURIComponent(ta.value);
         // Long exports may not fit in a link; then the form opens empty and they paste.
-        send.href = FEEDBACK_FORM.url + "?usp=pp_url" + (enc.length < 6000 ? "&entry." + FEEDBACK_FORM.entry + "=" + enc : "");
+        prefill = !!FEEDBACK_FORM.entry && enc.length < 6000;
+        send.href = FEEDBACK_FORM.url + (prefill ? "?usp=pp_url&entry." + FEEDBACK_FORM.entry + "=" + enc : "");
       };
       setHref();
       nm.addEventListener("input", setHref);
       send.addEventListener("click", function () {
-        copyText("Form opened in a new tab. Your feedback is filled in, and also copied in case you need to paste it.");
+        copyText(prefill
+          ? "Form opened in a new tab with your feedback filled in. It's also copied in case you need to paste it."
+          : "Feedback copied. In the form that just opened, paste it into the first box and submit.");
       });
       row.appendChild(send);
     }
