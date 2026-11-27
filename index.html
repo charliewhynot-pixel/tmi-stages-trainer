@@ -585,7 +585,9 @@ a.btn { display: inline-block; text-decoration: none; }
         msg.textContent = "Saved to your downloads. If nothing appeared, use Copy all instead.";
       } catch (e) { msg.textContent = "Couldn't save a file here. Use Copy all instead."; }
     });
-    row.appendChild(cp); row.appendChild(dl);
+    row.appendChild(cp);
+    // The Claude-hosted copy can't hand out files; the GitHub site can.
+    if (!window.claude) row.appendChild(dl);
     panel.appendChild(row);
     panel.appendChild(msg);
     var list = el("div", "ans-list");
